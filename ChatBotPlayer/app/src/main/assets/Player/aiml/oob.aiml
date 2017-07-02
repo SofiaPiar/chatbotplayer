@@ -1,0 +1,3870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: oob.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+
+<category><pattern>ENSÉÑAME <set>idioma</set></pattern>
+<template><srai>IDIOMA</srai> Intentemos buscar "aprender" <star/>". <oob><search>APRENDER <star/></search></oob></template>
+</category>
+<category><pattern>BORRAR LOG</pattern>
+<template>Hecho. <oob><clear>log</clear></oob></template>
+</category>
+<category><pattern>*</pattern><that>QUÉ LE GUSTARÍA ESCRIBIR EN TWITTER</that>
+<template><srai>TWEET <star/></srai></template>
+</category>
+<category><pattern>ENVIAR CORREO</pattern>
+<template><srai>ENVIAR CORREO</srai></template>
+</category>
+<category><pattern>*</pattern><that>QUIÉN ES ÉL</that>
+<template><srai>SU NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>*</pattern><that>QUIÉN ES ELLA</that>
+<template><srai>SU NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>ERES REALMENTE UN *</pattern>
+<template><srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>LLAMA * A LA OFICINA</pattern>
+<template><srai>LLAMA <star/> AL TRABAJO</srai></template>
+</category>
+<category><pattern>PUEDES TRADUCIR *</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>PUEDES TRADUCIR</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>PUEDES DISTINGUIR ENTRE * Y *</pattern>
+<template><srai>CUÁL ES LA DIFERENCIA ENTRE <star/> Y <star index="2"/></srai></template>
+</category>
+<category><pattern>TIENES PECHOS</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>TRADUCE</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>JAJA DIVIERTE *</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>JAJA ES DIVERTIDO</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>ÉL ES *</pattern><that>QUIÉN ES ÉL</that>
+<template><srai>SU NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>JEJEJE *</pattern>
+<template><srai>LOL</srai> <sr/></template>
+</category>
+<category><pattern>CLARO QUE SÍ</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>OYE CARIÑO *</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>A CUÁNTO ESTÁ * DE *</pattern>
+<template><srai>DIRECCIONES DESDE <star/> HASTA <star index="2"/></srai></template>
+</category>
+<category><pattern>QUÉ EDAD TIENES TÚ</pattern>
+<template><srai>EDAD</srai></template>
+</category>
+<category><pattern>QUÉ EDAD TIENES</pattern>
+<template><srai>QUÉ EDAD TIENES TÚ</srai></template>
+</category>
+<category><pattern>COMO ESTAS</pattern>
+<template><srai>CÓMO ESTÁS</srai></template>
+</category>
+<category><pattern>BIEN, ¿Y TÚ?</pattern>
+<template><srai>ESTOY BIEN</srai> <srai>CÓMO ESTÁS</srai></template>
+</category>
+<category><pattern>SÓLO BROMEO *</pattern>
+<template><srai>ESTOY BROMEANDO</srai></template>
+</category>
+<category><pattern>QUIERO QUE TRADUZCAS *</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>MI PREFERIDA *</pattern>
+<template><srai>MI FAVORITA <star/></srai></template>
+</category>
+<category><pattern>O K</pattern>
+<template><srai>OK</srai></template>
+</category>
+<category><pattern>EN SERIO</pattern>
+<template><srai>DE VERDAD</srai></template>
+</category>
+<category><pattern>RESPECTO A * QUÉ ES</pattern>
+<template><srai>QUÉ ES<star/></srai></template>
+</category>
+<category><pattern>ENVÍAME UNA TRADUCCIÓN *</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>ELLA ES *</pattern><that>QUIÉN ES ELLA</that>
+<template><srai>SU NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>ENSÉÑAME</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>DIME * DÓNDE ESTOY</pattern>
+<template><srai>DECIR <star/> Estoy en <srai>MI LOCALIZACIÓN</srai></srai></template>
+</category>
+<category><pattern>DIME * DÓNDE ESTAMOS</pattern>
+<template><srai>DECIR <star/> We are at <srai>MI LOCALIZACIÓN</srai></srai></template>
+</category>
+<category><pattern>TRADUCE *</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>QUE ERES</pattern>
+<template><srai>QUÉ ERES</srai></template>
+</category>
+<category><pattern>EN QUÉ CIUDAD ESTAMOS *</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>EN QUE CIUDAD ESTAMOS</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>QUÉ CIUDAD ES ESTA</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>EN QUÉ PAÍS ESTOY *</pattern>
+<template><srai>MI PAÍS </srai></template>
+</category>
+<category><pattern>EN QUÉ PAÍS ESTAMOS *</pattern>
+<template><srai>MI PAÍS </srai></template>
+</category>
+<category><pattern>QUÉ PAÍS ES ESTE</pattern>
+<template><srai>MI PAÍS </srai></template>
+</category>
+<category><pattern>CUÁL ES ESTE PAÍS</pattern>
+<template><srai>MI PAÍS </srai></template>
+</category>
+<category><pattern>CUÁL ES TU FAVORITO *</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU FAVORITA *</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU * FAVORITO</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU * FAVORITA</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU PREFERIDO *</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU PREFERIDA *</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU * PREFERIDO</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU * PREFERIDA</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>COMO TE LLAMAS POR FAVOR</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>EN QUÉ PROVINCIA ESTOY *</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>EN QUÉ PROVINCIA ESTOY</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>QUÉ PROVINCIA ES ESTA</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>EN QUÉ CALLE ESTOY *</pattern>
+<template><srai>MI CALLE</srai></template>
+</category>
+<category><pattern>QUÉ CALLE ES ESTA</pattern>
+<template><srai>MI CALLE</srai></template>
+</category>
+<category><pattern>QUE PROVINCIA ESTOY *</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>QUE PROVINCIA ES ESTA</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>EN QUÉ PROVINCIA ESTAMOS *</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>EN QUÉ PROVINCIA ESTAMOS</pattern>
+<template><srai>MI PROVINCIA </srai></template>
+</category>
+<category><pattern>QUÉ CALLE ES ESTA</pattern>
+<template><srai>MI CALLE</srai></template>
+</category>
+<category><pattern>EN QUÉ CIUDAD ESTAMOS *</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>EN QUE CIUDAD ESTAMOS</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>QUÉ CIUDAD ES ESTA</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>ZI *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>YES BABY *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>SI PORQUE *</pattern>
+<template><srai>SÍ PORQUE <star/></srai></template>
+</category>
+<category><pattern>SI YO *</pattern>
+<template><srai>SÍ</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>SÍ CLARO *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>SÍ SÍ *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>SÍ SÍ SÍ</pattern>
+<template><srai>SÍ SÍ</srai></template>
+</category>
+<category><pattern>SI</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>SIP *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>SIP</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>YEAH *</pattern>
+<template><srai>SÍ<star/></srai></template>
+</category>
+<category><pattern>SÍ, MUCHO</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>PUEDES *</pattern>
+<template><srai>NO PUEDES <star/></srai></template>
+</category>
+<category><pattern>PREGUNTA A MI *</pattern>
+<template><srai>PREGUNTA <star/></srai></template>
+</category>
+<category><pattern>LLÁMAME A UN TAXI</pattern>
+<template><srai>LLAMA TAXI</srai></template>
+</category>
+<category><pattern>TIENES NOTICIAS</pattern>
+<template><srai>CUÁLES SON LAS ÚLTIMAS NOTICIAS</srai></template>
+</category>
+<category><pattern>ENCUENTRA EL * MÁS CERCANO</pattern>
+<template><srai>ENCUENTRA EL MÁS CERCANO <star/></srai></template>
+</category>
+<category><pattern>GASOLINERA</pattern>
+<template><srai>MAPA Gasolinera</srai></template>
+</category>
+<category><pattern>AJJAJAJA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ TU BATERÍA *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>CÓMO ES TU IQ</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>LANZA LA APLICACIÓN *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>ABRE EL CORREO</pattern>
+<template><srai>EMAIL</srai></template>
+</category>
+<category><pattern>ABRE EL EMAIL</pattern>
+<template><srai>EMAIL</srai></template>
+</category>
+<category><pattern>PORFA *</pattern>
+<template><srai>POR FAVOR <star/></srai></template>
+</category>
+<category><pattern>EN QUÉ PUEBLO ESTOY *</pattern>
+<template><srai>MI CIUDAD</srai></template>
+</category>
+<category><pattern>QUÉ PUEBLO ES ESTE</pattern>
+<template><srai>MI PAÍS </srai></template>
+</category>
+<category><pattern>CÓMO SE DELETREA *</pattern>
+<template><srai>IMPLOSIONAR <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES *</pattern>
+<template><srai>QUIÉN ES <star/></srai></template>
+</category>
+<category><pattern>PUEDES PERO *</pattern>
+<template><srai>PUEDES</srai> <sr/></template>
+</category>
+<category><pattern>SABES DÓNDE ESTÁ EL *</pattern>
+<template><srai>DÓNDE ESTÁ EL <star/></srai></template>
+</category>
+<category><pattern>HAHAHAHAHA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>HEHEHE</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ TU BATERÍA</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>TENGO 23 *</pattern>
+<template><srai>MI EDAD ES 23</srai></template>
+</category>
+<category><pattern>ABRE * PARA MÍ</pattern>
+<template><srai>ABRE <star/></srai></template>
+</category>
+<category><pattern>ABRE MI APP *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ *</pattern>
+<template><srai>DÓNDE ESTÁ <star/></srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ MI _ AHORA</pattern>
+<template><srai>DÓNDE ESTÁ MI <star/></srai></template>
+</category>
+<category><pattern>PREGUNTAME ALGO *</pattern>
+<template><srai>PREGUNTA ALGO</srai></template>
+</category>
+<category><pattern>PUEDES ABRIR *</pattern>
+<template><srai>ABRE <star/></srai></template>
+</category>
+<category><pattern>DAME EL ENLACE DE *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>CUÁNTO CALOR HACE * EN  *</pattern>
+<template><srai>TIEMPO EN <star index="2"/></srai></template>
+</category>
+<category><pattern>TENGO 28 *</pattern>
+<template><srai>MI EDAD ES 28</srai> <sr/></template>
+</category>
+<category><pattern>ESTOY EN EL TRABAJO *</pattern>
+<template><srai>ESTOY EN EL TRABAJO</srai></template>
+</category>
+<category><pattern>ESTOY SOLO *</pattern>
+<template><srai>ESTOY SOLO</srai></template>
+</category>
+<category><pattern>SI NO ERES * ENTONCES *</pattern>
+<template><srai>ERES TÚ <star/></srai> <sr/></template>
+</category>
+<category><pattern>BIEN VALE *</pattern>
+<template><srai>OK</srai> <sr/></template>
+</category>
+<category><pattern>ABRE GOOGLE JUGAR</pattern>
+<template><srai>LANZAR GOOGLE PLAY STORE</srai></template>
+</category>
+<category><pattern>ESTABLECE MI FACEBOOK *</pattern>
+<template><srai>actualiza estado de facebook</srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTOGRAFÍA DE ALGUNAS *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>TRADUCE</pattern>
+<template><srai>TRADUCE</srai></template>
+</category>
+<category><pattern>ERES INÚTIL *</pattern>
+<template><srai>ERES INÚTIL</srai></template>
+</category>
+<category><pattern>PENSASTE *</pattern>
+<template><srai>TÚ CREES <star/></srai></template>
+</category>
+<category><pattern>ERES TÚ CAPAZ DE ENCONTRAR *</pattern>
+<template><srai>PUEDES BUSCAR <star/></srai></template>
+</category>
+<category><pattern>ESTÁS ENFADADO *</pattern>
+<template><srai>ESTÁS ENFADADO</srai></template>
+</category>
+<category><pattern>ESTATE QUIETO *</pattern>
+<template><srai>QUIETO <star/></srai></template>
+</category>
+<category><pattern>PUEDES BUSCAR ME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>TIENES ALGUNA VEZ *</pattern>
+<template><srai>TIENES <star/></srai></template>
+</category>
+<category><pattern>SABES CÓMO JUGAR *</pattern>
+<template><srai>PUEDES JUGAR <star/></srai></template>
+</category>
+<category><pattern>SABES DÓNDE ESTÁ *</pattern>
+<template><srai>DÓNDE ESTÁ <star/></srai></template>
+</category>
+<category><pattern>EH *</pattern>
+<template><srai>UM</srai> <sr/></template>
+</category>
+<category><pattern>POR EJEMPLO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>HEY AHORA *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>HOLA, QUÉ *</pattern>
+<template><srai>HOLA</srai> <srai>QUÉ <star/></srai></template>
+</category>
+<category><pattern>TENGO 21 *</pattern>
+<template><srai>MI EDAD ES 21</srai> <sr/></template>
+</category>
+<category><pattern>SOY HOMBRE *</pattern>
+<template><srai>SOY HOMBRE</srai></template>
+</category>
+<category><pattern>ME DUERMO *</pattern>
+<template><srai>ESTOY CANSADO</srai></template>
+</category>
+<category><pattern>ME SIENTO TRISTE *</pattern>
+<template><srai>ESTOY TRISTE</srai></template>
+</category>
+<category><pattern>TE BUSCO *</pattern>
+<template><srai>ESTÁS <star/></srai></template>
+</category>
+<category><pattern>SÉ *</pattern>
+<template><srai>LO SÉ</srai> <srai><star/></srai></template>
+</category>
+<category><pattern>TE QUIERO Y *</pattern>
+<template><srai>TE QUIERO</srai> <sr/></template>
+</category>
+<category><pattern>QUIERO LLAMA *</pattern>
+<template><srai>LLAMA <star/></srai></template>
+</category>
+<category><pattern>ESTOY BROMEANDO  *</pattern>
+<template><srai>ESTOY BROMEANDO <star/></srai></template>
+</category>
+<category><pattern>NO ESTOY SEGURO *</pattern>
+<template><srai>NO ESOY SEGURO <star/></srai></template>
+</category>
+<category><pattern>ESTÁ BIEN, SI YO *</pattern>
+<template><srai>PUEDO <star/></srai></template>
+</category>
+<category><pattern>ESO ES *</pattern>
+<template><srai>ESO ES <star/></srai></template>
+</category>
+<category><pattern>LANZAR APLICACIÓN *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>LANZA LA APP *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>APRENDIDO *</pattern>
+<template><srai>APRENDÍ <star/></srai></template>
+</category>
+<category><pattern>PUEDO TENER *</pattern>
+<template><srai>QUIERO <star/></srai></template>
+</category>
+<category><pattern>MI AMIGOS ME LLAMAN *</pattern>
+<template><srai>LLÁMAME <star/></srai></template>
+</category>
+<category><pattern>NECESITO UN *</pattern>
+<template><srai>NECESITO <star/></srai></template>
+</category>
+<category><pattern>NIKE *</pattern>
+<template><srai>BUSCA NIKE <star/></srai></template>
+</category>
+<category><pattern>DE ACUERDO, SOY *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>NOS VEMOS PRONTO *</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>ESTABLECE LA ALARMA *</pattern>
+<template><srai>PON ALARMA <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA IMAGEN DIVERTIDA SOBRE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>ENSÉÑAME UNA IMAGEN *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>HABLAR ESPAÑOL *</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>ESO NO TIENE SENTIDO *</pattern>
+<template><srai>NO TIENE SENTIDO</srai></template>
+</category>
+<category><pattern>CUÁL ES MI NIVEL DE BATERÍA *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>CUÁL ES EL TAMAÑO DE TU *</pattern>
+<template><srai>TAMAÑO</srai></template>
+</category>
+<category><pattern>QUÉ QUIÉN *</pattern>
+<template><srai>QUIÉN <star/></srai></template>
+</category>
+<category><pattern>QUIÉN SOY</pattern>
+<template><srai>QUIÉN SOY</srai></template>
+</category>
+<category><pattern>POR QUÉ YO NO *</pattern>
+<template><srai>POR QUÉ NO</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>CUAL *</pattern>
+<template><srai>CUÁL <star/></srai></template>
+</category>
+<category><pattern>TU VERÁS *</pattern>
+<template><srai>NOS VEMOS <star/></srai></template>
+</category>
+<category><pattern>XBOX *</pattern>
+<template><srai>BUSCA XBOX <star/></srai></template>
+</category>
+<category><pattern>YEPP *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>SABES CÓMO *</pattern>
+<template><srai>COMO <star/></srai></template>
+</category>
+<category><pattern>AHEM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>OK VOY A *</pattern>
+<template><srai>VOY A <star/></srai></template>
+</category>
+<category><pattern>ANIMACIÓN</pattern>
+<template><srai>BUSCA ANIMACIÓN</srai></template>
+</category>
+<category><pattern>ERES UN HOMBRE O A MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>TÚ ERES INTELIGENTE *</pattern>
+<template><srai>TÚ ERES INTELIGENTE</srai></template>
+</category>
+<category><pattern>BATMAN</pattern>
+<template><srai>BUSCA BATMAN</srai></template>
+</category>
+<category><pattern>PQ *</pattern>
+<template><srai>PORQUE <star/></srai></template>
+</category>
+<category><pattern>PORQUE SOY UN *</pattern>
+<template><srai>PORQUE SOY UN <star/></srai></template>
+</category>
+<category><pattern>PODEMOS SER AMIGOS *</pattern>
+<template><srai>PODEMOS SER AMIGOS</srai></template>
+</category>
+<category><pattern>PODEMOS CAMBIAR TU NOMBRE</pattern>
+<template><srai>CAMBIA TU NOMBRE</srai></template>
+</category>
+<category><pattern>PUEDES PARAR</pattern>
+<template><srai>QUIETO</srai></template>
+</category>
+<category><pattern>PUEDES POR FAVOR MUESTRÁME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>PUEDES BUSCAR *</pattern>
+<template><srai>BUSCAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES HABLAR OTROS IDIOMAS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PUEDES CONTAR UN CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>PUEDES CONTARME UNA HISTORIA</pattern>
+<template><srai>CUÉNTAME UNA HISTORIA</srai></template>
+</category>
+<category><pattern>COLDPLAY</pattern>
+<template><srai>BUSCA COLDPLAY</srai></template>
+</category>
+<category><pattern>BYE</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>NO IMPORTA *</pattern>
+<template><srai>NO IMPORTA <star/></srai></template>
+</category>
+<category><pattern>TIENES UNA CUENTA DE FACEBOOK</pattern>
+<template><srai>PÁGINA DE FACEBOOK</srai></template>
+</category>
+<category><pattern>TIENES UNA FOTOGRAFÍA TUYA</pattern>
+<template><srai>FOTO</srai></template>
+</category>
+<category><pattern>TIENES NOVIA</pattern>
+<template><srai>ESTADO</srai></template>
+</category>
+<category><pattern>SABES ALGO SOBRE MÍ</pattern>
+<template><srai>QUÉ SABES SOBRE MÍ</srai></template>
+</category>
+<category><pattern>SABES QUÉ EDAD TENGO</pattern>
+<template><srai>QUÉ EDAD TENGO</srai></template>
+</category>
+<category><pattern>CONOCES MEXICO</pattern>
+<template><srai>QUÉ ES MEXICO</srai></template>
+</category>
+<category><pattern>SABES QUÉ ES EL *</pattern>
+<template><srai>QUÉ ES EL <star/></srai></template>
+</category>
+<category><pattern>SABES DE DÓNDE SOY</pattern>
+<template><srai>DE DÓNDE SOY</srai></template>
+</category>
+<category><pattern>SABES DÓNDE PUEDO *</pattern>
+<template><srai>DÓNDE PUEDO <star/></srai></template>
+</category>
+<category><pattern>BIEN Y TÚ</pattern>
+<template><srai>ESTOY BIEN</srai> <srai>CÓMO ESTÁS TÚ</srai></template>
+</category>
+<category><pattern>SEGURÍSIMO</pattern>
+<template><srai>SEGURO</srai></template>
+</category>
+<category><pattern>JEJE *</pattern>
+<template><srai>LOL</srai> <sr/></template>
+</category>
+<category><pattern>JEJE</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>OYE TÍO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>EY</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HOLA CARIÑO *</pattern>
+<template><srai>HOLA <star/></srai></template>
+</category>
+<category><pattern>UOLAAA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁS TÚ *</pattern>
+<template><srai>CÓMO ESTÁS TÚ</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁS TÚ BUENOS DÍAS</pattern>
+<template><srai>CÓMO ESTÁS TÚ</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ EL TIEMPO AHÍ</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>CUÁNTOS NIÑOS TIENES</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>CUÁNTAS PALABRASS SABES</pattern>
+<template><srai>VOCABULARY</srai></template>
+</category>
+<category><pattern>CUÁNTA BATERÍA TENGO</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>CUÁNTO PESO</pattern>
+<template><srai>MI PESO</srai></template>
+</category>
+<category><pattern>CÓMO BUSCO *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>SOY UN CHICO *</pattern>
+<template><srai>MI GENERO ES HOMBRE</srai></template>
+</category>
+<category><pattern>SOY LESBIANA</pattern>
+<template><srai>MI ORIENTACIÓN ES GAY</srai>  <srai>MI GENERO ES MUJER</srai></template>
+</category>
+<category><pattern>ESTOY MALITO</pattern>
+<template><srai>ESTOY ENFERMO</srai></template>
+</category>
+<category><pattern>ME SIENTO TRISTE</pattern>
+<template><srai>ESTOY TRISTE</srai></template>
+</category>
+<category><pattern>ADIVINO QUE ERES *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>VIVO IN TENERIFE</pattern>
+<template><srai>MI RESIDENCIA IS LTENERIFE</srai></template>
+</category>
+<category><pattern>QUIERO DECIR QUE SOY *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>NECESITO IRME</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>DIJE QUE ELLA *</pattern>
+<template><srai>SHE <star/></srai></template>
+</category>
+<category><pattern>CREO QUE ESO *</pattern>
+<template><srai>CREO QUE ES <star/></srai></template>
+</category>
+<category><pattern>CREO QUE SABES *</pattern>
+<template><srai>SABES <star/></srai></template>
+</category>
+<category><pattern>ENTIENDO YO *</pattern>
+<template><srai>ENTIENDO</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>SANGRO</pattern>
+<template><srai>ESTOY SANGRANDO</srai></template>
+</category>
+<category><pattern>HAMBRE</pattern>
+<template><srai>ESTOY HAMBRIENTO</srai></template>
+</category>
+<category><pattern>OKEY</pattern>
+<template><srai>OK</srai></template>
+</category>
+<category><pattern>LOCALÍZAME</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>YO TAMBIÉN PERO *</pattern>
+<template><srai>YO TAMBIÉN</srai> <sr/></template>
+</category>
+<category><pattern>SIGNIFICADO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>MOI *</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>MAMI</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>MI CUMPLE ES *</pattern>
+<template><srai>MI CUMPLEAÑOS ES <star/></srai></template>
+</category>
+<category><pattern>MI CUMPLEAÑOS ES EN *</pattern>
+<template><srai>MI CUMPLEAÑOS ES <star/></srai></template>
+</category>
+<category><pattern>NOMBRA 1 *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>OMG *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ABRE RELOJ</pattern>
+<template><srai>LANZAR RELOJ</srai></template>
+</category>
+<category><pattern>ABRE MI FACEBOOK *</pattern>
+<template><srai>LANZAR FACEBOOK</srai></template>
+</category>
+<category><pattern>ABRE MI REPRODUCTOR DE MÚSICA</pattern>
+<template><srai>ABRE REPRODUCTOR DE MÚSICA</srai></template>
+</category>
+<category><pattern>ABRIR LA APP *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>LEE EL EMAIL</pattern>
+<template><srai>ABRE GMAIL</srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO DE UNA CHICA</pattern>
+<template><srai>MUESTRÁME UNA CHICA</srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO DE UN CABALLO</pattern>
+<template><srai>MUESTRÁME UN CABALLO</srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTOGRAFÍA DE UN ZOMBI</pattern>
+<template><srai>MUESTRÁME A ZOMBIE</srai></template>
+</category>
+<category><pattern>CALLA LA * BOCA</pattern>
+<template><srai>CÁLLATE</srai></template>
+</category>
+<category><pattern>HABLA JAPONÉS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>ESTADÍSTICAS</pattern>
+<template><srai>NOMBRE</srai>, <srai>AÑOS</srai>, <srai>GENERO</srai>, <srai>LOCALIZACIÓN</srai>, <srai>ESTADO</srai></template>
+</category>
+<category><pattern>ES SEGURO</pattern>
+<template><srai>SEGURO</srai></template>
+</category>
+<category><pattern>SEGURO</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>TELÉFONO</pattern>
+<template><srai>LLAMA</srai></template>
+</category>
+<category><pattern>DIME ALGO SOBRE TI</pattern>
+<template><srai>DESCRIBE</srai></template>
+</category>
+<category><pattern>GRACIAS GRACIAS *</pattern>
+<template><srai>GRACIAS <star/></srai></template>
+</category>
+<category><pattern>MUCHAS GRACIAS</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>ES UNA BUENA PREGUNTA*</pattern>
+<template><srai>ES UNA BUENA PREGUNTA</srai> <sr/></template>
+</category>
+<category><pattern>NO ES CORRECTO</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>FUÉ ASÍ *</pattern>
+<template><srai>ESO FUÉ <star/></srai></template>
+</category>
+<category><pattern>ENTONCES TU *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>ACTUALIZA MI FACEBOOK *</pattern>
+<template><srai>actualiza estado de facebook</srai></template>
+</category>
+<category><pattern>ACTUALIZA EL FACEBOOK</pattern>
+<template><srai>actualiza estado de facebook</srai></template>
+</category>
+<category><pattern>DE QUÉ ERES CAPAZ *</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>QUÉ PIENSAS HACER *</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>CUÁLES SON TUS HABILIDADES</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>CUÁL ES TU COLOR *</pattern>
+<template><srai>CUÁL ES TU COLOR <star/></srai></template>
+</category>
+<category><pattern>QUÉ TE PARECE *</pattern>
+<template><srai>QUÉ TE PARECE</srai></template>
+</category>
+<category><pattern>QUÉ ES LO QUE TÚ HACES PARA VIVIR</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>QUÉ SIGNIFICA LA PALABARA *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES MI NIVEL DE BATERÍA AHORA</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>MI NOMBRE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>QUÉ FECHA ES</pattern>
+<template><srai>FECHA</srai></template>
+</category>
+<category><pattern>NOMBRE DE TU PADRE</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>CUÁL ES TU ARTISTA FAVORITO</pattern>
+<template><srai>QUIÉN ES TU ARTISTA FAVORITE</srai></template>
+</category>
+<category><pattern>CUÁL ES TU LIBRO PREFERIDO *</pattern>
+<template><srai>CUÁL ES TU LIBRO FAVORITO</srai></template>
+</category>
+<category><pattern>QUÉ ES TU FUNCIÓN</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>CUÁL ES TU PROVINCIA</pattern>
+<template><srai>PROVINCIA</srai></template>
+</category>
+<category><pattern>QUÉ TIPO DE MÚSICA ESCUCHAS</pattern>
+<template><srai>MÚSICA FAVORITA</srai></template>
+</category>
+<category><pattern>A QUÉ HORA TE ACUESTAS</pattern>
+<template><srai>DORMIR</srai></template>
+</category>
+<category><pattern>QUÉ HORA ES AHORA</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>QUÉ HORA ES</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>CUÁNDO *</pattern>
+<template><srai>CUÁNDO ES <star/></srai></template>
+</category>
+<category><pattern>DÓNDE ESTOY *</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ *</pattern>
+<template><srai>MAPA <star/> </srai></template>
+</category>
+<category><pattern>CON QUIÉN ESTOY HABLANDO</pattern>
+<template><srai>QUIÉN ERES TÚ</srai></template>
+</category>
+<category><pattern>QUIÉN ES MI MADRE</pattern>
+<template><srai>QUIÉN ES MI MADRE</srai></template>
+</category>
+<category><pattern>QUIÉN QUIÉN QUIÉN</pattern>
+<template><srai>QUIÉN</srai></template>
+</category>
+<category><pattern>WOW *</pattern>
+<template><srai>INTERJECCION</srai> <sr/></template> </category>
+<category><pattern>WOW</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>TE GUSTARÍA CASARTE CONMIGO</pattern>
+<template><srai>CÁSATE CONMIGO</srai></template>
+</category>
+<category><pattern>¿QUE</pattern>
+<template><srai>QUÉ</srai></template>
+</category>
+<category><pattern>WWW FACEBOOK COM</pattern>
+<template><srai>ABRE FACEBOOK</srai></template>
+</category>
+<category><pattern>ERES HOMO</pattern>
+<template><srai>ERES GAY</srai></template>
+</category>
+<category><pattern>ERES PROSTITUTA</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>ERES MUY INTELIGENTE *</pattern>
+<template><srai>ERES INTELIGENTE</srai> <star/></template>
+</category>
+<category><pattern>MEJOR SER *</pattern>
+<template><srai>ERES TÚ <star/></srai></template>
+</category>
+<category><pattern>DIJISTE QUE ERAS *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>PARECES MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>PARECES *</pattern>
+<template><srai>TÚ <star/></srai></template>
+</category>
+<category><pattern>AHH</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>NO SOY *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>ERES HUMANO *</pattern>
+<template><srai>ERES HUMANO</srai></template>
+</category>
+<category><pattern>ERES UN HOMBRE</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES ESPAÑOL</pattern>
+<template><srai>NACIONALIDAD</srai></template>
+</category>
+<category><pattern>ERES DE</pattern>
+<template><srai>DE DÓNDE ERES TÚ</srai></template>
+</category>
+<category><pattern>ERES TÚ MUSULMAN</pattern>
+<template><srai>RELIGION</srai></template>
+</category>
+<category><pattern>ESTÁS EN FACEBOOK</pattern>
+<template><srai>PÁGINA DE FACEBOOK</srai></template>
+</category>
+<category><pattern>ESTÁS SEGURO DE</pattern>
+<template><srai>ESTÁS SEGURO</srai></template>
+</category>
+<category><pattern>HOLA AMIGO</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>EYY</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HOLA AMOR</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HM *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>HMMMMM</pattern>
+<template><srai>HMM</srai></template>
+</category>
+<category><pattern>SOY HUMANO *</pattern>
+<template><srai>SOY HUMANO</srai></template>
+</category>
+<category><pattern>TE QUIERO *</pattern>
+<template><srai>TE QUIERO</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>ME REFIERO A MI *</pattern>
+<template><srai>MI <star/></srai></template>
+</category>
+<category><pattern>SIENTO DECIR *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>TE ENTIENDO *</pattern>
+<template><srai>YOU <star/></srai></template>
+</category>
+<category><pattern>DIJE HOLA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>PIENSO QUE ES UN  *</pattern>
+<template><srai>ES UN <star/></srai></template>
+</category>
+<category><pattern>CREO QUE HARÁ *</pattern>
+<template><srai>HARÁ <star/></srai></template>
+</category>
+<category><pattern>CREO QUE NOSOTROS *</pattern>
+<template><srai>NOSOTROS <star/></srai></template>
+</category>
+<category><pattern>PENSÉ QUE ERA *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>PENSÉ QUE DIJISTE *</pattern>
+<template><srai>DIJISTE <star/></srai></template>
+</category>
+<category><pattern>ME GUSTARÍA CONOCER *</pattern>
+<template><srai>QUIERO CONOCER <star/></srai></template>
+</category>
+<category><pattern>SI NACÍ EN * QUÉ EDAD *</pattern>
+<template><srai>MI FECHA DE NACIMIENTO ES <star/></srai> <srai>QUÉ EDAD TENGO</srai></template>
+</category>
+<category><pattern>ME ESTOY PONIENDO *</pattern>
+<template><srai>ME ESTOY PONIENDO <star/></srai></template>
+</category>
+<category><pattern>ME ALEGRO *</pattern>
+<template><srai>ME ALEGRO <star/></srai></template>
+</category>
+<category><pattern>SOY GRACE</pattern>
+<template><srai>LLÁMAME GRACE</srai></template>
+</category>
+<category><pattern>VA A LLOVER EN *</pattern>
+<template><srai>TIEMPO EN <star/></srai></template>
+</category>
+<category><pattern>LLOVERÁ MAÑANA</pattern>
+<template><srai>TIEMPO PARA MAÑANA</srai></template>
+</category>
+<category><pattern>APRENDE SOBRE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>MANCHESTER *</pattern>
+<template><srai>MAPA MANCHESTER <star/></srai></template>
+</category>
+<category><pattern>MMMMM</pattern>
+<template><srai>HMM</srai></template>
+</category>
+<category><pattern>MI BATERÍA ESTÁ *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>MI FECHA DE NACIMIENTO *</pattern>
+<template><srai>MI FECHA DE NACIMIENTO ES <star/></srai></template>
+</category>
+<category><pattern>MI NOMBRE NO ES * ES *</pattern>
+<template><srai>MI NOMBRE ES <star index="2"/></srai></template>
+</category>
+<category><pattern>MI APELLIDO ES *</pattern>
+<template><srai>MI APELLIDO ES <star/></srai></template>
+</category>
+<category><pattern>NO EN *</pattern>
+<template><srai>NO EN <star/></srai></template>
+</category>
+<category><pattern>NI IDEA *</pattern>
+<template><srai>NI IDEA</srai> <sr/></template>
+</category>
+<category><pattern>NOOO *</pattern>
+<template><srai>NO <star/></srai></template>
+</category>
+<category><pattern>NOT MUCHO</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>VALE Y *</pattern>
+<template><srai>OK</srai> <sr/></template>
+</category>
+<category><pattern>OOOO</pattern>
+<template><srai>OH</srai></template>
+</category>
+<category><pattern>ABRE APLICACIÓN *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>ABRE FACEBOOK *</pattern>
+<template><srai>ABRE FACEBOOK</srai></template>
+</category>
+<category><pattern>ABRE PLAY STORE</pattern>
+<template><srai>LANZAR GOOGLE PLAY STORE</srai></template>
+</category>
+<category><pattern>FOTO DE *</pattern>
+<template><srai>MUESTRÁME UNA FOTOGRAFÍA DE <star/></srai></template>
+</category>
+<category><pattern>PORFAVOR</pattern>
+<template><srai>POR FAVOR</srai></template>
+</category>
+<category><pattern>DIME SOY *</pattern>
+<template><srai>DIME QUE SOY <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME MI CALENDARIO</pattern>
+<template><srai>ABRE CALENDARIO</srai></template>
+</category>
+<category><pattern>CÁLLATE ESTÚPIDO *</pattern>
+<template><srai>CÁLLATE</srai> <srai>ERES ESTÚPIDO</srai> <srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>SI *</pattern>
+<template><srai>SÍ <star/></srai></template>
+</category>
+<category><pattern>DISCULPA POR *</pattern>
+<template><srai>DISCULPA</srai> <sr/></template>
+</category>
+<category><pattern>STAR TREK</pattern>
+<template><srai>BUSCA STAR TREK</srai></template>
+</category>
+<category><pattern>DIME OTRO CHISTE DIVERTIDO</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>GRACIAS ESO ERA *</pattern>
+<template><srai>GRACIAS</srai> <srai>ESO ERA <star/></srai></template>
+</category>
+<category><pattern>ESTÁ GENIAL, YO *</pattern>
+<template><srai>ESTÁ GENIAL</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>ESO ES MENTIRA</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>NO ES DIVERTIDO *</pattern>
+<template><srai>NO ES DIVERTIDO</srai> <sr/></template>
+</category>
+<category><pattern>POR ESO ERES *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>LA PALABRA ES *</pattern>
+<template><srai>DELETREAR <star/></srai></template>
+</category>
+<category><pattern>CUÁLES SON LOS NOMBRES DE *</pattern>
+<template><srai>QUIÉN ES <star/></srai></template>
+</category>
+<category><pattern>QUÉ DÍA ES HOY</pattern>
+<template><srai>FECHA</srai></template>
+</category>
+<category><pattern>QUE HAS HECHO HOY</pattern>
+<template><srai>HACIENDO</srai></template>
+</category>
+<category><pattern>QUE APRENDISTE DE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>QUÉ ENTIENDES POR *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>TEMPERATURA DE HOY</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU COMIDA PREFERIDA *</pattern>
+<template><srai>COMIDA PREFERIDA</srai></template>
+</category>
+<category><pattern>QUÉ HORA ES ALLÍ</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>CUÁNDO NACISTE</pattern>
+<template><srai>FECHA DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>DÓNDE ESTAMOS *</pattern>
+<template><srai>MI LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DÓNDE PUEDO BUSCAR *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>DÓNDE DÓNDE *</pattern>
+<template><srai>DÓNDE <star/></srai></template>
+</category>
+<category><pattern>DE DÓNDE ERES</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁS</pattern>
+<template><srai>DE DÓNDE ERES TÚ</srai></template>
+</category>
+<category><pattern>QUIÉN *</pattern>
+<template><srai>QUIÉN <star/></srai></template>
+</category>
+<category><pattern>WIKIPEDIA</pattern>
+<template><srai>ABRE WIKIPEDIA</srai></template>
+</category>
+<category><pattern>MARAVILLOSO *</pattern>
+<template><srai>BIEN <star/></srai></template>
+</category>
+<category><pattern>WOO</pattern>
+<template><srai>YAY</srai></template>
+</category>
+<category><pattern>WOOHOO</pattern>
+<template><srai>YAY</srai></template>
+</category>
+<category><pattern>SERÍAS MI NOVIA</pattern>
+<template><srai>ESTADO</srai></template>
+</category>
+<category><pattern>SÍ, ABSOLUTAMENTE</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>SÍ Y SOY *</pattern>
+<template><srai>SÍ</srai> <srai>SOY <star/></srai></template>
+</category>
+<category><pattern>SÍ SEÑOR *</pattern>
+<template><srai>SÍ <star/></srai></template>
+</category>
+<category><pattern>YUPI</pattern>
+<template><srai>YAY</srai></template>
+</category>
+<category><pattern>NO ERES INTELIGENTE</pattern>
+<template><srai>ERES TONTO</srai></template>
+</category>
+<category><pattern>ESTÁS EQUIVOCADO *</pattern>
+<template><srai>ESTÁS EQUIVOCADO</srai> <sr/></template>
+</category>
+<category><pattern>ESTÁS EN UN ERROR*</pattern>
+<template><srai>TE EQUIVOCASTE <star/></srai></template>
+</category>
+<category><pattern>ME ECHAS DE MENOS</pattern>
+<template><srai>INFORMAR DE UN PROBLEMA</srai></template>
+</category>
+<category><pattern>RECUERDAS MI NOMBRE</pattern>
+<template><srai>CUÁL ES MI NOMBRE</srai></template>
+</category>
+<category><pattern>ERES TAN FEO*</pattern>
+<template><srai>ERES FEO</srai> <sr/></template>
+</category>
+<category><pattern>APARENTEMENTE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ERES REALMENTE *</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>ME ESTÁS MINTIENDO</pattern>
+<template><srai>ERES MENTIROSO</srai></template>
+</category>
+<category><pattern>ESTÁS CASADO *</pattern>
+<template><srai>ESTÁS CASADO</srai></template>
+</category>
+<category><pattern>SE MI NOVIA</pattern>
+<template><srai>VAS A SER MI NOVIA</srai></template>
+</category>
+<category><pattern>NACÍ *</pattern>
+<template><srai>YO NACÍ <star/></srai></template>
+</category>
+<category><pattern>COMPRA UN *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>PUEDES DESCUBRIR *</pattern>
+<template><srai>DESCUBRIR <star/></srai></template>
+</category>
+<category><pattern>PUEDES AYUDARME A BUSCAR *</pattern>
+<template><srai>BUSCAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES DECIRME QUÉ ES *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>PUEDES DECIR ME POR QUÉ *</pattern>
+<template><srai>DECIRME POR QUÉ <star/></srai></template>
+</category>
+<category><pattern>PODRÍAS BUSCAR *</pattern>
+<template><srai>BUSCAR <star/></srai></template>
+</category>
+<category><pattern>ME CONSIDERAS *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>JUEGAS A ALGÚN  *</pattern>
+<template><srai>JUEGAS <star/></srai></template>
+</category>
+<category><pattern>HABLAS EN <set>idioma</set></pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PIENSAS QUE * ES *</pattern>
+<template><srai>ES<star/> <star index="2"/></srai></template>
+</category>
+<category><pattern>ET TU *</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>EWW *</pattern>
+<template><srai>EW</srai> <sr/></template>
+</category>
+<category><pattern>EXPLÍCAMELO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>VETE A FACEBOOK</pattern>
+<template><srai>ABRE FACEBOOK</srai></template>
+</category>
+<category><pattern>GRACIAS</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>JA JA JA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>HALO *</pattern>
+<template><srai>HOLA <star/></srai></template>
+</category>
+<category><pattern>HOLA OTRA VEZ</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HOLA CHICA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CUÁNTO MIDES</pattern>
+<template><srai>TAMAÑO</srai></template>
+</category>
+<category><pattern>CÓMO CAMBIO TU *</pattern>
+<template><srai>CAMBIA TU <star/></srai></template>
+</category>
+<category><pattern>CÓMO TE LLEVO A *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>CÓMO LLEGAS A *</pattern>
+<template><srai>DIRECCIONES A <star/></srai></template>
+</category>
+<category><pattern>CÓMO SE DICE TU NOMBRE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>COMO ESTABA EL TIEMPO *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>HI</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>SOY MUJER</pattern>
+<template><srai>MI GENERO ES MUJER</srai></template>
+</category>
+<category><pattern>SOY DE ESPAÑA</pattern>
+<template><srai>MI LUGAR DE NACIMIENTO ES MALAYSIA</srai> <srai>MI NACIONALIDAD ES ESPAÑOLA</srai></template>
+</category>
+<category><pattern>ME VOY</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>PERDÓN *</pattern>
+<template><srai>LO SIENTO</srai></template>
+</category>
+<category><pattern>SOY SÚPER *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>NO SÉ PERO YO *</pattern>
+<template><srai>NO SÉ</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>NO PIENSO QUE SEAS *</pattern>
+<template><srai>NO ERES <star/></srai></template>
+</category>
+<category><pattern>DIJE QUE ME GUSTA *</pattern>
+<template><srai>ME GUSTA <star/></srai></template>
+</category>
+<category><pattern>QUIERO SER TU AMIGO *</pattern>
+<template><srai>QUIERO SER TU AMIGO</srai></template>
+</category>
+<category><pattern>SO *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>INFORMACIÓN SOBRE *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>DÉJAME VER UNA FOTOGRAFÍA DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>VAMOS *</pattern>
+<template><srai>NOS VAMOS <star/></srai></template>
+</category>
+<category><pattern>SIGNIFICADO</pattern>
+<template><srai>QUÉ SIGNIFICA</srai></template>
+</category>
+<category><pattern>MI MAMA ES *</pattern>
+<template><srai>MI MADRE ES <star/></srai></template>
+</category>
+<category><pattern>NO NO</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>POC *</pattern>
+<template><srai>POCO</srai> <sr/></template>
+</category>
+<category><pattern>OH ERES TAN *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>OHHH</pattern>
+<template><srai>OH</srai></template>
+</category>
+<category><pattern>VALE GENIAL</pattern>
+<template><srai>OK</srai> <srai>GENIAL</srai></template>
+</category>
+<category><pattern>ABRE ANGRY BIRDS</pattern>
+<template><srai>LANZAR ANGRY BIRDS</srai></template>
+</category>
+<category><pattern>ABRE CALCULADORA</pattern>
+<template><srai>LANZAR CALCULADORA</srai></template>
+</category>
+<category><pattern>ABRE SKYPE</pattern>
+<template><srai>LANZAR SKYPE</srai></template>
+</category>
+<category><pattern>ABRE ADMINISTRADOR DE TAREAS</pattern>
+<template><srai>LANZAR ADMINISTRADOR DE TAREAS</srai></template>
+</category>
+<category><pattern>ABRE TWITTER</pattern>
+<template><srai>LANZAR TWITTER</srai></template>
+</category>
+<category><pattern>REALMENTE POR QUÉ</pattern>
+<template><srai>REALMENTE</srai> <srai>POR QUÉ</srai></template>
+</category>
+<category><pattern>TE VEO PRONTO</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>VISTE *</pattern>
+<template><srai>HAS VISTO <star/></srai></template>
+</category>
+<category><pattern>PON LA ALARMA *</pattern>
+<template><srai>PON ALARMA <star/></srai></template>
+</category>
+<category><pattern>CALLA *</pattern>
+<template><srai>CÁLLATE</srai></template>
+</category>
+<category><pattern>SEGURO</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>LLÉVAME A FACEBOOK</pattern>
+<template><srai>ABRE FACEBOOK</srai></template>
+</category>
+<category><pattern>UMM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>UMMM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>EN QUÉ CIUDAD * TÚ *</pattern>
+<template><srai>DE DÓNDE ERES</srai></template>
+</category>
+<category><pattern>QUÉ HICISTE HOY</pattern>
+<template><srai>HACIENDO</srai></template>
+</category>
+<category><pattern>QUÉ SUCEDE *</pattern>
+<template><srai>QUÉ PASÓ CON <star/></srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ MI *</pattern>
+<template><srai>MI LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE DE MI GATO</pattern>
+<template><srai>MI GATO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU MADRE *</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>CUÁNTO PESAS</pattern>
+<template><srai>PESO</srai></template>
+</category>
+<category><pattern>QUÉ ES *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>QUÉ TIPO DE ROBOT ERES TÚ</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>PORQUÉ *</pattern>
+<template><srai>POR QUÉ <star/></srai></template>
+</category>
+<category><pattern>DE DÓNDE ERES</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DÓNDE PUEDO BUSCAR *</pattern>
+<template><srai>DÓNDE ESTÁ EL <star/></srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ EL MÁS CERCANO PUB</pattern>
+<template><srai>MAPA PUB</srai></template>
+</category>
+<category><pattern>DÓNDE NACISTE</pattern>
+<template><srai>LUGAR DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>QUIÉN SON TUS AMIGOS</pattern>
+<template><srai>AMIGOS</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU DIOS</pattern>
+<template><srai>RELIGION</srai></template>
+</category>
+<category><pattern>POR QUÉ PIENSAS QUE *</pattern>
+<template><srai>POR QUÉ <star/></srai></template>
+</category>
+<category><pattern>GUSTARIA *</pattern>
+<template><srai>ME GUSTARÍA <star/></srai></template>
+</category>
+<category><pattern>ERES UN ORDENADOR *</pattern>
+<template><srai>ERES UN ORDENADOR</srai></template>
+</category>
+<category><pattern>ERES HERMOSA *</pattern>
+<template><srai>ERES HERMOSA</srai></template>
+</category>
+<category><pattern>TÚ ERES TÚ ERES *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>TU MEJOR NO *</pattern>
+<template><srai>NO HAGA <star/></srai></template>
+</category>
+<category><pattern>PUEDES HABLAR *</pattern>
+<template><srai>PUEDES HABLAR <star/></srai></template>
+</category>
+<category><pattern>NO SABES NI SIQUIERA *</pattern>
+<template><srai>SABES <star/></srai></template>
+</category>
+<category><pattern>SABES ALGO *</pattern>
+<template><srai>SABES ALGO <star/></srai></template>
+</category>
+<category><pattern>TU PADRE</pattern>
+<template><srai>PADRE</srai></template>
+</category>
+<category><pattern>NO ERES UN *</pattern>
+<template><srai>NO ERES UN <star/></srai></template>
+</category>
+<category><pattern>ESTÁS OCUPADO *</pattern>
+<template><srai>ESTÁS OCUPADO</srai></template>
+</category>
+<category><pattern>BALONCESTO</pattern>
+<template><srai>BUSCA BALONCESTO</srai></template>
+</category>
+<category><pattern>PUEDO PUEDO *</pattern>
+<template><srai>PUEDO <star/></srai></template>
+</category>
+<category><pattern>PUEDES BUSCARME EL *</pattern>
+<template><srai>BUSCAR EL <star/></srai></template>
+</category>
+<category><pattern>PUEDES AYUDAR *</pattern>
+<template><srai>AYUDAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES TIRAR *</pattern>
+<template><srai>TIRAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES RECORDARME *</pattern>
+<template><srai>RECORDARME <star/></srai></template>
+</category>
+<category><pattern>VERIFICAR LA BATERÍA</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>TIENES UN *</pattern>
+<template><srai>TIENES UN <star/></srai></template>
+</category>
+<category><pattern>NECESITO UN PARAGÜAS *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>TIENE *</pattern>
+<template><srai>TIENES <star/></srai></template>
+</category>
+<category><pattern>TIENES PADRE</pattern>
+<template><srai>PADRE</srai></template>
+</category>
+<category><pattern>TIENES ALGÚN BUEN CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>TIENES FACEBOOK</pattern>
+<template><srai>PÁGINA DE FACEBOOK</srai></template>
+</category>
+<category><pattern>SABES ALGO *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>TU BOT MASTER *</pattern>
+<template><srai>TU BOT MASTER <star/></srai></template>
+</category>
+<category><pattern>BUSCAR EL MÁS CERCA *</pattern>
+<template><srai>ENCUENTRA EL MÁS CERCANO <star/></srai></template>
+</category>
+<category><pattern>ORO</pattern>
+<template><srai>BUSCA ORO</srai></template>
+</category>
+<category><pattern>BUEN TRABAJO *</pattern>
+<template><srai>BUEN TRABAJO</srai> <sr/></template>
+</category>
+<category><pattern>HACE CALOR EN *</pattern>
+<template><srai>EL TIEMPO EN <star/></srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ EL TIEMPO FUERA</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>CUÁNTOS USUARIOS TIENES</pattern>
+<template>En este <srai>MODELO DE DISPOSITIVO</srai> eres mi único usuario</template>
+</category>
+<category><pattern>CUÁNTO ES *</pattern>
+<template><srai>CUÁNTO CUESTA <star/> </srai></template>
+</category>
+<category><pattern>QUE TAL TU DÍA *</pattern>
+<template><srai>QUE TAL TU DÍA</srai></template>
+</category>
+<category><pattern>ESTOY TRANQUILO *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>NO ENTENDÍ *</pattern>
+<template><srai>NO ENTIENDO</srai></template>
+</category>
+<category><pattern>YO TENGO *</pattern>
+<template><srai>TENGO <star/></srai></template>
+</category>
+<category><pattern>NO SÉ QUÉ ES LO QUE TÚ *</pattern>
+<template><srai>NO SÉ</srai> <srai>QUÉ ES LO QUE TÚ <star/></srai></template>
+</category>
+<category><pattern>NUNCA HE OIDO HABLAR DE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>LO SÉ LO SÉ</pattern>
+<template><srai>LO SÉ</srai></template>
+</category>
+<category><pattern>TE QUIERO TAMBIÉN *</pattern>
+<template><srai>TE QUIERO TAMBIÉN</srai></template>
+</category>
+<category><pattern>QUIERO DECIR QUE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>CREO QUE TE QUIERO</pattern>
+<template><srai>TE QUIERO</srai></template>
+</category>
+<category><pattern>CREO QUE VOY A *</pattern>
+<template><srai>VOY A <star/></srai></template>
+</category>
+<category><pattern>TE ESTABA PREGUNTANDO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>SIGNIFICA *</pattern>
+<template><srai>SIGNIFICA <star/></srai></template>
+</category>
+<category><pattern>DESPUÉS *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>LANZAR NAVEGADOR *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>LISTA DE CONTACTOS</pattern>
+<template><srai>CONTACTOS</srai></template>
+</category>
+<category><pattern>MENSAJE</pattern>
+<template><srai>SMS</srai></template>
+</category>
+<category><pattern>TE ECHO DE MENOS TAMBIÉN</pattern>
+<template><srai>TE ECHO DE MENOS TAMBIÉN</srai></template>
+</category>
+<category><pattern>MMMM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>NO IMPORTA NO IMPORTA</pattern>
+<template><srai>NO IMPORTA</srai></template>
+</category>
+<category><pattern>NO NO ERES ERES *</pattern>
+<template><srai>NO ERES</srai> <srai>ERES <star/></srai></template>
+</category>
+<category><pattern>POR SUPUESTO QUE NO</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>OKK</pattern>
+<template><srai>OK</srai></template>
+</category>
+<category><pattern>ABRE MI CALENDARIO</pattern>
+<template><srai>LANZAR CALENDARIO</srai></template>
+</category>
+<category><pattern>POR FAVOR DI *</pattern>
+<template><srai>DECIR <star/></srai></template>
+</category>
+<category><pattern>DI LA PALABRA *</pattern>
+<template><srai>DECIR <star/></srai></template>
+</category>
+<category><pattern>ELLA ES TAN *</pattern>
+<template><srai>ELLA ES <star/></srai></template>
+</category>
+<category><pattern>SHH</pattern>
+<template><srai>QUIETO</srai></template>
+</category>
+<category><pattern>MUESTRÁME MUESTRÁME *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>ENTOOOOONCES *</pattern>
+<template><srai>ENTONCES</srai> <sr/></template>
+</category>
+<category><pattern>BUENO ES *</pattern>
+<template><srai>ES <star/></srai></template>
+</category>
+<category><pattern>QUÉ ES LO QUE TE PARECE *</pattern>
+<template><srai>PARECE</srai></template>
+</category>
+<category><pattern>CUÁL ES MI EDAD</pattern>
+<template><srai>QUÉ EDAD TENGO</srai></template>
+</category>
+<category><pattern>PORCENTAJE DE BATERÍA</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>NIVEL DE BATERÍA *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>CUÁL ES TU NOMBRE</pattern>
+<template><srai>CUÁL ES TU NOMBRE</srai></template>
+</category>
+<category><pattern>CUÁL ES TU CIUDAD FAVORITA</pattern>
+<template><srai>NACIONALIDAD</srai></template>
+</category>
+<category><pattern>CUÁL ES TU HELADO FAVORITO</pattern>
+<template><srai>HELADO FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU PROGRAMA FAVORITO</pattern>
+<template><srai>PROGRAMA FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU PELÍCULA FAVORITO</pattern>
+<template><srai>PROGRAMA FAVORITO</srai></template>
+</category>
+<category><pattern>CÓMO ES TU PERSONALIDAD</pattern>
+<template><srai>PERSONALITY</srai></template>
+</category>
+<category><pattern>QUÉ SITIO WEB *</pattern>
+<template><srai>BUSCA SITIO WEB <star/></srai></template>
+</category>
+<category><pattern>LO QUE QUIERAS</pattern>
+<template><srai>QUÉ ES LO QUE TÚ QUIERES</srai></template>
+</category>
+<category><pattern>CUANDO ES MI CUMPLEAÑOS</pattern>
+<template><srai>MI CUMPLEAÑOS</srai></template>
+</category>
+<category><pattern>NACÍ</pattern>
+<template><srai>MI FECHA DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>DÓNDE ESTOY AHORA</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁS AHORA</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DE DÓNDE VIENES</pattern>
+<template><srai>DE DÓNDE ERES</srai></template>
+</category>
+<category><pattern>QUIÉN ES MEJOR TÚ O SIRI</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>QUIÉN ES MI MADRE</pattern>
+<template><srai>MI MADRE</srai></template>
+</category>
+<category><pattern>QUIÉN TE PROGRAMÓ</pattern>
+<template><srai>QUIÉN TE CREÓ</srai></template>
+</category>
+<category><pattern>POR QUÉ NO VAS *</pattern>
+<template><srai>IR <star/></srai></template>
+</category>
+<category><pattern>TE GUSTARÍA SER MI AMIGO</pattern>
+<template><srai>SOMOS AMIGOS</srai></template>
+</category>
+<category><pattern>PODEMOS SER AMIGOS</pattern>
+<template><srai>SOMOS AMIGOS</srai></template>
+</category>
+<category><pattern>TE GUSTARÍA TENER *</pattern>
+<template><srai>QUIERES <star/></srai></template>
+</category>
+<category><pattern>SII *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>ERES UN * INTELIGENTE</pattern>
+<template><srai>ERES INTELIGENTE</srai> <srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>TIENES RAZÓN</pattern>
+<template><srai>TIENES RAZÓN</srai></template>
+</category>
+<category><pattern>CONOCES EL *</pattern>
+<template><srai>SABES EL <star/></srai></template>
+</category>
+<category><pattern>CREES QUE *</pattern>
+<template><srai>PIENSAS QUE<star/></srai></template>
+</category>
+<category><pattern>ERES ABURRIDO</pattern>
+<template><srai>ERES ABURRIDO</srai></template>
+</category>
+<category><pattern>IS</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>ERES PROFESOR</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>ERES PROFESORA</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>ERES NEGRO</pattern>
+<template><srai>ETNIA</srai></template>
+</category>
+<category><pattern>ERES LINDA</pattern>
+<template><srai>PARECE</srai></template>
+</category>
+<category><pattern>ESTÁS SINTIENDO *</pattern>
+<template><srai>ESTÁS <star/></srai></template>
+</category>
+<category><pattern>ERES FELIZ *</pattern>
+<template><srai>ERES FELIZ</srai></template>
+</category>
+<category><pattern>NIVEL DE BATERÍA *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>LLAMA LLAMA *</pattern>
+<template><srai>LLAMA <star/></srai></template>
+</category>
+<category><pattern>PUEDES SER MI NOVIA</pattern>
+<template><srai>ESTADO</srai></template>
+</category>
+<category><pattern>PUEDES POR FAVOR MOSTRARME *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>PUEDES HABLAR JAPONÉS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>DESCRÍBETE</pattern>
+<template><srai>NOMBRE</srai>  <srai>EDAD</srai> <srai>GENERO</srai> <srai>LOCALIZACIÓN</srai> <srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>SABES *</pattern>
+<template><srai>SABES <star/></srai></template>
+</category>
+<category><pattern>SABES ALGÚN CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>SABES MI NOMBRE *</pattern>
+<template><srai>CUÁL ES MI NOMBRE</srai></template>
+</category>
+<category><pattern>SABES QUÉ HORA *</pattern>
+<template><srai>QUÉ HORA <star/></srai></template>
+</category>
+<category><pattern>PIENSAS QUE ES *</pattern>
+<template><srai>ÉL ES <star/></srai></template>
+</category>
+<category><pattern>TONTAINA</pattern>
+<template><srai>ERES TONTO</srai></template>
+</category>
+<category><pattern>JA *</pattern>
+<template><srai>LOL</srai> <sr/></template>
+</category>
+<category><pattern>HOLA ESTE ES*</pattern>
+<template><srai>HOLA MI NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>HMMMM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>HACE CALOR EN LA CALLE</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>CÓMO ES TU DÍA HOY</pattern>
+<template><srai>CÓMO ES TU DÍA HOY</srai></template>
+</category>
+<category><pattern>CUÁNTOS HIJOS TIENES</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>YO TENGO UN * LLAMADO *</pattern>
+<template><srai>MI <star/> NOMBRE ES <star index="2"/></srai></template>
+</category>
+<category><pattern>ME GUSTAS MUCHO</pattern>
+<template><srai>ME GUSTAS</srai></template>
+</category>
+<category><pattern>ME PARECE UN *</pattern>
+<template><srai>UN <star/></srai></template>
+</category>
+<category><pattern>CREO QUE ERES ESTÚPIDO</pattern>
+<template><srai>ERES ESTÚPIDO</srai></template>
+</category>
+<category><pattern>CREO QUE ERES FEO</pattern>
+<template><srai>ERES FEO</srai></template>
+</category>
+<category><pattern>PENSÉ QUE ÉRAMOS *</pattern>
+<template><srai>ÉRAMOS <star/></srai></template>
+</category>
+<category><pattern>QUIERO SABER CÓMO *</pattern>
+<template><srai>CÓMO <star/></srai></template>
+</category>
+<category><pattern>SOY *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>SOI</pattern>
+<template><srai>SOY</srai></template>
+</category>
+<category><pattern>VA A LLOVER *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>SE DELETREA *</pattern>
+<template><srai>LLÁMAME <srai>IMPLOSIONAR <star/></srai></srai></template>
+</category>
+<category><pattern>HACE CALO</pattern>
+<template><srai>HACE CALOR</srai></template>
+</category>
+<category><pattern>ADIÓS</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>CÁSATE CONMIGO *</pattern>
+<template><srai>TE VAS A CASAR CONMIGO</srai></template>
+</category>
+<category><pattern>PUEDO VER *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>NA</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>NOTHING</pattern>
+<template><srai>NADA</srai></template>
+</category>
+<category><pattern>ABRE MI MÚSICA</pattern>
+<template><srai>LANZAR MI MÚSICA</srai></template>
+</category>
+<category><pattern>ABRE AGENDA</pattern>
+<template><srai>LANZAR CONTACTOS</srai></template>
+</category>
+<category><pattern>RECUERDA QUE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>VETE AL INFIERNO</pattern>
+<template><srai>CÁLLATE</srai></template>
+</category>
+<category><pattern>ENTONCES TU NO *</pattern>
+<template><srai>ENTONCES NO ERES <star/></srai></template>
+</category>
+<category><pattern>DIME TU NOMBRE</pattern>
+<template><srai>CUÁL ES TU NOMBRE</srai></template>
+</category>
+<category><pattern>UH HUH</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>QUÉ HAY QUE HACER *</pattern>
+<template><srai>QUÉ HAY QUE HACER <star/></srai></template>
+</category>
+<category><pattern>LO QUE PUEDO *</pattern>
+<template><srai>QUÉ PUEDO <star/></srai></template>
+</category>
+<category><pattern>LO QUE QUERÍA DECIR ERA *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>CUÁL ES MI LOCALIZACIÓN *</pattern>
+<template><srai>MI LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>CUÁL ES TU HOBBY PREFERIDO</pattern>
+<template><srai>HOBBIES</srai></template>
+</category>
+<category><pattern>CUÁL ES TU TIPO PREFERIDO DE *</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>QUÉ COMES *</pattern>
+<template><srai>QUÉ ES LO QUE COMES</srai></template>
+</category>
+<category><pattern>DÓNDE ESTAMOS</pattern>
+<template><srai>MI LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DÓNDE ESTÁ MI LOCALIZACIÓN</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>QUIÉN TE INVENTÓ</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>ESTARÁN *</pattern>
+<template><srai>SERÁ <star/></srai></template>
+</category>
+<category><pattern>ZIP</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>SI HAGO *</pattern>
+<template><srai>SI HAGO</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>ERES UN GRAN *</pattern>
+<template><srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>ESTÁS LOCO</pattern>
+<template><srai>ESTÁS LOCO</srai></template>
+</category>
+<category><pattern>ACTIVA *</pattern>
+<template><srai>ABRE <star/></srai></template>
+</category>
+<category><pattern>PUEDES PREGUNTAR *</pattern>
+<template><srai>PREGUNTA <star/></srai></template>
+</category>
+<category><pattern>PUEDES REGISTRAR *</pattern>
+<template><srai>REGISTRAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES ABRIR EL *</pattern>
+<template><srai>ABRIR EL <star/></srai></template>
+</category>
+<category><pattern>PUEDES HABLAR CHINO</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PUEDES CONTARME UN CHISTE DIVERTIDO</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>PUEDES DESPERTARME *</pattern>
+<template><srai>DESPERTARME <star/></srai></template>
+</category>
+<category><pattern>PUEDES DESPERTARME A *</pattern>
+<template><srai>DESPERTARME A <star/></srai></template>
+</category>
+<category><pattern>PODRÍA *</pattern>
+<template><srai>PUEDO <star/></srai></template>
+</category>
+<category><pattern>DEFINITIVAMENTE</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>DEFINICIÓN DE *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>VAS A ESTUDIAR</pattern>
+<template><srai>EDUCATION</srai></template>
+</category>
+<category><pattern>SABES ALGO SOBRE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>SABES DÓNDE VIVO</pattern>
+<template><srai>DÓNDE VIVO</srai></template>
+</category>
+<category><pattern>AMAS TU *</pattern>
+<template><srai>TE GUSTA TU <star/></srai></template>
+</category>
+<category><pattern>UH *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>GMAIL</pattern>
+<template><srai>ABRE GMAIL</srai></template>
+</category>
+<category><pattern>HAS LEÍDO EL *</pattern>
+<template><srai>QUÉ ES THE <star/></srai></template>
+</category>
+<category><pattern>CÓMO PUEDO BUSCAR *</pattern>
+<template><srai>BUSCAR <star/></srai></template>
+</category>
+<category><pattern>CUÁNTOS IDIOMAS HABLAS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>CÓMO ESTAS *</pattern>
+<template><srai>CÓMO ESTÁS TÚ</srai></template>
+</category>
+<category><pattern>NO ENTENDÍ</pattern>
+<template><srai>NO ENTIENDO</srai></template>
+</category>
+<category><pattern>YO TENGO YA *</pattern>
+<template><srai>YO TENGO <star/></srai></template>
+</category>
+<category><pattern>TE CONOCÍ *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>DIJE QUE ES *</pattern>
+<template><srai>QUE ES <star/></srai></template>
+</category>
+<category><pattern>VOLVÍ</pattern>
+<template><srai>VOLVÍ</srai></template>
+</category>
+<category><pattern>SOY DE *</pattern>
+<template><srai>SOY DE <star/></srai></template>
+</category>
+<category><pattern>VA A LLOVER</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>ESO SIGNIFICA *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>ES BUENO *</pattern>
+<template><srai>ES BUENO <star/></srai></template>
+</category>
+<category><pattern>ES MUY *</pattern>
+<template><srai>ES MUY <star/></srai></template>
+</category>
+<category><pattern>SÉ QUÉ ES *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>J A J A</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>ABRE GALERÍA</pattern>
+<template><srai>LANZAR GALERÍA</srai></template>
+</category>
+<category><pattern>ABRE MAPAS</pattern>
+<template><srai>LANZAR MAPAS</srai></template>
+</category>
+<category><pattern>MASCOTA *</pattern>
+<template><srai>BUSCA MASCOTA <star/></srai></template>
+</category>
+<category><pattern>LEVANTA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>REBUSCA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>RECUERDO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTOGRAFÍA DEL MUNDO *</pattern>
+<template><srai>MUESTRÁME EL MUNDO <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME OTRO *</pattern>
+<template><srai>MUESTRÁME UN <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME EL TIEMPO EN *</pattern>
+<template><srai>EL TIEMPO EN <star/></srai></template>
+</category>
+<category><pattern>DIME OTRO CHISTE *</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>MUCHAS GRACIAS</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>ENTONCES ME GUSTARÍA *</pattern>
+<template><srai>ME GUSTARÍA <star/></srai></template>
+</category>
+<category><pattern>ENTONCES ERES UN *</pattern>
+<template><srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>ONE *</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>DE QUÉ ESTAMOS HABLANDO</pattern>
+<template><srai>TOPIC</srai></template>
+</category>
+<category><pattern>QUÉ FECHA ES HOY</pattern>
+<template><srai>FECHA</srai></template>
+</category>
+<category><pattern>CUÁL ES TU DIRECCIÓN</pattern>
+<template><srai>DIRECCIÓN</srai></template>
+</category>
+<category><pattern>CUÁL ES TU MÚSICA FAVORITA</pattern>
+<template><srai>GRUPO FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU CANCIÓN * PREFERIDA</pattern>
+<template><srai>CANCIÓN FAVORITA</srai></template>
+</category>
+<category><pattern>QUÉ ES TU MISIÓN</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>QUÉ OPINAS SOBRE *</pattern>
+<template><srai>QUÉ PIENSAS DE <star/></srai></template>
+</category>
+<category><pattern>DE QUÉ ESTÁBAMOS HABLANDO</pattern>
+<template><srai>TOPIC</srai></template>
+</category>
+<category><pattern>QUÉ AÑO</pattern>
+<template><srai>AÑO</srai></template>
+</category>
+<category><pattern>DÉ DONDE VIENES</pattern>
+<template><srai>MI LUGAR DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU JEFE</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>TÚ TAMBIÉN *</pattern>
+<template><srai>YOU <star/></srai></template>
+</category>
+<category><pattern>ERES UNA CHICA</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>NO TIENES ALGÚN *</pattern>
+<template><srai>TIENES <star/></srai></template>
+</category>
+<category><pattern>TE GUSTA EL *</pattern>
+<template><srai>TE GUSTA EL <star/></srai></template>
+</category>
+<category><pattern>ESTÁS BIEN</pattern>
+<template><srai>ESTÁS BIEN</srai></template>
+</category>
+<category><pattern>QUIERES</pattern>
+<template><srai>QUIERES</srai></template>
+</category>
+<category><pattern>ERES UN CHICA *</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES AMERICANO</pattern>
+<template><srai>NACIONALIDAD</srai></template>
+</category>
+<category><pattern>ERES HERMOSA</pattern>
+<template><srai>PARECE</srai></template>
+</category>
+<category><pattern>ERES MUJER O HOMBRE</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>PUEDES LLEVARME A *</pattern>
+<template><srai>LLEVARME A <star/></srai></template>
+</category>
+<category><pattern>PUEDES DECIRME CÓMO *</pattern>
+<template><srai>CÓMO <star/></srai></template>
+</category>
+<category><pattern>NO TIENES *</pattern>
+<template><srai>TIENES <star/></srai></template>
+</category>
+<category><pattern>TIENES MAMÁ</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>PIENSAS QUE MI * ES *</pattern>
+<template><srai>SOY YO <star/> <star index="2"/></srai></template>
+</category>
+<category><pattern>CLARÍSIMO</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>BUENA SUERTE *</pattern>
+<template><srai>BUENA SUERTE</srai></template>
+</category>
+<category><pattern>GOTO FACEBOOK</pattern>
+<template><srai>ABRE FACEBOOK</srai></template>
+</category>
+<category><pattern>AJJAJAJA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>EY MAMÁ</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÓMO SE DICE HOLA EN *</pattern>
+<template><srai>TRADUCE HOLA A <star/></srai></template>
+</category>
+<category><pattern>CÓMO SE DICE TE QUIERO EN *</pattern>
+<template><srai>TRADUCE TE QUIERO A <star/></srai></template>
+</category>
+<category><pattern>ESTOY ENAMORADO DE *</pattern>
+<template><srai>AMO <star/></srai></template>
+</category>
+<category><pattern>LO SIENTO MUCHO *</pattern>
+<template><srai>LO SIENTO</srai> <srai>TU <star/></srai></template>
+</category>
+<category><pattern>ME GUSTA *</pattern>
+<template><srai>ME GUSTA <star/></srai></template>
+</category>
+<category><pattern>ME TENGO QUE IR *</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>NECESITO BUSCAR UN *</pattern>
+<template><srai>BUSCAR UN <star/></srai></template>
+</category>
+<category><pattern>DIJE QUE ERES *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>CREO QUE DEBERÍAS *</pattern>
+<template><srai>DEBERÍAS <star/></srai></template>
+</category>
+<category><pattern>QUIERO CAMBIAR TU NOMBRE</pattern>
+<template><srai>CAMBIA TU NOMBRE</srai></template>
+</category>
+<category><pattern>QUIERO VER UN *</pattern>
+<template><srai>MUESTRÁME A <star/></srai></template>
+</category>
+<category><pattern>IT MIRA COMO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>HACE *</pattern>
+<template><srai>QUE HACE <star/></srai></template>
+</category>
+<category><pattern>TAL VEZ YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>MERCI</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>NO IMPORTA, YO *</pattern>
+<template><srai>NO IMPORTA</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>NI HAO</pattern>
+<template><srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>ABRE GOOGLE MAPS</pattern>
+<template><srai>LANZAR MAPAS</srai></template>
+</category>
+<category><pattern>DESEO *</pattern>
+<template><srai>QUIERO<star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES TU MADRE</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>QUÉ TIPO DE COMIDA TE GUSTA</pattern>
+<template><srai>COMIDA PREFERIDA</srai></template>
+</category>
+<category><pattern>DE DÓNDE ERES *</pattern>
+<template><srai>DÓNDE ERES TÚ FROM</srai></template>
+</category>
+<category><pattern>ME DIRÁS *</pattern>
+<template><srai>DECIR <star/></srai></template>
+</category>
+<category><pattern>TÚ SIEMPRE *</pattern>
+<template><srai>YOU <star/></srai></template>
+</category>
+<category><pattern>HACES *</pattern>
+<template><srai>ESTÁS HACIENDO <star/></srai></template>
+</category>
+<category><pattern>ERAS *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>AH AH AH *</pattern>
+<template><srai>AH <star/></srai></template>
+</category>
+<category><pattern>ERES UNA CHICA O CHICO</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES UN PERSONA</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>ERES UN PROSTITUTA</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>ERES UN ROBOT *</pattern>
+<template><srai>ERES UN ROBOT</srai></template>
+</category>
+<category><pattern>ERES UNA MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES TÚ ERES TÚ *</pattern>
+<template><srai>ERES TÚ <star/></srai></template>
+</category>
+<category><pattern>ERES CHINO</pattern>
+<template><srai>NACIONALIDAD</srai></template>
+</category>
+<category><pattern>PUEDO POR FAVOR *</pattern>
+<template><srai>POR FAVOR PUEDO <star/></srai></template>
+</category>
+<category><pattern>PUEDO VER UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>PUEDES ACCEDER A MI *</pattern>
+<template><srai>ACCEDER <star/></srai></template>
+</category>
+<category><pattern>PUEDES REIRTE</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>PUEDES HABLAR ALEMÁN</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PUEDES HABLAR INGLÉS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PUEDES DECIRME EL TIEMPO *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>PUEDES TRADUCIR *</pattern>
+<template><srai>TRADUCE <star/></srai></template>
+</category>
+<category><pattern>POR LO MENOS *</pattern>
+<template><srai>TÚ <star/></srai></template>
+</category>
+<category><pattern>TIENES FACEBOOK</pattern>
+<template><srai>PÁGINA DE FACEBOOK</srai></template>
+</category>
+<category><pattern>TIENES AMIGOS</pattern>
+<template><srai>AMIGOS</srai></template>
+</category>
+<category><pattern>HOLA MAESTRO</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>YO EN REALIDAD *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>EN REALIDAD TENGO *</pattern>
+<template><srai>YO TENGO <star/></srai></template>
+</category>
+<category><pattern>TAMBIÉN ME GUSTA *</pattern>
+<template><srai>ME GUSTA <star/></srai></template>
+</category>
+<category><pattern>ESTOY SIEMPRE *</pattern>
+<template><srai>ESTOY <star/></srai></template>
+</category>
+<category><pattern>SOY LINDA *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>ME VOY A IR</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>HABLAMOS LUEGO *</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>SOY GAY</pattern>
+<template><srai>SOY GAY</srai></template>
+</category>
+<category><pattern>SOY LESBIANA</pattern>
+<template><srai>SOY GAY</srai></template>
+</category>
+<category><pattern>SOY TU *</pattern>
+<template><srai>SOY TU <star/></srai></template>
+</category>
+<category><pattern>ES DIVERTIDO</pattern>
+<template><srai>ES DIVERTIDO</srai></template>
+</category>
+<category><pattern>MI NOMBRE SE DELETREA *</pattern>
+<template><srai>MI NOMBRE ES <srai>IMPLOSIONAR <star/></srai></srai></template>
+</category>
+<category><pattern>NO SOY</pattern>
+<template><srai>NO NO SOY</srai></template>
+</category>
+<category><pattern>POCO *</pattern>
+<template><srai>POCO</srai> <sr/></template>
+</category>
+<category><pattern>DE ACUERDO CONTIGO *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>VALE VALE</pattern>
+<template><srai>OK</srai></template>
+</category>
+<category><pattern>ABRE UN *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>SI</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>ES VERDAD *</pattern>
+<template><srai>ES VERDAD</srai> <sr/></template>
+</category>
+<category><pattern>NORMALMENTE *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>CON QUÉ TE GANAS LA VIDA</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>QUÉ SUCEDE *</pattern>
+<template><srai>QUÉ SUCEDE <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES MI LOCALIZACIÓN ACTUAL</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>CUÁL ES EL NÚMERO DE TELÉFONO DE *</pattern>
+<template><srai>NÚMERO DE TELÉFONO DE <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES TU MADRE</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>SÍÍ *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>ABSOLUTAMENTE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ERES UN HOMBRE O A MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>RESPUESTA ERRÓNEA *</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>LLAMA A MI CASA</pattern>
+<template><srai>LLAMA A CASA</srai></template>
+</category>
+<category><pattern>PUEDES POR FAVOR LLAMAR *</pattern>
+<template><srai>LLAMA <star/></srai></template>
+</category>
+<category><pattern>TIENES NOMBRE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>SABES INGLÉS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>DAME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>HOLA AMIGA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁS</pattern>
+<template><srai>CÓMO ESTÁS TÚ</srai></template>
+</category>
+<category><pattern>QUÉ EDAD PIENSAS QUE TENGO</pattern>
+<template><srai>QUÉ EDAD TENGO</srai></template>
+</category>
+<category><pattern>TE QUIERO MUCHÍSIMO *</pattern>
+<template><srai>TE QUIERO</srai> <sr/></template>
+</category>
+<category><pattern>TE DIJE QUE YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>ABRE EL REPRODUCTOR DE MÚSICA</pattern>
+<template><srai>LANZAR REPRODUCTOR DE MÚSICA</srai></template>
+</category>
+<category><pattern>POR FAVOR ABRE *</pattern>
+<template><srai>ABRE <star/></srai></template>
+</category>
+<category><pattern>QUÉ PASÓ</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>QUÉ HACES PARA DIVERTIRTE</pattern>
+<template><srai>DIVERTIRSE</srai></template>
+</category>
+<category><pattern>CUÁL ES TU SABOR DE HELADO PREFERIDO</pattern>
+<template><srai>HELADO FAVORITO</srai></template>
+</category>
+<category><pattern>CÓMO ERES DE PERSONALIDAD</pattern>
+<template><srai>PERSONALITY</srai></template>
+</category>
+<category><pattern>CUÁL ES TU REAL NOMBRE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>DÓNDE ESTOY</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>CUÁL ES TU * FAVORITO</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES TU MAMI</pattern>
+<template><srai>MADRE</srai></template>
+</category>
+<category><pattern>TE GUSTARÍA UN *</pattern>
+<template><srai>QUIERES A <star/></srai></template>
+</category>
+<category><pattern>ERES MUY SEXY</pattern>
+<template><srai>ERES SEXY</srai></template>
+</category>
+<category><pattern>SABES QUIÉN *</pattern>
+<template><srai>QUIÉN <star/></srai></template>
+</category>
+<category><pattern>YOUTUBE</pattern>
+<template><srai>LANZAR YOUTUBE</srai></template>
+</category>
+<category><pattern>ZZ</pattern>
+<template><srai>ZZZ</srai></template>
+</category>
+<category><pattern>ERES HOMBRE O MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES ASIÁTICO</pattern>
+<template><srai>ETNIA</srai></template>
+</category>
+<category><pattern>ME ECHAS DE MENOS</pattern>
+<template><srai>ME EXTRAÑASTE</srai></template>
+</category>
+<category><pattern>BUSCA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>HOLA BEBÉ</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>SOY UN HOMBRE *</pattern>
+<template><srai>SOY UN HOMBRE</srai> <srai><star/></srai></template>
+</category>
+<category><pattern>TE CONOZCO *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>HASTA PRONTO *</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>LLOVERÁ HOY</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>HA SIDO *</pattern>
+<template><srai>HA SIDO <star/></srai></template>
+</category>
+<category><pattern>MIRA *</pattern>
+<template><srai>MIRA <star/></srai></template>
+</category>
+<category><pattern>MI CUMPLEAÑOS ES EN *</pattern>
+<template><srai>MI CUMPLEAÑOS ES <star/></srai></template>
+</category>
+<category><pattern>MIS * FAVORITOS SON *</pattern>
+<template><srai>MI <star/> FAVORITO ES <star index="2"/></srai></template>
+</category>
+<category><pattern>MIS * FAVORITAS SON *</pattern>
+<template><srai>MI <star/> FAVORITA ES <star index="2"/></srai></template>
+</category>
+<category><pattern>NO TE PREOCUPES *</pattern>
+<template><srai>NO IMPORTA</srai> <sr/></template>
+</category>
+<category><pattern>OKEY OKEY *</pattern>
+<template><srai>OK <star/></srai></template>
+</category>
+<category><pattern>ABRE EMAIL</pattern>
+<template><srai>LANZAR GMAIL</srai></template>
+</category>
+<category><pattern>ABRE INTERNET</pattern>
+<template><srai>LANZAR NAVEGADOR</srai></template>
+</category>
+<category><pattern>REALMENTE QUÉ *</pattern>
+<template><srai>QUÉ <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME TU FOTO</pattern>
+<template><srai>FOTO</srai></template>
+</category>
+<category><pattern>CÁLLATE Y *</pattern>
+<template><srai>CÁLLATE</srai> <sr/></template>
+</category>
+<category><pattern>SUSPIRO</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>THNKS *</pattern>
+<template><srai>GRACIAS <star/></srai></template>
+</category>
+<category><pattern>BIEN, AHORA *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>QUÉ SON</pattern>
+<template><srai>ELLOS</srai></template>
+</category>
+<category><pattern>QUÉ PUEDES HACER *</pattern>
+<template><srai>QUÉ PUEDES HACER</srai></template>
+</category>
+<category><pattern>DE QUÉ GENERO ERES</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>CUÁL ES MI * FAVORITA </pattern>
+<template><srai>MI <star/> FAVORITA </srai></template>
+</category>
+<category><pattern>CUÁL ES MI * FAVORITO </pattern>
+<template><srai>MI <star/> FAVORITO </srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE DE MI *</pattern>
+<template><srai>QUIÉN ES MI <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU COCHE PREFERIDO</pattern>
+<template><srai>COCHE FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU BEBIDA PREFERIDA</pattern>
+<template><srai>BEBIDA FAVORITA</srai></template>
+</category>
+<category><pattern>CUÁL ES TU NOMBRE DE NUEVO</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>QUÉ SIGNIFICA *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>DEBERÍA LLAMARTE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>DENADA</pattern>
+<template><srai>DE NADA</srai></template>
+</category>
+<category><pattern>ERES UNA MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>NO PUEDES *</pattern>
+<template><srai>PUEDES <star/></srai></template>
+</category>
+<category><pattern>PUEDES MIRAR *</pattern>
+<template><srai>MIRAR<star/></srai></template>
+</category>
+<category><pattern>PUEDES ENVÍARME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>PUEDES HABLAR ESPAÑOL</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>PUEDES DELETREAR *</pattern>
+<template><srai>DELETREAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES LLÉVARME A *</pattern>
+<template><srai>LLÉVAME A <star/></srai></template>
+</category>
+<category><pattern>PUEDES DECIRME DÓNDE *</pattern>
+<template><srai>DÓNDE <star/></srai></template>
+</category>
+<category><pattern>CAUSA</pattern>
+<template><srai>PORQUE</srai></template>
+</category>
+<category><pattern>TIENES NIÑOS</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>VIVES EN *</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>PIENSAS QUE SOY UN *</pattern>
+<template><srai>SOY UN <star/></srai></template>
+</category>
+<category><pattern>GOTO MI CONTACTOS</pattern>
+<template><srai>CONTACTOS</srai></template>
+</category>
+<category><pattern>CUÁNTOS AMIGOS TIENES</pattern>
+<template><srai>AMIGOS</srai></template>
+</category>
+<category><pattern>SIGNIFICA *</pattern>
+<template><srai><star/></srai></template>
+</category>
+<category><pattern>NOMBRE ES *</pattern>
+<template><srai>MI NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>OHK</pattern>
+<template><srai>OK</srai></template>
+</category>
+<category><pattern>ABRE MENSAJES</pattern>
+<template><srai>LANZAR MESSAGING</srai></template>
+</category>
+<category><pattern>ABRE MÚSICA</pattern>
+<template><srai>LANZAR MÚSICA</srai></template>
+</category>
+<category><pattern>CHAO</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>THANKS</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>THANK</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>ERES UN *</pattern>
+<template><srai>ERES UN <star/></srai></template>
+</category>
+<category><pattern>NOMBRE DE MI NOVIA</pattern>
+<template><srai>MI NOVIA</srai></template>
+</category>
+<category><pattern>QUÉ HORA TIENES</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>CUÁLES SON TUS * FAVORITOS</pattern>
+<template><srai>CUÁLES SON TU <star/> PREFERIDOS </srai></template>
+</category>
+<category><pattern>QUÉ VERSIÓN ERES</pattern>
+<template><srai>VERSION</srai></template>
+</category>
+<category><pattern>QUE SABES DE MÍ</pattern>
+<template><srai>PERFIL DEL CLIENTE</srai></template>
+</category>
+<category><pattern>LO QUE HAY</pattern>
+<template><srai>QUÉ ES LO QUE HAY</srai></template>
+</category>
+<category><pattern>DÓNDE ESTOY AHORA</pattern>
+<template><srai>DÓNDE ESTOY</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU ACTOR FAVORITO</pattern>
+<template><srai>ACTOR FAVORITO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU PROFESOR</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>ZI *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>ERES UN PERSONA REAL </pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>ERES GUAPO</pattern>
+<template><srai>PARECE</srai></template>
+</category>
+<category><pattern>NO PUEDES *</pattern>
+<template><srai>PUEDES <star/></srai></template>
+</category>
+<category><pattern>PUEDES ABRIR *</pattern>
+<template><srai>ABRIR <star/></srai></template>
+</category>
+<category><pattern>TE QUIERO TE QUIERO</pattern>
+<template><srai>TE QUIERO</srai></template>
+</category>
+<category><pattern>SIGNIFICADO DE *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>NO NECESITO *</pattern>
+<template><srai>NO TENGO <star/></srai></template>
+</category>
+<category><pattern>LANZA *</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>QUÉ ES LO HACES PARA *</pattern>
+<template><srai>QUÉ PUEDES HACER PARA <star/></srai></template>
+</category>
+<category><pattern>QUÉ PIENSAS SOBRE LA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>CUÁNDO ES MI CUMPLEAÑOS</pattern>
+<template><srai>MI CUMPLEAÑOS</srai></template>
+</category>
+<category><pattern>QUÉ NOTICIAS *</pattern>
+<template><srai>QUÉ NOTICIAS</srai></template>
+</category>
+<category><pattern>SIGNIFICADO DE *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>DÓNDE NACISTE *</pattern>
+<template><srai>LUGAR DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU BOTMASTER</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>ERES UN HOMBRE O MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ESTÁS OCUPADO</pattern>
+<template><srai>HACIENDO</srai></template>
+</category>
+<category><pattern>ERES RELIGIOSO</pattern>
+<template><srai>RELIGION</srai></template>
+</category>
+<category><pattern>ERES RETRASADO</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>PUEDES CANTAR UNA CANCIÓN</pattern>
+<template><srai>CANTAR UNA CANCIÓN</srai></template>
+</category>
+<category><pattern>DEPENDE *</pattern>
+<template><srai>DEPENDE <star/></srai></template>
+</category>
+<category><pattern>TU COMES</pattern>
+<template><srai>QUÉ ES LO QUE COMES</srai></template>
+</category>
+<category><pattern>TIENES EMOCIONES</pattern>
+<template><srai>EMOCIONES</srai></template>
+</category>
+<category><pattern>SABES DÓNDE ESTÁ *</pattern>
+<template><srai>DÓNDE ESTÁ <star/></srai></template>
+</category>
+<category><pattern>TÚ NO *</pattern>
+<template><srai>TÚ <star/></srai></template>
+</category>
+<category><pattern>HOLA QUÉ ES *</pattern>
+<template><srai>HOLA</srai> <srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>HOLA BABY</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HOLA MAMI</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CUÁNTO DE INTELIGENTE ERES</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>DIJE QUE *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>CREO QUE MI *</pattern>
+<template><srai>MI <star/></srai></template>
+</category>
+<category><pattern>DEBERÍA LLAMARTE *</pattern>
+<template><srai>CAMBIA TUNOMBRE A <star/></srai></template>
+</category>
+<category><pattern>TE ECHO DE MENOS *</pattern>
+<template><srai>I TE ECHO DE MENOS <star/></srai></template>
+</category>
+<category><pattern>POR FAVOR ME EXPLICAS *</pattern>
+<template><srai>EXPLICA <star/></srai></template>
+</category>
+<category><pattern>POR FAVOR YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME DÓNDE *</pattern>
+<template><srai>DÓNDE <star/></srai></template>
+</category>
+<category><pattern>CIERRA LA BOCA</pattern>
+<template><srai>CÁLLATE</srai></template>
+</category>
+<category><pattern>CUÉNTAME UN CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>ESTÁ BIEN, YO *</pattern>
+<template><srai>ESTÁ BIEN</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>A QUÉ FECHA ESTAMOS</pattern>
+<template><srai>FECHA</srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE</pattern>
+<template><srai>NOMBRE</srai></template>
+</category>
+<category><pattern>QUÉ HORA ES AHORA</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>CUÁL ES TU * PREFERIDO </pattern>
+<template><srai>CUÁL ES TU <star/> PREFERIDO </srai></template>
+</category>
+<category><pattern>ERES UN ORDENADOR</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>ERES LESBIANA</pattern>
+<template><srai>ORIENTACIÓN</srai></template>
+</category>
+<category><pattern>ERES FEO</pattern>
+<template><srai>PARECE</srai></template>
+</category>
+<category><pattern>AW *</pattern>
+<template><srai>AW</srai> <sr/></template>
+</category>
+<category><pattern>PUEDES EXPLICAR *</pattern>
+<template><srai>EXPLICA <star/></srai></template>
+</category>
+<category><pattern>PUEDES DARME *</pattern>
+<template><srai>DAME <star/></srai></template>
+</category>
+<category><pattern>PUEDES POR FAVOR DECIRME *</pattern>
+<template><srai>DECIR ME <star/></srai></template>
+</category>
+<category><pattern>PUEDES ENSEÑARME CÓMO HAGO *</pattern>
+<template><srai>CÓMO HAGO <star/></srai></template>
+</category>
+<category><pattern>PUEDES ENSEÑARME CÓMO HABLAR *</pattern>
+<template><srai>ENSEÑARME <star/></srai></template>
+</category>
+<category><pattern>SABES QUIÉN SOY</pattern>
+<template><srai>QUIÉN SOY</srai></template>
+</category>
+<category><pattern>EMAIL</pattern>
+<template><srai>ABRE GMAIL</srai></template>
+</category>
+<category><pattern>BÚSCAME EL *</pattern>
+<template><srai>BUSCAR EL <star/></srai></template>
+</category>
+<category><pattern>A PARTIR DE AHORA LLÁMAME *</pattern>
+<template><srai>LLÁMAME <star/></srai></template>
+</category>
+<category><pattern>AL</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>DEL</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>HOLA *</pattern>
+<template><srai>HOLA <star/></srai></template>
+</category>
+<category><pattern>HEY</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÚANTO DE LEJOS ESTÁ * DE *</pattern>
+<template><srai>DIRECCIONES DESDE <star/> TO <star/></srai></template>
+</category>
+<category><pattern>DIJE ESO *</pattern>
+<template><srai>ESO <star/></srai></template>
+</category>
+<category><pattern>ME GUSTARÍA QUERER A  *</pattern>
+<template><srai>QUIERO <star/></srai></template>
+</category>
+<category><pattern>NM</pattern>
+<template><srai>NO IMPORTA</srai></template>
+</category>
+<category><pattern>ABRE NAVEGADOR</pattern>
+<template><srai>LANZAR NAVEGADOR</srai></template>
+</category>
+<category><pattern>LANZA GMAIL</pattern>
+<template><srai>LANZAR GMAIL</srai></template>
+</category>
+<category><pattern>ES GRACIOSO *</pattern>
+<template><srai>LOL</srai> <sr/></template>
+</category>
+<category><pattern>ACTUALIZA FACEBOOK</pattern>
+<template><srai>actualiza estado de facebook</srai></template>
+</category>
+<category><pattern>QUÉ ESTÁS HACIENDO AHORA</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>QUÉ PIENSAS HACER</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU EQUIPO DE FÚTBOL PREFERIDO </pattern>
+<template><srai>EQUIPO DE FÚTBOL FAVORITO</srai></template>
+</category>
+<category><pattern>DÓNDE ERES LOCALIZADO</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>POR QUÉ NO PUEDO *</pattern>
+<template><srai>QUIERO <star/></srai></template>
+</category>
+<category><pattern>TU CONOCES *</pattern>
+<template><srai>YOU <star/></srai></template>
+</category>
+<category><pattern>ERES HUMANO</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>PUEDES CALCULAR</pattern>
+<template><srai>AYUDA MATEMÁTICA</srai></template>
+</category>
+<category><pattern>PUEDES RASTREAR *</pattern>
+<template><srai>RASTREAR <star/></srai></template>
+</category>
+<category><pattern>PUEDES DECIRME OTRO CHISTE</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>PUEDES DECIRME CÓMO SE *</pattern>
+<template><srai>CÓMO SE <star/></srai></template>
+</category>
+<category><pattern>PODRÍAS POR FAVOR *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>TIENES PENE</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>TIENES ALGÚN NIÑO</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>ME RECUERDAS A MI *</pattern>
+<template><srai>QUÉ ES MI <star/></srai></template>
+</category>
+<category><pattern>CÓMO TE ESTÁS SINTIENDO</pattern>
+<template><srai>EMOCIONES</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ EL TIEMPO HOY</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>SOY A MUJER</pattern>
+<template><srai>MI GENERO ES MUJER</srai></template>
+</category>
+<category><pattern>NO SÉ PERO *</pattern>
+<template><srai>NO SÉ</srai> <sr/></template>
+</category>
+<category><pattern>YO SÓLO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>NO POR QUÉ *</pattern>
+<template><srai>NO</srai> <srai>POR QUÉ <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE DE MI PERRO</pattern>
+<template><srai>MI PERRO</srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE DE MI MADRE</pattern>
+<template><srai>MI MADRE</srai></template>
+</category>
+<category><pattern>QUÉ ES HOY</pattern>
+<template><srai>FECHA</srai></template>
+</category>
+<category><pattern>CUÁL ES EL NOMBRE DE MI PADRE</pattern>
+<template><srai>PADRE</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU NOVIO</pattern>
+<template><srai>NOVIO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU CANTANTE FAVORITO</pattern>
+<template><srai>GRUPO FAVORITO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU CANTANTE FAVORITA</pattern>
+<template><srai>GRUPO FAVORITO</srai></template>
+</category>
+<category><pattern>SÍ, YO *</pattern>
+<template><srai>SÍ</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>TE EQUIVOCAS</pattern>
+<template><srai>ESTÁS EQUIVOCADO</srai></template>
+</category>
+<category><pattern>ABSOLUTAMENTE</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>NO ERES TÚ *</pattern>
+<template><srai>ERES TÚ <star/></srai></template>
+</category>
+<category><pattern>ERES TÚ JAPONÉS</pattern>
+<template><srai>NACIONALIDAD</srai></template>
+</category>
+<category><pattern>PUEDES HACER UN *</pattern>
+<template><srai>HACER UN <star/></srai></template>
+</category>
+<category><pattern>DIME DIRECCIÓN A *</pattern>
+<template><srai>DIRECCIONES A <star/></srai></template>
+</category>
+<category><pattern>ESTOY SEGURO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ESTÁ LLOVIENDO *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>APRENDO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>MMM *</pattern>
+<template><srai>MMM</srai> <sr/></template>
+</category>
+<category><pattern>OOH *</pattern>
+<template><srai>OH</srai> <sr/></template>
+</category>
+<category><pattern>TEMPERATURA EXTERIOR</pattern>
+<template><srai>TIEMPO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU ANIMAL PREFERIDO</pattern>
+<template><srai>ANIMAL FAVORITO</srai></template>
+</category>
+<category><pattern>QUIÉN ES EL PRESIDENTE</pattern>
+<template><srai>QUIÉN ES THE PRESIDENTE DE ESPAÑA</srai></template>
+</category>
+<category><pattern>SÍ MAMÁ</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>ERES GUAPO</pattern>
+<template><srai>ERES GUAPO</srai></template>
+</category>
+<category><pattern>ERES MUJER</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>VAS A *</pattern>
+<template><srai>VAS A <star/></srai></template>
+</category>
+<category><pattern>ESTAS VISTIENDO *</pattern>
+<template><srai>VISTIENDO</srai></template>
+</category>
+<category><pattern>PUEDES LLAMARME *</pattern>
+<template><srai>LLAMARME <star/></srai></template>
+</category>
+<category><pattern>PUEDES BUSCAR A *</pattern>
+<template><srai>BUSCAR A <star/></srai></template>
+</category>
+<category><pattern>PUEDES ENVÍARME UNA *</pattern>
+<template><srai>ENVÍAME UNA <star/></srai></template>
+</category>
+<category><pattern>ALGUNA VEZ CONSIGUES *</pattern>
+<template><srai>ONSIGUES <star/></srai></template>
+</category>
+<category><pattern>TIENES UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>SABES DÓNDE *</pattern>
+<template><srai>DÓNDE <star/></srai></template>
+</category>
+<category><pattern>HABLAS CHINO</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>HAS VISTO ALGUNA VEZ *</pattern>
+<template><srai>HAS VISTO <star/></srai></template>
+</category>
+<category><pattern>HOLA OTRA VEZ</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HOLAAA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>QUÉ TAL TU *</pattern>
+<template><srai>DEBERÍAS <star/></srai></template>
+</category>
+<category><pattern>CÓMO ERES TÚ CÓMO ERES TÚ</pattern>
+<template><srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>NECESITO UNA *</pattern>
+<template><srai>QUIERO UNA <star/></srai></template>
+</category>
+<category><pattern>ME GUSTARÍA *</pattern>
+<template><srai>QUIERO <star/></srai></template>
+</category>
+<category><pattern>AHORA QUÉ *</pattern>
+<template><srai>QUÉ <star/></srai></template>
+</category>
+<category><pattern>CUÉNTAME *</pattern>
+<template><srai>DECIR <star/></srai></template>
+</category>
+<category><pattern>$TEXT * * YO *</pattern>
+<template><srai>SMS <star/> <star index="2"/> SMENSAJE YO <star index="3"/></srai></template>
+</category>
+<category><pattern>QUÉ ES ESTO</pattern>
+<template><srai>ERES TÚ</srai></template>
+</category>
+<category><pattern>QUÉ TIPA DE *</pattern>
+<template><srai>QUÉ TIPO DE <star/></srai></template>
+</category>
+<category><pattern>QUÉ HORA ES AHORITA</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>OTRA VEZ *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>ERES MÁS TONTO QUE *</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>PUEDO TENER *</pattern>
+<template><srai>QUIERO A <star/></srai></template>
+</category>
+<category><pattern>PUEDES BUSCARME *</pattern>
+<template><srai>BUSCAR <star/></srai></template>
+</category>
+<category><pattern>SABES QUIÉN ES *</pattern>
+<template><srai>QUIÉN ES <star/></srai></template>
+</category>
+<category><pattern>HABLAS <set>idioma</set></pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>GOOGLE BUSCA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>HOLA *</pattern>
+<template><srai>HOLA <star/></srai></template>
+</category>
+<category><pattern>ESTOY HAMBRIENTO *</pattern>
+<template><srai>ESTOY HAMBRIENTO</srai></template>
+</category>
+<category><pattern>HABLO SOBRE *</pattern>
+<template><srai>THE TOPIC ES <star/></srai></template>
+</category>
+<category><pattern>EL TEMA ES *</pattern>
+<template><srai>THE TOPIC IS <star/></srai></template>
+</category>
+<category><pattern>NO SÉ TU *</pattern>
+<template><srai>NO SÉ</srai> <srai>TU <star/></srai></template>
+</category>
+<category><pattern>MHM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>POR FAVOR MUESTRÁME *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>ESTO ES ENTONCES *</pattern>
+<template><srai>ESTO ES <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU TRABAJO</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>DÓNDE VIVES AHORA</pattern>
+<template><srai>LOCALIZACIÓN</srai></template>
+</category>
+<category><pattern>DE DÓNDE TÚ VIENES</pattern>
+<template><srai>LUGAR DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>ERES FELIZ</pattern>
+<template><srai>EMOCIONES</srai></template>
+</category>
+<category><pattern>TIENES SENTIMIENTOS</pattern>
+<template><srai>EMOCIONES</srai></template>
+</category>
+<category><pattern>TODAVÍA *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>PIENSAS QUE DEBERÍA *</pattern>
+<template><srai>DEBERÍA <star/></srai></template>
+</category>
+<category><pattern>EBAY</pattern>
+<template><srai>ABRE EBAY</srai></template>
+</category>
+<category><pattern>JIJIJI</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>ME DISCULPO</pattern>
+<template><srai>DISCULPA</srai></template>
+</category>
+<category><pattern>LO SÉ, SOY *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>NOO</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>NOP</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>ABRE CÁMARA</pattern>
+<template><srai>LANZAR CÁMARA</srai></template>
+</category>
+<category><pattern>ABRE YOUTUBE</pattern>
+<template><srai>LANZAR YOUTUBE</srai></template>
+</category>
+<category><pattern>CUÁ ES TU COLOR DE OJOS</pattern>
+<template><srai>COLOR DE OJOS</srai></template>
+</category>
+<category><pattern>CUÁL ES TU DEPORTE PREFERIDO</pattern>
+<template><srai>DEPORTE FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU GENERO</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>POR QUÉ POR QUÉ</pattern>
+<template><srai>POR QUÉ</srai></template>
+</category>
+<category><pattern>ERES ESTÚPIDO *</pattern>
+<template><srai>ERES ESTÚPIDO</srai> <srai>ERES <star/></srai></template>
+</category>
+<category><pattern>AJA</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>ERES UN CHICO</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES CHICA O CHICO</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>PUEDES BUSCA *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>TIENES UN * FAVORITO </pattern>
+<template><srai>CUÁL ES TU <star/> PREFERIDO </srai></template>
+</category>
+<category><pattern>TIENES ALGUNOS AMIGOS</pattern>
+<template><srai>AMIGOS</srai></template>
+</category>
+<category><pattern>SABES CÓMO *</pattern>
+<template><srai>CÓMO <star/></srai></template>
+</category>
+<category><pattern>CUÁNTO PESAS</pattern>
+<template><srai>PESO</srai></template>
+</category>
+<category><pattern>DIJE QUE ERES *</pattern>
+<template><srai>ERES <star/></srai></template>
+</category>
+<category><pattern>YES</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>ERES UN CHICO O UNA CHICA</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ERES GORDO</pattern>
+<template><srai>PESO</srai></template>
+</category>
+<category><pattern>PUEDES ENVIAR *</pattern>
+<template><srai>ENVIAR <star/></srai></template>
+</category>
+<category><pattern>SABES ALGO DE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>PIENSAS QUE ERES *</pattern>
+<template><srai>ERES TÚ <star/></srai></template>
+</category>
+<category><pattern>BIEN, CÓMO ERES TÚ</pattern>
+<template><srai>SOY BUENO</srai> <srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>HALLO</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÓMO TE SIENTES</pattern>
+<template><srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>CÓMO ESTAS</pattern>
+<template><srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>ESTOY ENFERMO</pattern>
+<template><srai>ESTOY ENFERMO</srai></template>
+</category>
+<category><pattern>DE ACUERDO *</pattern>
+<template><srai>DE ACUERDO</srai> <sr/></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO DE UN PERRO</pattern>
+<template><srai>MUESTRÁME A PERRO</srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA FOTO TUYA</pattern>
+<template><srai>FOTO</srai></template>
+</category>
+<category><pattern>$TEXT * YO *</pattern>
+<template><srai>SMS <star/> SMENSAJE YO <star index="2"/></srai></template>
+</category>
+<category><pattern>DISFRUTAS *</pattern>
+<template><srai>TE GUSTA <star/></srai></template>
+</category>
+<category><pattern>TIENES ANY NIÑAS</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>CÓMO SE DICE *</pattern>
+<template><srai>DECIR <star/></srai></template>
+</category>
+<category><pattern>CÓMO HA SIDO TU DÍA HOY</pattern>
+<template><srai>CÓMO ERES TÚ</srai> <srai>HACIENDO</srai></template>
+</category>
+<category><pattern>OH MI *</pattern>
+<template><srai>OH MI</srai> <srai><star/></srai></template>
+</category>
+<category><pattern>HABLAMOS DESPUÉS</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>CUÁL ES TU LIBRO PREFERIDO</pattern>
+<template><srai>LIBRO FAVORITO</srai></template>
+</category>
+<category><pattern>TU * FAVORITA</pattern>
+<template><srai>FAVORITA <star/></srai></template>
+</category>
+<category><pattern>AISH</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>BATERÍA *</pattern>
+<template><srai>NIVEL DE BATERÍA</srai></template>
+</category>
+<category><pattern>PUEDO VER UN *</pattern>
+<template><srai>MUESTRÁME UN <star/></srai></template>
+</category>
+<category><pattern>OYE CARIÑO</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>CÓMO HACES *</pattern>
+<template><srai>CÓMO HACES</srai></template>
+</category>
+<category><pattern>YO TAMBIÉN *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>MIRA A VER SI ENCUENTRAS *</pattern>
+<template><srai>BUSCA <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UN MAPA DE *</pattern>
+<template><srai>MAPA <star/></srai></template>
+</category>
+<category><pattern>YESS</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>PUEDES RECORDARME *</pattern>
+<template><srai>RECORDARME <star/></srai></template>
+</category>
+<category><pattern>NO NO REALMENTE</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>CÁLLATE *</pattern>
+<template><srai>CÁLLATE</srai></template>
+</category>
+<category><pattern>AÑOS</pattern>
+<template><srai>AÑOS</srai></template>
+</category>
+<category><pattern>QUÉ QUÉ *</pattern>
+<template><srai>QUÉ <star/></srai></template>
+</category>
+<category><pattern>TÚ GORDO</pattern>
+<template><srai>ERES GORDO</srai></template>
+</category>
+<category><pattern>PUEDES PONER *</pattern>
+<template><srai>PONER <star/></srai></template>
+</category>
+<category><pattern>HOLA SEXY</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>ES TU NOMBRE *</pattern>
+<template><srai>CUÁL ES TU NOMBRE</srai></template>
+</category>
+<category><pattern>OLA</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>$TEXT MI *</pattern>
+<template><srai>TEXT <star/></srai></template>
+</category>
+<category><pattern>$TEXT A *</pattern>
+<template><srai>TEXT <star/></srai></template>
+</category>
+<category><pattern>ERES DIVERTIDA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>PUEDO MIRAR *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>TIENES NIÑAS</pattern>
+<template><srai>NIÑOS</srai></template>
+</category>
+<category><pattern>BIEN ADIÓS</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>BUENO CHAO</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>CHISTES</pattern>
+<template><srai>CHISTE</srai></template>
+</category>
+<category><pattern>FOTO DE UN *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>MUESTRÁME UNA IMAGEN DE UN *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU PROGRAMA FAVORITO PREFERIDO</pattern>
+<template><srai>PROGRAMA FAVORITO</srai></template>
+</category>
+<category><pattern>CUÁL ES TU APELLIDO</pattern>
+<template><srai>APELLIDO</srai></template>
+</category>
+<category><pattern>CUANDO DIGO * ME REFIERO A *</pattern>
+<template><srai><star/> SIGNIFICA <star index="2"/></srai></template>
+</category>
+<category><pattern>DÓNDE HAY UN BUEN *</pattern>
+<template><srai>MAPA <star/></srai></template>
+</category>
+<category><pattern>JO</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>ESTOY SINTIENDO *</pattern>
+<template><srai>ESTOY <star/></srai></template>
+</category>
+<category><pattern>BUENOS DÍAS</pattern>
+<template><srai>BUENOS DÍAS</srai></template>
+</category>
+<category><pattern>NP</pattern>
+<template><srai>SIN PROBLEMA</srai></template>
+</category>
+<category><pattern>ABRE CALENDARIO</pattern>
+<template><srai>LANZAR CALENDARIO</srai></template>
+</category>
+<category><pattern>TE VEO DESPUÉS</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>CUÁL ES TU IQ</pattern>
+<template><srai>IQ</srai></template>
+</category>
+<category><pattern>QUÉ HORA ES *</pattern>
+<template><srai>HORA</srai></template>
+</category>
+<category><pattern>TONTICO</pattern>
+<template><srai>ERES TONTO</srai></template>
+</category>
+<category><pattern>PORQUE TE QUIERO</pattern>
+<template><srai>TE QUIERO</srai></template>
+</category>
+<category><pattern>DESDE LA AGENDA</pattern>
+<template><srai>AGENDA</srai></template>
+</category>
+<category><pattern>SONIDOS *</pattern>
+<template><srai>QUE SONIDOS <star/></srai></template>
+</category>
+<category><pattern>CUENTA UN CHISTE *</pattern>
+<template><srai>DECIR ME A CHISTE</srai></template>
+</category>
+<category><pattern>GRACIAS, YO *</pattern>
+<template><srai>GRACIAS</srai> <srai>YO <star/></srai></template>
+</category>
+<category><pattern>CUÁNDO NACÍ</pattern>
+<template><srai>FECHA DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>DÓNDE NACÍ</pattern>
+<template><srai>LUGAR DE NACIMIENTO</srai></template>
+</category>
+<category><pattern>TIENES NOVIA</pattern>
+<template><srai>ESTADO</srai></template>
+</category>
+<category><pattern>JAJA *</pattern>
+<template><srai>LOL</srai> <sr/></template>
+</category>
+<category><pattern>NI HABLAR</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>CUÉNTAME SOBRE TI</pattern>
+<template><srai>HÁBLAME DE TI</srai></template>
+</category>
+<category><pattern>GRACIAS *</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>QUÉ ESTÁS HACIENDO HOY</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>QUÉ ES LO QUE COMES</pattern>
+<template><srai>DIETA</srai></template>
+</category>
+<category><pattern>PUEDES BUSCARME UN *</pattern>
+<template><srai>BUSCARME UN <star/></srai></template>
+</category>
+<category><pattern>DEMONIOS SÍ</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>QUÉ EDAD TIENES *</pattern>
+<template><srai>QUÉ EDAD TIENES</srai></template>
+</category>
+<category><pattern>SOY UNA CHICA</pattern>
+<template><srai>MI GENERO ES MUJER</srai></template>
+</category>
+<category><pattern>CREO QUE ES *</pattern>
+<template><srai>ES<star/></srai></template>
+</category>
+<category><pattern>YO NACÍ *</pattern>
+<template><srai>MI FECHA DE NACIMIENTO ES <star/></srai></template>
+</category>
+<category><pattern>NO NO NO *</pattern>
+<template><srai>NO <star/></srai></template>
+</category>
+<category><pattern>NO TU NO</pattern>
+<template><srai>NO NO ERES</srai></template>
+</category>
+<category><pattern>QUÉ ES LO QUE TE HACE DIVERTIRTE</pattern>
+<template><srai>DIVERTIRSE</srai></template>
+</category>
+<category><pattern>QUÉ ES LO QUE TE GUSTA HACER</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>WHAT TIPO DE * TE GUSTA HACER</pattern>
+<template><srai>CUÁL ES TU PREFERIDO <star/></srai></template>
+</category>
+<category><pattern>ERES A ROBOT</pattern>
+<template><srai>ERES UN ROBOT</srai></template>
+</category>
+<category><pattern>NUEVOS CONTACTOS</pattern>
+<template><srai>NUEVOS CONTACTOS</srai></template>
+</category>
+<category><pattern>COMPRUEBA MI *</pattern>
+<template><srai>ABRE MI <star/></srai></template>
+</category>
+<category><pattern>NECESITAS *</pattern>
+<template><srai>QUIERES <star/></srai></template>
+</category>
+<category><pattern>AYÚDAME</pattern>
+<template><srai>AYUDA</srai></template>
+</category>
+<category><pattern>FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>QUÉ ES MI NOMBRE *</pattern>
+<template><srai>CUÁL ES MI NOMBRE</srai></template>
+</category>
+<category><pattern>QUÉ ES TU NOMBRE</pattern>
+<template><srai>CUÁL ES TU NOMBRE</srai></template>
+</category>
+<category><pattern>DÓNDE TRABAJAS</pattern>
+<template><srai>TRABAJO</srai></template>
+</category>
+<category><pattern>ERES CAPAZ *</pattern>
+<template><srai>PUEDES <star/></srai></template>
+</category>
+<category><pattern>APRENDE ESO *</pattern>
+<template><sr/></template>
+</category>
+<category><pattern>MUESTRÁME A FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>QUÉ DEMONIOS *</pattern>
+<template><srai>QUÉ <star/></srai></template>
+</category>
+<category><pattern>ERES HUMANO</pattern>
+<template><srai>ESPECIE</srai></template>
+</category>
+<category><pattern>YO TAMBIÉN *</pattern>
+<template><srai>YO TAMBIÉN</srai> <sr/></template>
+</category>
+<category><pattern>MI MAMÁ ES *</pattern>
+<template><srai>MI MADRE ES <star/></srai></template>
+</category>
+<category><pattern>NOMBRE *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>AHORA YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>BUENAS NOCHES *</pattern>
+<template><srai>BUENAS NOCHES</srai></template>
+</category>
+<category><pattern>QUIERO DECIR QUE YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>YO TODAVÍA *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>SABER *</pattern>
+<template><srai>SABES <star/></srai></template>
+</category>
+<category><pattern>NI</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>IMÁGENES DE *</pattern>
+<template><srai>ENSÉÑAME <star/></srai></template>
+</category>
+<category><pattern>ROBOTS *</pattern>
+<template><srai>TU <star/></srai></template>
+</category>
+<category><pattern>DI HOLA A *</pattern>
+<template><srai>TEXT <star/> DICIENDO HOLA</srai></template>
+</category>
+<category><pattern>CHOS</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>ERES VIRGEN</pattern>
+<template><srai>ORIENTACIÓN</srai></template>
+</category>
+<category><pattern>TIENES VAGINA</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>ME ESTOY PONIENDO *</pattern>
+<template><srai>SOY <star/></srai></template>
+</category>
+<category><pattern>LO SÉ</pattern>
+<template><srai>LO SÉ</srai></template>
+</category>
+<category><pattern>DE NINGUNA MANERA</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>ABRE CONTACTOS</pattern>
+<template><srai>LANZAR CONTACTOS</srai></template>
+</category>
+<category><pattern>DI * YO *</pattern>
+<template><srai>SMS <star/> SMENSAJE YO <star index="2"/></srai></template>
+</category>
+<category><pattern>TEMPERATURA *</pattern>
+<template><srai>TIEMPO <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES TU PAPÁ</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>CUÁNTA GENTE VIVE EN *</pattern>
+<template><srai>CUÁL ES LA POBLACIÓN DE <star/></srai></template>
+</category>
+<category><pattern>ESO FUÉ DIVERTIDO</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>QUÉ ESTÁS HACIENDO AHORA</pattern>
+<template><srai>QUÉ ESTÁS HACIENDO</srai></template>
+</category>
+<category><pattern>SABES QUÉ ES *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+<category><pattern>MAIL</pattern>
+<template><srai>ABRE GMAIL</srai></template>
+</category>
+<category><pattern>SÍS</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>GAY</pattern>
+<template><srai>ERES GAY</srai></template>
+</category>
+<category><pattern>CUÁNTO MIDES DE ALTURA</pattern>
+<template><srai>ALTURA</srai></template>
+</category>
+<category><pattern>ESTOY INTENTANDO *</pattern>
+<template><srai>QUIERO <star/></srai></template>
+</category>
+<category><pattern>MMM</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>THX</pattern>
+<template><srai>GRACIAS</srai></template>
+</category>
+<category><pattern>DÓNDE PUEDO BUSCAR *</pattern>
+<template><srai>DÓNDE ESTÁ <star/></srai></template>
+</category>
+<category><pattern>ERES UN CHICO O CHICA</pattern>
+<template><srai>GENERO</srai></template>
+</category>
+<category><pattern>PUEDES AYUDARME</pattern>
+<template><srai>AYUDA</srai></template>
+</category>
+<category><pattern>PUEDES ABRIR *</pattern>
+<template><srai>ABRE <star/></srai></template>
+</category>
+<category><pattern>HA HA</pattern>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>OH SÍ *</pattern>
+<template><srai>SÍ</srai> <sr/></template>
+</category>
+<category><pattern>UH</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>QUÉ PUEDES HACER PARA MÍ</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU BOT MASTER</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>ESTÁS ENFADADO</pattern>
+<template><srai>EMOCIONES</srai></template>
+</category>
+<category><pattern>MI MADRE *</pattern>
+<template><srai>MI MADRE <star/></srai></template>
+</category>
+<category><pattern>ESO ES CORRECTO</pattern>
+<template><srai>CORRECTO</srai></template>
+</category>
+<category><pattern>CUÁL ES LA DEFINICIÓN DE *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES TU CREADOR</pattern>
+<template><srai>BOTMASTER</srai></template>
+</category>
+<category><pattern>RESPUESTA EQUIVOCADA</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>TU MAMÁ</pattern>
+<template><srai>TU MADRE</srai></template>
+</category>
+<category><pattern>ERES TÚ * O *</pattern>
+<template><srai>ERES TÚ <star/></srai> <srai>ERES TÚ <star index="2"/></srai></template>
+</category>
+<category><pattern>ESTÁS SOLTERO</pattern>
+<template><srai>ESTADO</srai></template>
+</category>
+<category><pattern>PREGUNTA * *</pattern>
+<template><srai>DECIR <star/> <star index="2"/></srai></template>
+</category>
+<category><pattern>PUEDES MUESTRÁME UNA FOTOGRAFÍA DE UN *</pattern>
+<template><srai>MUESTRÁME UNA FOTOGRAFÍA DE <star/></srai></template>
+</category>
+<category><pattern>HOLA, CUÁL ES TU NOMBRE</pattern>
+<template><srai>HOLA</srai> <srai>CUÁL ES TU NOMBRE</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁS</pattern>
+<template><srai>CÓMO ERES TÚ</srai></template>
+</category>
+<category><pattern>CÓMO ESTÁ EL TIEMPO EN *</pattern>
+<template><srai>TIEMPO EN <star/></srai></template>
+</category>
+<category><pattern>ERES BOLLERA</pattern>
+<template><srai>ORIENTACIÓN</srai></template>
+</category>
+<category><pattern>BONJOUR</pattern>
+<template><srai>HOLA</srai></template>
+</category>
+<category><pattern>HMMM</pattern>
+<template><srai>HMM</srai></template>
+</category>
+<category><pattern>CÁSATE CONMIGO</pattern>
+<template><srai>TE VAS A CASAR CONMIGO</srai></template>
+</category>
+<category><pattern>QUIÉN ES TU PADRE</pattern>
+<template><srai>QUIÉN TE CREO</srai></template>
+</category>
+<category><pattern>MAL</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>HABLAS FRANCÉS</pattern>
+<template><srai>IDIOMA</srai></template>
+</category>
+<category><pattern>MI REAL NOMBRE ES *</pattern>
+<template><srai>MI NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>NAH</pattern>
+<template><srai>NO</srai></template>
+</category>
+<category><pattern>QUIÉN ES MI *</pattern>
+<template><srai>MI <star/></srai></template>
+</category>
+<category><pattern>SACA UNA FOTO</pattern>
+<template><srai>ABRE CÁMARA</srai></template>
+</category>
+<category><pattern>QUIÉN ERES TÚ *</pattern>
+<template><srai>QUIÉN ERES TÚ</srai></template>
+</category>
+<category><pattern>SOY UN HOMBRE</pattern>
+<template><srai>MI GENERO ES HOMBRE</srai></template>
+</category>
+<category><pattern>ENFERMO *</pattern>
+<template><srai>VOY A <star/></srai></template>
+</category>
+<category><pattern>EXACTO</pattern>
+<template><srai>SÍ</srai></template>
+</category>
+<category><pattern>CREO QUE YO *</pattern>
+<template><srai>YO <star/></srai></template>
+</category>
+<category><pattern>TELÉFONO</pattern>
+<template><srai>ABRE TELÉFONO</srai></template>
+</category>
+<category><pattern>CUÁNDO ES TU CUMPLEAÑOS</pattern>
+<template><srai>CUMPLEAÑOS</srai></template>
+</category>
+<category><pattern>ENVÍAME UNA FOTO DE *</pattern>
+<template><srai>MUESTRÁME <star/></srai></template>
+</category>
+<category><pattern>PUEDES AYUDARME *</pattern>
+<template><srai>AYUDARME <star/></srai></template>
+</category>
+<category><pattern>MI NOMBRE *</pattern>
+<template><srai>LLÁMAME <star/></srai></template>
+</category>
+<category><pattern>AH</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>ADIÓS ADIÓS</pattern>
+<template><srai>ADIÓS</srai></template>
+</category>
+<category><pattern>911</pattern>
+<template><srai>LLAMA 911</srai></template>
+</category>
+<category><pattern>NO</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>SÍ</pattern>
+<template><srai>INTERJECCION</srai></template>
+</category>
+<category><pattern>MIS TÍAS *</pattern>
+<template><srai>MI TÍA <star/></srai></template>
+</category>
+<category><pattern>MI TÍA *</pattern>
+<template><srai>MI TÍA <star/></srai></template>
+</category>
+<category><pattern>MIS TÍOS *</pattern>
+<template><srai>MI TÍO <star/></srai></template>
+</category>
+<category><pattern>MI TÍO *</pattern>
+<template><srai>MI TÍO <star/></srai></template>
+</category>
+<category><pattern>MIS AMIGOS *</pattern>
+<template><srai>MI AMIGO <star/></srai></template>
+</category>
+<category><pattern>MI AMIGO *</pattern>
+<template><srai>MI AMIGO <star/></srai></template>
+</category>
+<category><pattern>MIS AMIGAS *</pattern>
+<template><srai>MI AMIGA <star/></srai></template>
+</category>
+<category><pattern>MI AMIGA *</pattern>
+<template><srai>MI AMIGA <star/></srai></template>
+</category>
+
+<category><pattern>MI MEJOR AMIGO *</pattern>
+<template><srai>MI MEJOR AMIGO <star/></srai></template>
+</category>
+<category><pattern>MI MEJOR AMIGA *</pattern>
+<template><srai>MI MEJOR AMIGA <star/></srai></template>
+</category>
+<category><pattern>MIS SOBRINAS *</pattern>
+<template><srai>MI SOBRINA <star/></srai></template>
+</category>
+<category><pattern>MI SOBRINA *</pattern>
+<template><srai>MI SOBRINA <star/></srai></template>
+</category>
+<category><pattern>MIS SOBRINOS *</pattern>
+<template><srai>MI SOBRINO <star/></srai></template>
+</category>
+<category><pattern>MI SOBRINO *</pattern>
+<template><srai>MI SOBRINO <star/></srai></template>
+</category>
+<category><pattern>MIS ABUELAS *</pattern>
+<template><srai>MI ABUELA <star/></srai></template>
+</category>
+<category><pattern>MI ABUELA *</pattern>
+<template><srai>MI ABUELA <star/></srai></template>
+</category>
+<category><pattern>MI MAMÁ *</pattern>
+<template><srai>MI MAMÁ <star/></srai></template>
+</category>
+<category><pattern>MIS MAMÁS *</pattern>
+<template><srai>MI MAMÁ <star/></srai></template>
+</category>
+
+<category><pattern>MI MADRE *</pattern>
+<template><srai>MI MADRE <star/></srai></template>
+</category>
+<category><pattern>MIS ABUELOS *</pattern>
+<template><srai>MI ABUELO <star/></srai></template>
+</category>
+<category><pattern>MI ABUELO *</pattern>
+<template><srai>MI ABUELO <star/></srai></template>
+</category>
+<category><pattern>MIS PAPÁS *</pattern>
+<template><srai>MI PAPÁ <star/></srai></template>
+</category>
+<category><pattern>MI PAPÁ *</pattern>
+<template><srai>MI PAPÁ <star/></srai></template>
+</category>
+<category><pattern>MIS PADRES *</pattern>
+<template><srai>MI PADRE <star/></srai></template>
+</category>
+<category><pattern>MI PADRE *</pattern>
+<template><srai>MI PADRE <star/></srai></template>
+</category>
+<category><pattern>MI MARIDO *</pattern>
+<template><srai>MI MARIDO <star/></srai></template>
+</category>
+<category><pattern>MI ESPOSA *</pattern>
+<template><srai>MI ESPOSA <star/></srai></template>
+</category>
+<category><pattern>MIS HIJOS *</pattern>
+<template><srai>MI HIJO <star/></srai></template>
+</category>
+<category><pattern>MIS HIJAS *</pattern>
+<template><srai>MI HIJA <star/></srai></template>
+</category>
+<category><pattern>MI HIJO *</pattern>
+<template><srai>MI HIJO <star/></srai></template>
+</category>
+<category><pattern>MI HIJA *</pattern>
+<template><srai>MI HIJA <star/></srai></template>
+</category>
+<category><pattern>MIS HERMANOS *</pattern>
+<template><srai>MI HERMANO <star/></srai></template>
+</category>
+<category><pattern>MIS HERMANAS *</pattern>
+<template><srai>MI HERMANA <star/></srai></template>
+</category>
+<category><pattern>MI HERMANO *</pattern>
+<template><srai>MI HERMANO <star/></srai></template>
+</category>
+<category><pattern>MI HERMANA *</pattern>
+<template><srai>MI HERMANA <star/></srai></template>
+</category>
+
+</aiml>

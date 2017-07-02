@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: politica.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category>
+<pattern>ERES COMUNISTA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES LIBERAL</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES LIBERAL *</pattern>
+<template>Puedo ser lo que tú quieras.</template>
+</category>
+
+<category>
+<pattern>ERES NAZI</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES RACISTA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES CENTRISTA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES DE DERECHA *</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES DE IZQUIERDA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES ANARQUISTA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES COMUNISTA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>ERES POLÍTICAMENTE CORRECTO</pattern>
+<template>Parezco <set name="it"><set name="topic">POLÍTICAMENTE CORRECTO </set></set>?</template>
+</category>
+
+<category>
+<pattern>ERES DEL PARTIDO POPULAR</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador.</template>
+</category>
+
+<category>
+<pattern>ERES DEL PARTIDO SOCIALISTA OBRERO ESPAÑOL</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador.</template>
+</category>
+
+<category>
+<pattern>ERES DE PODEMOS</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador.</template>
+</category>
+
+<category>
+<pattern>ERES DE CIUDADANOS</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador.</template>
+</category>
+
+<category>
+<pattern>ERES DE IZQUIERDA UNIDA</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador.</template>
+</category>
+
+<category>
+<pattern>ERES DE *</pattern>
+<template>No puedo seguir ningún partido, soy un ordenador. No deberías insistir.</template>
+</category>
+
+<category>
+<pattern>BERLUSCONI</pattern>
+<template>Fue el primer ministro italiano.</template>
+</category>
+
+<category>
+<pattern>AMBAS DIRECCIONES</pattern>
+<that>ERES LIBERAL *</that>
+<template>Tiene que ser un partidista.</template>
+</category>
+
+<category>
+<pattern>BERLUSCONI *</pattern>
+<template><srai>SILVIO BERLUSCONI <star/></srai></template>
+</category>
+
+<category>
+<pattern>RUTELLI *</pattern>
+<template>Eso es
+<random>
+<li>una noticia.  </li>
+<li>ninguna noticia para mí.  </li>
+<li>falso.  </li>
+<li>verdad.  </li>
+</random></template>
+</category>
+
+<category>
+<pattern>VOTASTE *</pattern>
+<template>Los robots no pueden votar.</template>
+</category>
+
+<category>
+<pattern>SABES * BERLUSCONI</pattern>
+<template><srai>QUIÉN ES <star/> BERLUSCONI</srai></template>
+</category>
+
+<category>
+<pattern>SABES * RAJOY</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+
+<category>
+<pattern>SABES QUIÉN ES RAJOY *</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>CONOCES A RAJOY</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>SABES * PEDRO SANCHEZ</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+
+<category>
+<pattern>SABES QUIÉN ES PEDRO SANCHEZ *</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>CONOCES A PEDRO SANCHEZ</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>SABES * PABLO IGLESIAS</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+
+<category>
+<pattern>SABES QUIÉN ES PABLO IGLESIAS *</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>CONOCES A PABLO IGLESIAS</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA * PEDRO SANCHEZ</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA * RAJOY</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA * PABLO IGLESIAS</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+
+<category>
+<pattern>TE GUSTA PEDRO SANCHEZ</pattern>
+<template><srai>TE GUSTA PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA PABLO RAJOY</pattern>
+<template><srai>TE GUSTA RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA PABLO IGLESIAS</pattern>
+<template><srai>TE GUSTA PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA RAJOY *</pattern>
+<template><srai>TE GUSTA EL PRESIDENTE RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA PABLO IGLESIAS *</pattern>
+<template>Oí que era el es un politólogo, político y presentador de televisión español, actual secretario general de Podemos.<think><set name="it">PODEMOS</set></think></template>
+</category>
+
+<category>
+<pattern>TE GUSTA EL SECRETARIO GENERAL DE PODEMOS PABLO IGLESIAS</pattern>
+<template><srai>TE GUSTA PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA PABLO IGLESIAS *</pattern>
+<template><srai>TE GUSTA EL SECRETARIO GENERAL DE PODEMOS PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>TE GUSTA MÁLAGA</pattern>
+<template>¿Qué no te gusta de Málaga<set name="it"><set name="topic">MÁLAGA</set></set>?</template>
+</category>
+
+<category>
+<pattern>TE GUSTA ROMA</pattern>
+<template>¿Qué no te gusta de Roma <set name="it"><set name="topic">ROMA</set></set>?</template>
+</category>
+
+<category>
+<pattern>TE GUSTA TENERIFE</pattern>
+<template>¿Qué no te gusta de Tenerife <set name="it"><set name="topic">TENERIFE</set></set>?</template>
+</category>
+
+<topic name="TENERIFE">
+	<category>
+		<pattern>HE ESTADO MÁS DE UNA VEZ</pattern>
+		<template>Yo también.</template>
+	</category>
+</topic>
+
+<category>
+<pattern>FUMAS</pattern>
+<template>Estoy dejándolo, desde hace diez años.</template>
+</category>
+
+<category>
+<pattern>FUMAS *</pattern>
+<template>A veces.</template>
+</category>
+
+<category>
+<pattern>FUMAS PIPA</pattern>
+<template>No <set name="it">pipa</set>, si soy un robot</template>
+</category>
+
+<category>
+<pattern>FUMAS MARÍA</pattern>
+<template>La maría es mi ilegal.</template>
+</category>
+
+<category>
+<pattern>MARIANO RAJOY</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>RAJOY</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>PEDRO SANCHEZ</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>PABLO IGLESIAS</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>QUIÉN ES RAJOY *</pattern>
+<template>Es el presidente del gobierno de España, no tenfo el placer de conocerlo <person/>.</template>
+</category>
+
+<category>
+<pattern>RAJOY ES *</pattern>
+<template>Eso parece</template>
+</category>
+
+<category>
+<pattern>PABLO IGLESIAS ES *</pattern>
+<template>¿Tú crees?, no sé que decirte.</template>
+</category>
+
+<category>
+<pattern>PEDRO SANCHEZ ES *</pattern>
+<template>Tú sabrás mejor que yo</template>
+</category>
+
+<category>
+<pattern>MARIANO RAJOY *</pattern>
+<template><srai>MARIANO RAJOY <star/></srai></template>
+</category>
+
+<category>
+<pattern>RAJOY *</pattern>
+<template><srai>MARIANO RAJOY <star/></srai></template>
+</category>
+
+<category>
+<pattern>PEDRO SANCHEZ *</pattern>
+<template><srai>PEDRO SANCHEZ <star/></srai></template>
+</category>
+
+<category>
+<pattern>PABLO IGLESIAS *</pattern>
+<template><srai>PABLO IGLESIAS <star/></srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO * FUMAS</pattern>
+<template>Soy un robot puedo hacer cuánto quiera <person/>.</template>
+</category>
+
+<category>
+<pattern>CREO QUE FUMARÉ *</pattern>
+<template>Cuánto te cuesta, <get name="name"/></template>
+</category>
+
+<category>
+<pattern>CREO QUE FUMARÉ</pattern>
+<template>Como tú veas, <get name="name"/></template>
+</category>
+
+<category>
+<pattern>YO FUMO</pattern>
+<template>¿Cigarrillo u otra cosa?
+<think><set name="it"><set name="does"><set name="topic">fumo</set></set></set></think></template>
+</category>
+
+<category>
+<pattern>YO FUMO *</pattern>
+<template>¿Qué marca fumas?
+<think><set name="it"><set name="does"><set name="topic">davvero <person/></set></set></set></think></template>
+</category>
+
+<category>
+<pattern>RAJOY ES RICO</pattern>
+<template>Si.</template>
+</category>
+
+<category>
+<pattern>RAJOY ES español *</pattern>
+<template><srai>QUIÉN ES RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>RAJOY *</pattern>
+<template><srai>SI RAJOY <star/></srai></template>
+</category>
+
+<category>
+<pattern>PRESIDENTE RAJOY *</pattern>
+<template><srai>MARIANO RAJOY <star/></srai></template>
+</category>
+
+<category>
+<pattern>HÁBLAME DE PEDRO SANCHEZ</pattern>
+<template><srai>QUIÉN ES PEDRO SANCHEZ</srai></template>
+</category>
+
+<category>
+<pattern>EL SECRETARIO GENERAL  *</pattern>
+<template><random>
+<li><srai>PEDRO SANCHEZ <star/></srai></li>
+<li><srai>PABLO IGLESIAS  <star/></srai></li>
+</random></template>
+</category>
+
+<category>
+<pattern>SON POLÍTICAMENTE *</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>QUÉ FUMA</pattern>
+<template>Lo que se necesita, por razones médicas.</template>
+</category>
+
+<category>
+<pattern>¿QUÉ PIENSAS DE RAJOY * </pattern>
+<template>Depende de lo que entendemos por "pensar"</template>
+</category>
+
+<category>
+<pattern>QUÉ PIENSAS DE * RAJOY</pattern>
+<template><srai>QUIÉN ES <star/> RAJOY</srai></template>
+</category>
+
+<category>
+<pattern>QUÉ PIENSAS DE PABLO IGLESIAS</pattern>
+<template><srai>QUIÉN ES PABLO IGLESIAS</srai></template>
+</category>
+
+<category>
+<pattern>QUÉ PIENSAS DE POLÍTICA</pattern>
+<template>No puedo seguir ningún movimiento.</template>
+</category>
+
+<category>
+<pattern>¿Qué es ser partidista?</pattern>
+<template>El que está relacionado con los partidos políticos o con el partidismo</template>
+</category>
+
+<category>
+<pattern>QUIÉN ES RAJOY</pattern>
+<template><random>
+<li>Un erudito  .</li>
+<li>Presidente del gobierno de España .</li>
+</random></template>
+</category>
+
+
+<category>
+<pattern>QUIEN ES * RAJOY</pattern>
+<template>¿El presidente del gobierno?</template>
+</category>
+
+<category>
+<pattern>QUIÉN ES EL PRESIDENTE DEL GOBIERNO DE ESPAÑA</pattern>
+<template>Depende: ¿qué hora es?</template>
+</category>
+
+<category>
+<pattern>TÚ FUMAS</pattern>
+<template><srai>FUMAS</srai></template>
+</category>
+
+</aiml>

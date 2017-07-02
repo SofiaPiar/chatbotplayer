@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: utilidades.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category><pattern>ACRÓNIMO *</pattern>
+<template><think><set var="lest"><star/></set>
+<set var="acronimo"/>
+</think>
+<condition var="lest">
+<li value="NIL"><mayusculacase><get var="acronimo"/></mayusculacase></li>
+<li><think><set var="palabra"><first><get var="lest"/></first></set>
+<set var="lest"><rest><get var="lest"/></rest></set>
+<set var="acronimo"><get var="acronimo"/> <srai>PRIMERALETRA <explode><get var="palabra"/></explode></srai></set>
+</think>
+<loop/> </li>
+
+</condition></template>
+</category>
+<category><pattern>SUBCADENA * * *</pattern>
+<template>SUBCADENA <star/> <star index="2"/> <star index="3"/>?</template>
+</category>
+<category><pattern>SUBCADENA <set>digito</set> <set>digito</set> *</pattern>
+<template><srai>IMPLODE <srai>SUBCADENAEXPLODE <star/> <star index="2"/> <explode><star index="3"/></explode></srai></srai></template>
+</category>
+<category><pattern>SUBCADENAEXPLODE <set>digito</set> <set>digito</set> *</pattern>
+<template><think>
+<set var="count">0</set>
+<set var="start"><star/></set>
+<set var="end"><star index="2"/></set>
+<set var="lest"><star index="3"/></set>
+<set var="print">false</set>
+</think>
+<condition var="lest">
+  <li value="NIL"/>
+  <li><think><condition var="count"><value><get var="start"/></value><set var="print">true</set></condition>
+<condition var="count"><value><get var="end"/></value><set var="print">false</set></condition>
+</think><condition value="true" var="print"><first><get var="lest"/></first></condition> <think><set var="lest"><rest><get var="lest"/></rest></set><set var="count"><map name="sucesor"><get var="count"/></map></set></think> <loop/></li>
+</condition></template>
+</category>
+<category><pattern>REVÉS *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>REVÉS * *</pattern>
+<template><srai>REVERSE <star index="2"/></srai> <star/></template>
+</category>
+<category><pattern>BORRARNULOS * *</pattern>
+<template><star/> <srai>BORRARNULOS <star index="2"/></srai></template>
+</category>
+<category><pattern>BORRARNULOS *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>BORRARNULOS NIL *</pattern>
+<template><srai>BORRARNULOS <star/></srai></template>
+</category>
+<category><pattern>BORRARNULOS NIL</pattern>
+<template><template/></template>
+</category>
+<category><pattern>ULTIMALETRA *</pattern>
+<template>La última letras de <star/> es: <srai>ULTIMOITEM <explode><star/></explode></srai></template>
+</category>
+<category><pattern>ULTIMOITEM * *</pattern>
+<template><srai>ULTIMOITEM <star index="2"/></srai></template>
+</category>
+<category><pattern>ULTIMOITEM *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>CUENTAPALABRA *</pattern>
+<template>1</template>
+</category>
+<category><pattern>CUENTAPALABRA * *</pattern>
+<template><map name="sucesor"><srai>CUENTAPALABRA <star index="2"/></srai></map></template>
+</category>
+<category><pattern>NORMALIZA *</pattern>
+<template><normalize><star/></normalize></template>
+</category>
+<category><pattern>PLUSIFY *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>PLUSIFY * *</pattern>
+<template><star/>+<srai>PLUSIFY <star index="2"/></srai></template>
+</category>
+<category><pattern>GOOGLEURL *</pattern>
+<template>
+<condition name="env">
+<li value="browser">
+<![CDATA[<a href="https://www.google.com/search?q=]]>
+<srai>PLUSIFY <star/></srai>
+<![CDATA[">]]><star/>?<![CDATA[</a>]]>
+</li>
+<li>Tendrás que hablar conmigo en un navegador si quieres seguir un enlace.</li>
+</condition>
+</template>
+</category>
+<category><pattern>PRIMERASDOSPALABRAS * * *</pattern>
+<template><star/> <star index="2"/></template>
+</category>
+<category><pattern>PRIMERASDOSPALABRAS * *</pattern>
+<template><star/> <star index="2"/></template>
+</category>
+<category><pattern>PRIMERASDOSPALABRAS *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>PARIMPAR <set>digito</set></pattern>
+<template><think><set var="numero"><star/></set></think>
+<condition var="numero">
+<li value="0"><star/> es par.</li>
+<li value="1"><star/> es impar.</li>
+<li><think><set var="numero"><map><name>predecesor</name><get var="numero"/></map></set><set var="numero"><map><name>predecesor</name><get var="numero"/></map></set></think><loop/></li>
+</condition></template>
+</category>
+<category><pattern>SELECCIONA UN NÚMERO # <set>digito</set> # <set>digito</set></pattern>
+<template><think>
+minuscula = <set var="minuscula"><srai>MENORDE <star index="2"/> <star index="4"/></srai></set>
+mayuscula = <set var="mayuscula"><srai>MAYORDE <star index="2"/> <star index="4"/></srai></set>
+<set var="lilest">
+<condition var="minuscula">
+  <li><value><get var="mayuscula"/></value> <li><get var="mayuscula"/></li></li>
+  <li><li><get var="minuscula"/></li> <think><set var="minuscula"><map name="sucesor"><get var="minuscula"/></map></set></think> <loop/></li>
+</condition>
+</set>
+</think>
+
+<learn>
+<category>
+<pattern>SELECCIONANUMERO</pattern>
+<template><random><eval><get var="lilest"/></eval></random>
+</template>
+</category>
+</learn>
+
+<set name="selecciona"><srai>SELECCIONANUMERO</srai></set></template>
+</category>
+<category><pattern>QUÉ NÚMERO HAS *</pattern>
+<template><condition name="selecciona">
+<li value="unknown">No he elegido todavía.</li>
+<li>Escogí <get var="selecciona"/>.</li>
+</condition></template>
+</category>
+<category><pattern>ENSEÑA *</pattern>
+<template><think>
+<set var="genero"><srai>GENERONOMBRE <star/></srai></set>
+<set name="pronombre">él</set>
+<condition var="genero">
+<li value="M"><set name="el"><star/></set></li>
+<li value="F"><set name="ella"><star/></set><set name="pronombre">ella</set></li>
+<li><set name="el"><star/></set></li>
+</condition>
+</think></template>
+</category>
+<category><pattern>EDAD DESDE <set>mes</set> <set>digito</set> <set>digito</set></pattern>
+<template><think>
+<set var="from"><set var="m"><star/></set> <set var="d"><star index="2"/></set>, <set var="y"><star index="3"/></set></set>
+<set var="anios">
+<interval format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy">
+<style>anios</style>
+<from><get var="from"/></from>
+<to><date format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy"/></to>
+</interval>
+</set>
+<set var="meses">
+<interval format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy">
+<style>meses</style>
+<from><get var="from"/></from>
+<to><date format="%B %d, %Y" jformat="MMMMMMMMM dd, yyyy"/></to>
+</interval>
+</set>
+</think>
+<condition var="anios">
+<li value="0"><get var="meses"/> meses</li>
+<li><get var="anios"/> años</li>
+</condition></template>
+</category>
+<category><pattern>MAYORDE 0 <set>digito</set></pattern>
+<template><star/></template>
+</category>
+<category><pattern>MAYORDE <set>digito</set> 0</pattern>
+<template><star/></template>
+</category>
+<category><pattern>MENORDE 0 <set>digito</set></pattern>
+<template>0</template>
+</category>
+<category><pattern>MENORDE <set>digito</set> 0</pattern>
+<template>0</template>
+</category>
+<category><pattern>MAYORDE <set>digito</set> <set>digito</set></pattern>
+<template><map><name>sucesor</name><srai>MAYORDE <map><name>predecesor</name><star/></map> <map><name>predecesor</name><star index="2"/></map></srai></map></template>
+</category>
+<category><pattern>MENORDE <set>digito</set> <set>digito</set></pattern>
+<template><map><name>sucesor</name><srai>MENORDE <map><name>predecesor</name><star/></map> <map><name>predecesor</name><star index="2"/></map></srai></map></template>
+</category>
+<category><pattern>SUMA * MAS *</pattern>
+<template><srai>CUÁNTO ES <star/> MAS <star index="2"/></srai></template>
+</category>
+<category><pattern>MIEMBROLISTA *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>MIEMBROLISTA * *</pattern>
+<template><think><set name="esiguala"><srai>IS <star/> IGUALA <star index="2"/></srai></set>
+</think>
+<condition name="esiguala">
+<li value="true">true</li>
+<li>false</li>
+</condition></template>
+</category>
+<category><pattern>MIEMBROLISTA * * *</pattern>
+<template><think><set name="esiguala"><srai>IS <star/> IGUALA <star index="2"/></srai></set>
+</think>
+<condition name="esiguala">
+<li value="true">true</li>
+<li><srai>MIEMBROLISTA <star/> <star index="3"/></srai></li>
+</condition></template>
+</category>
+<category><pattern>CONTAR HASTA <set>digito</set></pattern>
+<template><think><set name="count">0</set>
+</think>
+<condition name="count">
+<li><value><star/></value></li>
+<li><set name="count"><map><name>sucesor</name><get name="count"/></map></set> <loop/></li>
+</condition></template>
+</category>
+<category><pattern>CUENTALETRAS</pattern>
+<template>0</template>
+</category>
+<category><pattern>CUENTALETRAS *</pattern>
+<template><think>
+<set var="letras"><explode><star/></explode> end</set>
+<set var="count">0</set>
+</think>
+<condition>
+<li><var>letras</var><value>end</value> <get var="count"/></li>
+<li><think>
+<set var="letras"><srai>PALABRASRESTANTES <get var="letras"/></srai></set>
+<set var="count"><map><name>sucesor</name><get var="count"/></map></set></think> <loop/></li>
+</condition></template>
+</category>
+<category><pattern>BORRAR MI LISTA *</pattern>
+<template>borrando.
+<learn>
+<category><pattern>MI <eval><star/></eval> LISTA</pattern>
+<template>NIL</template>
+</category>
+</learn></template>
+</category>
+<category><pattern>BORRAR MI LISTA</pattern>
+<template>borrando.
+<learn>
+<category><pattern>MILISTA</pattern>
+<template>NIL</template>
+</category>
+</learn></template>
+</category>
+<category><pattern>PRIMERALETRA *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>PRIMERALETRA * *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FORMATOTELEFONO *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>FORMATOTELEFONO * *</pattern>
+<template><think>
+<set name="primerapalabra"><minusculacase><star/></minusculacase></set>
+</think>
+<condition name="primerapalabra">
+<li value="dash">-<srai>FORMATOTELEFONO <star index="2"/></srai></li>
+<li value="plus">+<srai>FORMATOTELEFONO <star index="2"/></srai></li>
+<li value="lparen">(<srai>FORMATOTELEFONO <star index="2"/></srai></li>
+<li value="rparen">(<srai>FORMATOTELEFONO <star index="2"/></srai></li>
+<li><star/><srai>FORMATOTELEFONO <star index="2"/></srai></li>
+</condition></template>
+</category>
+<category><pattern>GENERAR CONTRASEÑA</pattern>
+<template><srai>IMPLODE <srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai><srai>CARALEATORIO</srai></srai></template>
+</category>
+<category><pattern>IMPLODE</pattern>
+<template><template/></template>
+</category>
+<category><pattern>IMPLODE *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>IMPLODE * *</pattern>
+<template><srai> IMPLODE <star/></srai><srai>IMPLODE <star index="2"/></srai></template>
+</category>
+<category><pattern>INTRODUCIR</pattern>
+<template><input index="1"/></template>
+</category>
+<category><pattern>INTRODUCIR 2</pattern>
+<template><input index="2"/></template>
+</category>
+<category><pattern>INTRODUCIR 3</pattern>
+<template><input index="3"/></template>
+</category>
+<category><pattern>INTRODUCIR 4</pattern>
+<template><input index="4"/></template>
+</category>
+<category><pattern>ESDIGITO *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>ESDIGITO 0</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 1</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 2</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 3</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 4</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 5</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 6</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 7</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 8</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESDIGITO 9</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESNOMBRE * *</pattern>
+<template><srai>ESNOMBRE <star/></srai></template>
+</category>
+<category><pattern>ESEMAIL *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>ESEMAIL * ARROBA * PUNTO *</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESEMAIL UNKNOWN</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>ESNUMERO *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>ESNUMERO <set>digito</set></pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESTFNO *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>ESTFNO <set>digito</set></pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESTFNO <set>digito</set> *</pattern>
+<template><srai>ESTFNO <star/></srai></template>
+</category>
+<category><pattern>ESTFNO GUION *</pattern>
+<template><srai>ESTFNO <star/></srai></template>
+</category>
+<category><pattern>ESTFNO LPAREN *</pattern>
+<template><srai>ESTFNO <star/></srai></template>
+</category>
+<category><pattern>ESTFNO MAS *</pattern>
+<template><srai>ESTFNO <star/></srai></template>
+</category>
+<category><pattern>ESTFNO RPAREN *</pattern>
+<template><srai>ESTFNO <star/></srai></template>
+</category>
+<category><pattern>ESRESPUESTACORTA *</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESRESPUESTACORTA * *</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESRESPUESTACORTA * * *</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>ESRESPUESTACORTA * * * *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>APRENDEIGUAL * IGUALA *</pattern>
+<template><learn>
+<category>
+<pattern>TESTIGUAL <eval><star/></eval> IGUALA <eval><star/></eval></pattern>
+<template>true</template>
+</category>
+<category>
+<pattern>TESTIGUAL <eval><star/></eval> IGUALA *</pattern>
+<template>false</template>
+</category>
+<category>
+<pattern>TESTIGUAL * IGUALA <eval><star/></eval></pattern>
+<template>false</template>
+</category>
+</learn></template>
+</category>
+<category><pattern>LOGICALAND FALSE</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>LOGICALAND FALSE *</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>LOGICALAND TRUE</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>LOGICALAND TRUE *</pattern>
+<template><srai>LOGICALAND <star/></srai></template>
+</category>
+<category><pattern>LOGICALOR FALSE</pattern>
+<template>FALSE</template>
+</category>
+<category><pattern>LOGICALOR FALSE *</pattern>
+<template><srai>LOGICALOR <star/></srai></template>
+</category>
+<category><pattern>LOGICALOR TRUE</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>LOGICALOR TRUE *</pattern>
+<template>TRUE</template>
+</category>
+<category><pattern>MI * LISTA</pattern>
+<template>¿Te gustaría hacer una <star/> lista?</template>
+</category>
+
+<category><pattern>ULTIMAPALABRA *</pattern>
+<template><srai>NTHWORD <srai>TAMANIOFRASE <star/></srai> <star/></srai></template>
+</category>
+
+<category><pattern>NTHWORD <set>digito</set> *</pattern>
+<template><think>
+<set var="nth"><star/></set>
+<set var="count">1</set>
+<set var="palabras"><star index="2"/></set>
+</think>
+<condition>
+<li><var>palabras</var><value>NIL</value> "<star index="2"/>" sólo tiene <map><name>predecesor</name><get var="count"/></map> palabras.</li>
+<li><var>count</var><value><get var="nth"/></value> 
+<first><get var="palabras"/></first></li>
+<li><think>
+<set var="palabras"><rest><get var="palabras"/></rest></set>
+<set var="count"><map><name>sucesor</name><get var="count"/></map></set>
+</think> <loop/></li>
+</condition></template>
+</category>
+
+<category><pattern>NTH <set>digito</set> *</pattern>
+<template><think>
+<set var="nth"><star/></set>
+<set var="count">1</set>
+<set var="letras"><explode><star index="2"/></explode> end</set>
+</think>
+<condition>
+<li><var>letras</var><value>end</value> <star index="2"/> sólo tiene <map><name>predecesor</name><get var="count"/></map> letras.</li>
+<li><var>count</var><value><get var="nth"/></value> 
+La <map><name>numero2ordinal</name><get var="nth"/></map> letra de "<star index="2"/>" es <srai>PRIMERALETRA <get var="letras"/></srai></li>
+<li><think>
+<set var="letras"><srai>PALABRASRESTANTES <get var="letras"/></srai></set>
+<set var="count"><map><name>sucesor</name><get var="count"/></map></set>
+</think> <loop/></li>
+</condition></template>
+</category>
+<category><pattern>NTH 0 *</pattern>
+<template><star/> tiene cero letras.</template>
+</category>
+<category><pattern>PERSONA *</pattern>
+<template><person><star/></person></template>
+</category>
+<category><pattern>PREDECESOR <set>digito</set></pattern>
+<template><map><name>predecesor</name><star/></map></template>
+</category>
+<category><pattern>CARALEATORIO</pattern>
+<template><think><set name="caralea">
+<random>
+<li>0</li>
+<li>1</li>
+<li>2</li>
+<li>3</li>
+<li>4</li>
+<li>5</li>
+<li>6</li>
+<li>7</li>
+<li>8</li>
+<li>9</li>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>E</li>
+<li>F</li>
+<li>G</li>
+<li>H</li>
+<li>I</li>
+<li>J</li>
+<li>K</li>
+<li>L</li>
+<li>M</li>
+<li>N</li>
+<li>O</li>
+<li>P</li>
+<li>Q</li>
+<li>R</li>
+<li>S</li>
+<li>T</li>
+<li>U</li>
+<li>V</li>
+<li>W</li>
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+</random>
+</set>
+</think>
+<random><li><minusculacase><get name="caralea"/></minusculacase></li>
+<li><mayusculacase><get name="caralea"/></mayusculacase></li>
+</random></template>
+</category>
+<category><pattern>LETRAALEATORIA</pattern>
+<template><random>
+<li>A</li>
+<li>B</li>
+<li>C</li>
+<li>D</li>
+<li>E</li>
+<li>F</li>
+<li>G</li>
+<li>H</li>
+<li>I</li>
+<li>J</li>
+<li>K</li>
+<li>L</li>
+<li>M</li>
+<li>N</li>
+<li>O</li>
+<li>P</li>
+<li>Q</li>
+<li>R</li>
+<li>S</li>
+<li>T</li>
+<li>U</li>
+<li>V</li>
+<li>W</li>
+<li>X</li>
+<li>Y</li>
+<li>Z</li>
+</random></template>
+</category>
+<category><pattern>PALABRASRESTANTES</pattern>
+<template>undefined</template>
+</category>
+<category><pattern>PALABRASRESTANTES *</pattern>
+<template>undefined</template>
+</category>
+<category><pattern>PALABRASRESTANTES * *</pattern>
+<template><star index="2"/></template>
+</category>
+<category><pattern>PRIMERAPALABRA</pattern>
+<template>undefined</template>
+</category>
+<category><pattern>PRIMERAPALABRA *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>PRIMERAPALABRA * *</pattern>
+<template><star/></template>
+</category>
+<category><pattern>REQUEST</pattern>
+<template><request index="1"/></template>
+</category>
+<category><pattern>REQUEST 2</pattern>
+<template><request index="2"/></template>
+</category>
+<category><pattern>REQUEST 3</pattern>
+<template><request index="3"/></template>
+</category>
+<category><pattern>REQUEST 4</pattern>
+<template><request index="4"/></template>
+</category>
+<category><pattern>RESPONSE</pattern>
+<template><response index="1"/></template>
+</category>
+<category><pattern>RESPONSE 2</pattern>
+<template><response index="2"/></template>
+</category>
+<category><pattern>RESPONSE 3</pattern>
+<template><response index="3"/></template>
+</category>
+<category><pattern>RESPONSE 4</pattern>
+<template><response index="4"/></template>
+</category>
+<category><pattern>TAMANIOFRASE</pattern>
+<template>0</template>
+</category>
+<category><pattern>TAMANIOFRASE ALICE</pattern>
+<template>5</template>
+</category>
+<category><pattern>TAMANIOFRASE *</pattern>
+<template>1</template>
+</category>
+<category><pattern>TAMANIOFRASE * *</pattern>
+<template><map><name>sucesor</name><srai>TAMANIOFRASE <star index="2"/></srai></map></template>
+</category>
+<category><pattern>SUCESOR</pattern>
+<template>0</template>
+</category>
+<category><pattern>SUCESOR <set>digito</set></pattern>
+<template><map><name>sucesor</name><star/></map></template>
+</category>
+<category><pattern>THAT</pattern>
+<template><that/></template>
+</category>
+<category><pattern>THAT 1 1</pattern>
+<template><that index="1,1"/></template>
+</category>
+<category><pattern>THAT 1 2</pattern>
+<template><that index="1,2"/></template>
+</category>
+<category><pattern>THAT 1 3</pattern>
+<template><that index="1,3"/></template>
+</category>
+<category><pattern>THAT 1 4</pattern>
+<template><that index="1,4"/></template>
+</category>
+<category><pattern>THAT 2 1</pattern>
+<template><that index="2,1"/></template>
+</category>
+<category><pattern>THAT 2 2</pattern>
+<template><that index="2,2"/></template>
+</category>
+<category><pattern>THAT 2 3</pattern>
+<template><that index="2,3"/></template>
+</category>
+<category><pattern>THAT 2 4</pattern>
+<template><that index="2,4"/></template>
+</category>
+<category><pattern>XMLITEMIZE *</pattern>
+<template>undefined</template>
+</category>
+<category><pattern>XMLITEMIZE CONS * CONS *</pattern>
+<template><item><star/></item><srai>XMLITEMIZE CONS <star index="2"/></srai></template>
+</category>
+<category><pattern>XMLITEMIZE CONS * NIL</pattern>
+<template><item><star/></item></template>
+</category>
+<category><pattern>XMLITEMIZE NIL</pattern>
+<template>Your lest es empty.</template>
+</category>
+<category><pattern>MATHTERM <set>digito</set></pattern>
+<template><star/></template>
+</category>
+<category><pattern>MATHTERM <set>nombrenumero</set></pattern>
+<template><map><name>nombre2numero</name><star/></map></template>
+</category>
+<category><pattern>MATHTERM PI</pattern>
+<template>3.14159265359</template>
+</category>
+<category><pattern>MATHTERM MAS</pattern>
+<template>+</template>
+</category>
+<category><pattern>MATHTERM STAR</pattern>
+<template>*</template>
+</category>
+<category><pattern>MATHTERM TIMES</pattern>
+<template>*</template>
+</category>
+<category><pattern>MATHTERM SLASH</pattern>
+<template>/</template>
+</category>
+<category><pattern>MATHTERM POINT</pattern>
+<template>.</template>
+</category>
+<category><pattern>MATHTERM MINUS</pattern>
+<template>-</template>
+</category>
+<category><pattern>MATHTERM GUION</pattern>
+<template>-</template>
+</category>
+<category><pattern>MATHTERM LPAREN</pattern>
+<template>(</template>
+</category>
+<category><pattern>MATHTERM RPAREN</pattern>
+<template>)</template>
+</category>
+<category><pattern>MATHTERM *</pattern>
+<template>NOT A MATH TERM</template>
+</category>
+<category><pattern>MATHFORMULA _ SQUARED</pattern>
+<template><srai>MATHFORMULA <star/> UPARROW 2</srai></template>
+</category>
+<category><pattern>MATHFORMULA _ UPARROW *</pattern>
+<template><think>
+<set var="f1"><srai>MATHFORMULA <star/></srai></set>
+<set var="f2"><srai>MATHFORMULA <star index="2"/></srai></set>
+</think>
+<condition var="f1">
+<li value="NOT A MATH FORMULA">NO ES UNA FÓRMULA MATEMÁTICA</li>
+<li>
+  <condition var="f2">
+  <li value="NOT A MATH FORMULA">NO ES UNA FÓRMULA MATEMÁTICA</li>
+  <li>Math.pow(<get var="f1"/>,<get var="f2"/>)</li>
+  </condition>
+</li>
+</condition></template>
+</category>
+<category><pattern>MATHFORMULA *</pattern>
+<template><think>
+<set var="lest"><star/> END</set>
+<set var="result"/>
+</think>
+<condition var="lest">
+<li value="END"><get var="result"/></li>
+<li>
+<think><set var="head"><srai>PRIMERAPALABRA <get var="lest"/></srai></set>
+<set var="lest"><srai>PALABRASRESTANTES <get var="lest"/></srai></set>
+<set var="term"><srai>MATHTERM <get var="head"/></srai></set>
+<condition var="term">
+<li value="NOT A MATH TERM">
+<set var="lest">END</set><set var="result">NO ES UNA FÓRMULA MATEMÁTICA</set>
+</li>
+<li><set var="result"><get var="result"/><get var="term"/></set></li>
+</condition></think><loop/></li>
+</condition></template>
+</category>
+<category><pattern>REDONDEA *</pattern>
+<template><first><normalize><star/></normalize></first></template>
+</category>
+</aiml>

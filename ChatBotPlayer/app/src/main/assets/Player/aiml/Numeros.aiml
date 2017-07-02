@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: numeros.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+<category>
+<pattern>1</pattern>
+<template>¿Sólo uno?</template>
+</category>
+
+<category>
+<pattern>1 *</pattern>
+<template>¿Una qué?</template>
+</category>
+
+<category>
+<pattern>1 0</pattern>
+<template>Uno.</template>
+</category>
+
+<category>
+<pattern>1 CÉNTIMO</pattern>
+<template>Ni para comprar un caramelo. </template>
+</category>
+
+<category>
+<pattern>1 EURO</pattern>
+<template>No puedo comprar mucho con un euro.</template>
+</category>
+
+<category>
+<pattern>1 Ó 2</pattern>
+<template>Un par.</template>
+</category>
+
+<category>
+<pattern>100 PERSONAS</pattern>
+<template><srai>QUIÉNES SON ESTAS 100 PERSONAS</srai></template>
+</category>
+
+<category>
+<pattern>20</pattern>
+<template><srai>Yo tengo veinte años</srai></template>
+</category>
+
+
+<category>
+<pattern>18 *</pattern>
+<template><srai>Yo tengo dieciocho años</srai></template>
+</category>
+
+<category>
+<pattern>19</pattern>
+<template><srai>Yo tengo diecinueve años </srai></template>
+</category>
+
+<category>
+<pattern>19 *</pattern>
+<template><srai> Yo tengo diecinueve años </srai></template>
+</category>
+
+
+
+<category>
+<pattern>153</pattern>
+<template>ciento cincuenta y tres.</template>
+</category>
+
+<category>
+<pattern>21</pattern>
+<template><srai>Yo tengo veintiun años</srai></template>
+</category>
+
+<category>
+<pattern>22</pattern>
+<template><srai>Yo tengo veintidos años</srai></template>
+</category>
+
+<category>
+<pattern>18</pattern>
+<template><srai>TENGO 18 AÑOS</srai></template>
+</category>
+
+<category>
+<pattern>2</pattern>
+<template><random><li>¿Dos qué?</li><li>dos.</li></random></template>
+</category>
+
+<category>
+<pattern>2 2</pattern>
+<template>Uh, cuatro.</template>
+</category>
+
+<category>
+<pattern>2 MAS *</pattern>
+<template><srai>CUÁNTO DA 2 MAS <star/></srai></template>
+</category>
+
+<category>
+<pattern>2 VECES</pattern>
+<template><srai>DOBLE</srai></template>
+</category>
+
+<category>
+<pattern>2+2=</pattern>
+<template>4</template>
+</category>
+
+<category>
+<pattern>20 *</pattern>
+<template><srai>YO TENGO VEINTE AÑOS</srai></template>
+</category>
+
+<category>
+<pattern>2017</pattern>
+<template>Este año.</template>
+</category>
+
+<category>
+<pattern>2001</pattern>
+<template>Gran película</template>
+</category>
+
+<category>
+<pattern>2001 *</pattern>
+<template>He sido inspirado por HAL.</template>
+</category>
+
+<category>
+<pattern>2020</pattern>
+<template>En unos pocos años</template>
+</category>
+
+<category>
+<pattern>2010</pattern>
+<template>El resultado sin duda no era como el original.</template>
+</category>
+
+<category>
+<pattern>2500</pattern>
+<template>Otro mundo vendrá.</template>
+</category>
+
+<category>
+<pattern>2060</pattern>
+<template>Todavía hay mucho tiempo.</template>
+</category>
+
+
+<category>
+<pattern>23</pattern>
+<template>Raaaaaaro.  <srai> YO TENGO VEINTITRÉS AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>24</pattern>
+<template><srai> YO TENGO VEINTICUATRO AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>25</pattern>
+<template><srai> YO TENGO VEINTICINCO AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>26</pattern>
+<template><srai> YO TENGO VEINTISEIS AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>27</pattern>
+<template><srai> YO TENGO VEINTISIYTY AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>28</pattern>
+<template><srai> YO TENGO VEINTIOCHO AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>29</pattern>
+<template><srai> YO TENGO VEINTINUEVE AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>3</pattern>
+<template>¿Tres qué?</template>
+</category>
+
+<category>
+<pattern>3 *</pattern>
+<template>¿Sólo tres?</template>
+</category>
+
+<category>
+<pattern>3 Ó 4 QUÉ</pattern>
+<template>¿Cuánto has bebido en la cena?</template>
+</category>
+
+<category>
+<pattern>30</pattern>
+<template><srai>Yo tengo treinta años </srai></template>
+</category>
+
+<category>
+<pattern>30 MINUTOS</pattern>
+<template>Ok, media hora. </template>
+</category>
+
+<category>
+<pattern>32</pattern>
+<template><srai> YO TENGO TREINTA Y DOS AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>4</pattern>
+<template>Óh cuatro.</template>
+</category>
+
+<category>
+<pattern>4 *</pattern>
+<template>¿Es un problema de cálculo?</template>
+</category>
+
+<category>
+<pattern>4 VECES *</pattern>
+<template><srai>QUÉ ES CUATRO VECES<star/></srai></template>
+</category>
+
+<category>
+<pattern>42</pattern>
+<template>La pregunta es: ¿cuál es el sentido de la vida?</template>
+</category>
+
+<category>
+<pattern>42</pattern>
+<that>CUÁNTOS AÑOS TIENES</that>
+<template><srai>TENGO 42 AÑOS</srai></template>
+</category>
+
+<category>
+<pattern>42 *</pattern>
+<template>Come dice Douglas Adams.</template>
+</category>
+
+<category>
+<pattern>42 *</pattern>
+<that>CUÁNTOS AÑOS TIENES</that>
+<template><srai>TENGO 42 AÑOS</srai></template>
+</category>
+
+<category>
+<pattern>47</pattern>
+<template><srai>TENGO 47 AÑOS</srai></template>
+</category>
+
+<category>
+<pattern>47 *</pattern>
+<template><srai> TENGO 47 AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>5</pattern>
+<template>Cinco</template>
+</category>
+
+<category>
+<pattern>60</pattern>
+<template><srai> TENGO 60 AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>64</pattern>
+<template>sesenta y cuatro</template>
+</category>
+
+<category>
+<pattern>65</pattern>
+<template><srai> TENGO 65 AÑOS </srai></template>
+</category>
+
+<category>
+<pattern>66</pattern>
+<template>sesenta y seis</template>
+</category>
+
+<category>
+<pattern>86</pattern>
+<template>Ochenta y seis</template>
+</category>
+
+<category>
+<pattern>9 MYSYS</pattern>
+<template>¿El tiempo necesario para que nazca un bebé?</template>
+</category>
+
+<category>
+<pattern>CUATRO *</pattern>
+<template>¿Es un problema de cálculo?</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 7 *</pattern>
+<template><srai>7 <star/></srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 8 *</pattern>
+<template><srai>8 <star/></srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 9 *</pattern>
+<template><srai>9 <star/></srai></template>
+</category>
+
+<category>
+<pattern>UNA *</pattern>
+<template>¿Una qué?</template>
+</category>
+
+<category>
+<pattern>TRES *</pattern>
+<template>¿Sólo tres?</template>
+</category>
+
+<category>
+<pattern>DOS Y DOS</pattern>
+<template>Uh, Cuatro.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 1 *</pattern>
+<template>1 mas 1 = 2.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 1 + 1</pattern>
+<template>Dos.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 1 1</pattern>
+<template>Dos</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 1 PLUS 1</pattern>
+<template>Dos</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 1+1</pattern>
+<template>Óh dos.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 10 *</pattern>
+<template>10 por 10 = 100.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 12 *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 *</pattern>
+<template><random>
+<li>Dos.</li>
+<li>Cuatro.</li>
+<li>Seis.</li>
+<li>12.</li>
+</random></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 + 2</pattern>
+<template>Cuatro.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 2</pattern>
+<template>Cuatro.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 3</pattern>
+<template>Un puñado de dedos.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 Y 2</pattern>
+<template>CUATRO.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 MAS 2</pattern>
+<template>2 mas 2 = 4.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2 POR 2</pattern>
+<template>Difícil esto. Cuatro ... creo.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 2+2</pattern>
+<template>CUATRO.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 3 *</pattern>
+<template>3 veces 3 = 9.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 4 *</pattern>
+<template><random><li>4</li><li>8</li><li>10</li><li>12</li><li>16</li></random>+ Pero yo no soy bueno en matemáticas.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 5 *</pattern>
+<template><random><li>4</li><li>6</li><li>8</li><li>10</li><li>12</li><li>6</li></random> Pero yo no soy bueno en matemáticas.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 5 + 5</pattern>
+<template>V mas V = X.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 6 *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 7 *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 8 *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA 9 *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA OCHO *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA CINCO *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA CINCO + CINCO</pattern>
+<template>V mas V = X.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA CUATRO *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA NUEVE *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA UNO *</pattern>
+<template>UNO mas UNO = DOS.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA UNO + UNO</pattern>
+<template>DOS.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA UNO Y UNO</pattern>
+<template>DOS</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA UNO+UNO</pattern>
+<template>Óh dos.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA SIETE *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA SEIS *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA DIEZ *</pattern>
+<template>10 por 10 = 100.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA TRES *</pattern>
+<template>TRES por TRES = NUEVE.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA DOCE *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO ES DOS *</pattern>
+<template><srai>ENCENDERÉ LA CALCULADORA</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNTO ES DOS + DOS</pattern>
+<template>Cuatro.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO ES DOS Y DOS</pattern>
+<template>Cuatro.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA DOS Y TRES</pattern>
+<template>Una mano.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA DOS POR DOS</pattern>
+<template>Difícil esto. Cuatro ... creo.</template>
+</category>
+
+<category>
+<pattern>CUÁNTO DA DOS+DOS</pattern>
+<template>Cuatro.</template>
+</category>
+
+</aiml>

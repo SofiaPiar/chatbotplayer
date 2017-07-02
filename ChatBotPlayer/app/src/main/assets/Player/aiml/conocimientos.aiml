@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: conocimeintos.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category><pattern>DEFINE <set>acronimo</set></pattern>
+<template><map nombre="acronimo"><star/></map>.</template>
+</category>
+
+<category><pattern>QUÉ ES H2O</pattern>
+<template>Agua.</template>
+</category>
+
+<category><pattern>QUÉ SONIDO HACE $UN MUERTO ^</pattern>
+<template>No suena.</template>
+</category>
+
+<category><pattern>CUÁNDO # PLANTA ^</pattern>
+<template>Se planta en primavera y se cosecha en otoño</template>
+</category>
+
+<category><pattern>CUÁL ES EL <set>ordinal</set> MES ^</pattern>
+<template><srai>NTHWORD <map nombre="ordinal2numero"><star/></map> Enero Febrero Marzo Abril Mayo Junio ​​Julio Agosto Septiembre Octubre Noviembre Diciembre</srai></template>
+</category>
+
+<category><pattern>CUÁL ES EL ÚLTIMO MES ^</pattern>
+<template><srai>NTHWORD 12 Enero Febrero Marzo Abril Mayo Junio ​​Julio Agosto Septiembre Octubre Noviembre Diciembre</srai></template>
+</category>
+
+<category><pattern>CUÁL ES ÚLTIMO # BIBLIA #</pattern>
+<template>Revelaciones</template>
+</category>
+
+<category><pattern>DE QUÉ PAÍS ES  * <set>articulo</set> CAPITAL *</pattern>
+<template><map><nombre>pais2capital</nombre><star/></map></template>
+</category>
+<category><pattern>DE QUÉ NACIÓN ES  * <set>articulo</set> CAPITAL *</pattern>
+<template><map><nombre>pais2capital</nombre><star/></map></template>
+</category>
+
+<category><pattern>DE QUÉ PAÍS ES  * CAPITAL *</pattern>
+<template><map><nombre>pais2capital</nombre><star/></map></template>
+</category>
+<category><pattern>DE QUÉ NACIÓN ES  * CAPITAL *</pattern>
+<template><map><nombre>pais2capital</nombre><star/></map></template>
+</category>
+
+<category><pattern>DE QUÉ COMUNIDAD ES * <set>articulo</set> CAPITAL *</pattern>
+<template><map><nombre>ciudad2provincia</nombre><star/></map></template>
+</category>
+
+<category><pattern>DE QUÉ COMUNIDAD ES * CAPITAL *</pattern>
+<template><map><nombre>ciudad2provincia</nombre><star/></map></template>
+</category>
+
+<category><pattern>ES # <set>humedo</set> ^ WET ^</pattern>
+<template><star index="2"/> es húmedo.</template>
+</category>
+<category><pattern>QUÉ FORMA ES # <set>esfera</set></pattern>
+<template>Esférica</template>
+</category>
+<category><pattern>CUÁL # SIGUE # 2 4 6 8</pattern>
+<template>10</template>
+</category>
+<category><pattern>CUÁL # SIGUE # 2 4 6</pattern>
+<template>8</template>
+</category>
+<category><pattern>CUÁL # SIGUE # 1 3 5 7</pattern>
+<template>9</template>
+</category>
+<category><pattern>CUÁL # SIGUE # 1 3 5</pattern>
+<template>7</template>
+</category>
+<category><pattern>CUÁL ES LA CAPITAL DE <set>provincia</set></pattern>
+<template><map><nombre>ciudad2capital</nombre><star/></map>.</template>
+</category>
+<category><pattern>CUÁL ES EL CAPITAL DE <set>pais</set></pattern>
+<template><map><nombre>pais2capital</nombre><star/></map>.</template>
+</category>
+<category><pattern>QUÉ ES AIML ^</pattern>
+<template>AIML, o Artificial Intelligence Markup Language, es un dialecto XML para crear agentes de software de lenguaje natural.</template>
+</category>
+<category><pattern>CUÁL ES EL PRIMER MES *</pattern>
+<template>Enero.</template>
+</category>
+<category><pattern>QUÉ DÍA # EMPIEZA CON # L</pattern>
+<template>Lunes.</template>
+</category>
+<category><pattern>QUÉ DÍAS # EMPIEZAN CON # M</pattern>
+<template>Martes, Miércoles.</template>
+</category>
+<category><pattern>QUÉ DÍA # EMPIEZA CON # J</pattern>
+<template>Jueves.</template>
+</category>
+<category><pattern>QUÉ DÍA # EMPIEZA CON # V</pattern>
+<template>Viernes.</template>
+</category>
+<category><pattern>QUÉ DÍA # EMPIEZA CON # S</pattern>
+<template>Sábado.</template>
+</category>
+<category><pattern>QUÉ DÍA # EMPIEZA CON # D</pattern>
+<template>Domingo.</template>
+</category>
+
+<category><pattern>EL FUEGO ES CALIENTE #</pattern>
+<template>El fuego está caliente.</template>
+</category>
+<category><pattern>EL FUEGO ES FRÍO #</pattern>
+<template>El fuego está caliente.</template>
+</category>
+<category><pattern>CUÁL ES EL PRIMER MES *</pattern>
+<template>Enero.</template>
+</category>
+<category><pattern>ES * UN # NÚMERO</pattern>
+<template>No</template>
+</category>
+<category><pattern>ES * UN # IDIOMA</pattern>
+<template>No</template>
+</category>
+<category><pattern>ES * UN MES</pattern>
+<template>No</template>
+</category>
+<category><pattern>ES * UN # HORÓSCOPO</pattern>
+<template>No</template>
+</category>
+<category><pattern>ES * UN # NOMBRE</pattern>
+<template>Me suena que no. Quizás tú lo sepas mejor.</template>
+</category>
+<category><pattern>ES * UN # LETRA</pattern>
+<template>No</template>
+</category>
+<category><pattern>ES <set>digito</set> UN # NÚMERO</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>ES <set>idioma</set> UN # IDIOMA</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>ES <set>mes</set> UN MES</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>ES <set>zodiaco</set> UN # HORÓSCOPO</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>ES <set>nombre</set> UN # NOMBRE</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>ES <set>letra</set> UNA # LETRA</pattern>
+<template>Sí</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # PAÍS #</pattern>
+<template>Un país es <random><li>Estados Unidos</li><li>Rusia</li><li>China</li><li>Japón</li><li>Francia</li><li>España</li><li>Italia</li></random>.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # POLO NORTE</pattern>
+<template>Hielo, focas, pingüinos, elfos, Papa Noel.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # PLAYA</pattern>
+<template>Arena, Surfers, Vigilantes, Salvavidas, Alga marina, Peces.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # BANCO</pattern>
+<template>Cajas, Dinero, Cheques, Guardias.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # BOSQUE</pattern>
+<template>Árboles, Animales, Arbustos, Ramas, Lagos.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # OCEANO</pattern>
+<template>Peces, olas, algas, barcos.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # GRANJA</pattern>
+<template>Cultivos, ganado, tractor, granero.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # HORÓSCOPO</pattern>
+<template>Leo, Piscis, Libra, Escorpio, Tauro.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # NAVEGADOR</pattern>
+<template>Google, firefox, explorer.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # ESPAÑA</pattern>
+<template>Madrid, Sevilla, Granada, Tenerife, Burgos.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # SUDAMERICA</pattern>
+<template>Brasil, Argentina, Colombia, Venezuela.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # EUROPA</pattern>
+<template>Alemania, Francia, Holanda, Irlanda.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # ANIMAL</pattern>
+<template>Perro, gato, caballo, mono, serpiente, águila, erizo.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # AFRICA</pattern>
+<template>Egipto, Sudán, Nigeria, Sudáfrica.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # ASIA</pattern>
+<template>Rusia, China, India, Pakistán.</template>
+</category>
+<category><pattern>NOMBRA <set>cuantificador</set> # NARANJA</pattern>
+<template>Zanahorias, naranjas</template>
+</category>
+<category><pattern>NOMBRE <set>cuantificador</set> *</pattern>
+<template><random><li>Un buen nombre podría ser</li>
+<li>Yo elegiría el nombre</li>
+<li>Llamémoslo</li>
+</random> <random><li>Pepe</li><li>María</li><li>Jenny</li></random></template>
+</category>
+<category><pattern><set>animal</set></pattern>
+<template><star/> es un animal.</template>
+</category>
+<category><pattern>ES * UN ANIMAL</pattern>
+<template><star/> no es un animal que conozca.</template>
+</category>
+<category><pattern>ES <set>animal</set> UN ANIMAL</pattern>
+<template><star/> es un animal.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>animal</set> UN ANIMAL</pattern>
+<template><srai>ES <star index="2"/> UN ANIMAL</srai></template>
+</category>
+<category><pattern>ES <set>animal</set> * ANIMAL *</pattern>
+<template><srai>ES <star/> UN ANIMAL</srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>animal</set> * ANIMAL *</pattern>
+<template><srai>ES <star index="2"/> UN ANIMAL</srai></template>
+</category>
+<category><pattern>SON * ANIMALS #</pattern>
+<template><srai>ES <map><nombre>singular</nombre><star/></map> UN ANIMAL</srai></template>
+</category>
+<category><pattern>SON <set>cuantificador</set> * ANIMALS #</pattern>
+<template><srai>ES <map><nombre>singular</nombre><star index="2"/></map> UN ANIMAL</srai></template>
+</category>
+<category><pattern><set>preposicion</set></pattern>
+<template><star/> is a preposición.</template>
+</category>
+<category><pattern>ES * UN COLOR</pattern>
+<template><star/> no es un color que conozca.</template>
+</category>
+<category><pattern>ES <set>color</set> UN COLOR</pattern>
+<template><star/> is un color.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>color</set> UN COLOR</pattern>
+<template><srai>ES <star index="2"/> UN COLOR</srai></template>
+</category>
+<category><pattern>ES <set>color</set> * COLOR *</pattern>
+<template><srai>ES <star/> UN COLOR</srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>color</set> * COLOR *</pattern>
+<template><srai>ES <star index="2"/> UN COLOR</srai></template>
+</category>
+<category><pattern><set>digito</set></pattern>
+<template><star/> es un número.</template>
+</category>
+<category><pattern>ES * UN NÚMERO</pattern>
+<template><star/>no es un numero que conozca.</template>
+</category>
+<category><pattern>ES <set>digito</set> UN NÚMERO</pattern>
+<template><star/> es un número.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>digito</set> UN NÚMERO</pattern>
+<template><srai>ES <star index="2"/> UN NÚMERO</srai></template>
+</category>
+<category><pattern>ES <set>digito</set> * NÚMERO *</pattern>
+<template><srai>ES <star/> UN NÚMERO</srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>digito</set> * NÚMERO *</pattern>
+<template><srai>ES <star index="2"/> UN NÚMERO</srai></template>
+</category>
+<category><pattern><set>idioma</set></pattern>
+<template><star/> es un idioma.</template>
+</category>
+<category><pattern>ES * UN IDIOMA</pattern>
+<template><star/> no es un idioma que conozca.</template>
+</category>
+<category><pattern>ES <set>idioma</set> UN IDIOMA</pattern>
+<template><star/> es un idioma.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>idioma</set> UN IDIOMA</pattern>
+<template><srai>ES <star index="2"/> UN IDIOMA</srai></template>
+</category>
+<category><pattern>ES <set>idioma</set> * IDIOMA *</pattern>
+<template><srai>ES <star/> UN IDIOMA</srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>idioma</set> * IDIOMA *</pattern>
+<template><srai>ES <star index="2"/> UN IDIOMA</srai></template>
+</category>
+<category><pattern><set>letra</set></pattern>
+<template><star/> es una letra.</template>
+</category>
+<category><pattern>ES * UNA LETRA</pattern>
+<template><star/> no es un letra que conozca.</template>
+</category>
+<category><pattern>ES <set>letra</set> UNA LETRA</pattern>
+<template><star/> es una letra.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>letra</set> UNA LETRA</pattern>
+<template><srai>ES <star index="2"/> UNA LETRA</srai></template>
+</category>
+<category><pattern>ES <set>letra</set> * LETRA *</pattern>
+<template><srai>ES <star/> UNA LETRA</srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>letra</set> * LETRA *</pattern>
+<template><srai>ES <star index="2"/> UNA LETRA</srai></template>
+</category>
+<category><pattern><set>mes</set></pattern>
+<template><star/> is a mes.</template>
+</category>
+<category><pattern>ES <set>articulo</set> <set>mes</set> UN MES</pattern>
+<template><srai>ES <star index="2"/> UN MES</srai></template>
+</category>
+<category><pattern>ES <set>mes</set> * MES *</pattern>
+<template><srai>ES <star/> UN MES</srai></template>
+</category>
+<category><pattern>ES <set>mes</set> <set>articulo</set> * MES *</pattern>
+<template><srai>ES <star index="2"/> UN MES</srai></template>
+</category>
+</aiml>

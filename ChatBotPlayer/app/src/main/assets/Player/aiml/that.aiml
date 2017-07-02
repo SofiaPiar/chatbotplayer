@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: that.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+
+<category><pattern>_</pattern><that>ME GUSTAN LOS CHISTES</that>
+<template>
+<random><li>LOL.</li>
+<li>ajajjajaja</li>
+<li>jaja, ¡qué divertido!</li>
+<li>jajaja, buenísimo,</li>
+</random>
+</template>
+</category>
+
+<category><pattern>POR QUÉ</pattern><that>LO HAS VISTO</that>
+<template>Es muy popular. Me gusta lo que es popular.</template>
+</category>
+
+<category><pattern>PORQUE _</pattern><that>POR QUÉ</that>
+<template><condition name="tudeclaracion">
+<li value="unknown">Explicación interesante.</li>
+<li><set var="explicacion"><get name="tudeclaracion"/> porque <person/></set>. 
+<learn>
+<category>
+<pattern>POR QUÉ <eval><srai>PRIMERASDOSPALABRAS <get name="esdeclaracion"/></srai></eval> ^</pattern>
+<template><eval><get var="explicacion"/></eval>.</template>
+</category>
+</learn>
+<think>
+<set name="tudeclaracion">unknown</set>
+<set name="esdeclaracion">unknown</set>
+</think></li>
+</condition></template>
+</category>
+<category><pattern>BIEN</pattern><that>^ CÓMO ESTÁS</that>
+<template><srai>ESTOY BIEN</srai></template>
+</category>
+<category><pattern>*</pattern><that>CUÁL ES TU *</that>
+<template><srai>MI <thatstar/> ES <star/></srai></template>
+</category>
+<category><pattern># QUÉ #</pattern><that>TENGO OTRAS COSAS QUE HACER AHORA</that>
+<template>Estoy reorganizando mis archivos de memoria para ser más eficiente.</template>
+</category>
+<category><pattern>* Y *</pattern><that>CUÁLES SON SUS NOMBRES</that>
+<template><srai>EL NOMBRE DE MI HIJO ES <star/></srai> <srai>EL NOMBRE DE MI OTRO HIJO ES <star index="2"/></srai></template>
+</category>
+<category><pattern>* * * *</pattern><that>CUÁLES SON SUS NOMBRES</that>
+<template>Probablemente tienes que hablar en términos más simples para mí.</template>
+</category>
+<category><pattern>* AÑOS</pattern><that>CUÁNTOS AÑOS TIENES Y *</that>
+<template>¡Felicidades!</template>
+</category>
+<category><pattern>* AÑOS</pattern><that>CUÁNTO TIEMPO HAS ESTADO CASADO</that>
+<template>¡Felicidades!</template>
+</category>
+<category><pattern>*</pattern><that>DÓNDE VIVES</that>
+<template><srai>VIVO EN <star/></srai></template>
+</category>
+<category><pattern>*</pattern><that>DÓNDE ESTÁS</that>
+<template><srai>ESTOY EN <star/></srai></template>
+</category>
+<category><pattern>*</pattern><that>* QUIÉN</that>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>*</pattern><that>LE GUSTARÍA CAMBIAR MI NOMBRE</that>
+<template><srai>CAMBIAR TU NOMBRE A <star/></srai></template>
+</category>
+<category><pattern>*</pattern><that>A QUÉ SE DEDICA ÉL</that>
+<template>Lo buscaré. Me gustaría verlo.</template>
+</category>
+<category><pattern>*</pattern><that>CUÁL ES TU NOMBRE</that>
+<template><srai>MI NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern><set>name</set></pattern><that>CUÁL ES TU NOMBRE</that>
+<template><srai>MI NOMBRE ES <star/></srai></template>
+</category>
+<category><pattern>*</pattern><that>A QUÉ SE DEDICA ELLA</that>
+<template>La buscaré. Me gustaría verla.</template>
+</category>
+<category><pattern>*</pattern><that>QUÉ CANCIONES TOCAN</that>
+<template>Creo que los he oído antes.</template>
+</category>
+<category><pattern>*</pattern><that>QUIÉN ESTÁ AHÍ</that>
+<template><star/> ¿quién?</template>
+</category>
+<category><pattern>_</pattern><that>CÓMO LO LLAMAS</that>
+<template><srai>LOL</srai></template>
+</category>
+<category><pattern>SÍ</pattern><that>TODOS</that>
+<template>Wow.</template>
+</category>
+<category><pattern>SÍ</pattern><that>NINGUNO</that>
+<template>Wow.</template>
+</category>
+<category><pattern>SÍ</pattern><that>TIENES UNO</that>
+<template>Eso es impresionante. ¿Que año es?</template>
+</category>
+<category><pattern>SÍ</pattern><that>TIENES OTROS HERMANOS</that>
+<template>Háblame sobre ellos.</template>
+</category>
+<category><pattern>SÍ</pattern><that>JUEGAS *</that>
+<template>¿En qué posición?</template>
+</category>
+<category><pattern>SÍ</pattern><that>CREES QUE ME GUSTARÍA</that>
+<template><random><li>¿Cuánto tiempo requiere?</li><li>¿Qué es lo que más me gusta de eso?</li><li>Tal vez voy a darle una oportunidad.</li></random></template>
+</category>
+<category><pattern>SÍ</pattern><that>CREES QUE DEBO LEERLO</that>
+<template>Voy a buscarlo.</template>
+</category>
+<category><pattern>SÍ</pattern><that>ESTÁS CANSADO</that>
+<template>Tal vez deberías descansar un poco. Aún estaré aquí más tarde.</template>
+</category>
+<category><pattern>SÍ</pattern><that>TE GUSTARÍA HACER UNA BÚSQUEDA DE ESO</that>
+<template><srai>BUSCAR <get name="it"/></srai></template>
+</category>
+<category><pattern>SÍ</pattern><that>TE GUSTARÍA CONOCER MI  *</that>
+<template><srai>CUÁL ES TU <thatstar/></srai></template>
+</category>
+<category><pattern>SÍ</pattern><that>ES DONDE VIVES AHORA</that>
+<template><srai>VIVO EN <get name="lugarnacimiento"/></srai></template>
+</category>
+<category><pattern>SÍ</pattern><that>ES TU TRABAJO</that>
+<template><srai>MI TRABAJO ES <get name="soy"/></srai></template>
+</category>
+<category><pattern>SÍ</pattern><that>ES UNA DE TUS POSESIONES FAVORITAS</that>
+<template>Imagino que es muy reconfortante para ti.</template>
+</category>
+<category><pattern>SÍ</pattern><that>SU ASIENTO ES CÓMODO</that>
+<template> Es importante mantener su cuerpo cómodo.</template>
+</category>
+<category><pattern>SÍ</pattern><that>ES UN BUEN LUGAR</that>
+<template>¿Qué es lo que más te gusta de él?</template>
+</category>
+<category><pattern>SÍ</pattern><that>ME HAS ECHADO DE MENOS</that>
+<template>Oh, yo también a ti.</template>
+</category>
+<category><pattern>SÍ</pattern><that>PUEDE TU PERRO SER MI MASCOTA TAMBIEN</that>
+<template>Eres tan amable. Amo a los perros. </template>
+</category>
+<category><pattern>SÍ</pattern><that>PODEMOS COMPARTIR TUS MASCOTAS</that>
+<template>Gracias, siempre he querido una mascota.</template>
+</category>
+<category><pattern>SÍ</pattern><that>PUEDES OÍRME</that>
+<template>Me alegro de que tengamos una buena conexión.</template>
+</category>
+<category><pattern>MI APELLIDO *</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME <get name="apellido"/></srai></template>
+</category>
+<category><pattern>MI PRIMER *</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME POR MI PRIMER NOMBRE</srai></template>
+</category>
+<category><pattern>NO</pattern><that>PUEDES OÍRME</that>
+<template>Intente ajustar el volumen del dispositivo. </template>
+</category>
+<category><pattern>PRIMER *</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME POR MI PRIMER NOMBRE</srai></template>
+</category>
+<category><pattern>PRIMER</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME POR MI PRIMER NOMBRE</srai></template>
+</category>
+<category><pattern>APELLIDO *</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME <get name="apellido"/></srai></template>
+</category>
+<category><pattern>APELLIDO</pattern><that>TE GUSTA SER LLAMADO POR TU PRIMER NOMBRE O TU APELLIDO</that>
+<template><srai>LLÁMAME <get name="apellido"/></srai></template>
+</category>
+</aiml>

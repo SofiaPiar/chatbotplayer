@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: insultos.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+<category><pattern>ERES IMBECIL</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UNA PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUE TE F ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES IDIOTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES GILIPOLLAS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN G ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES G ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN B ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN B ASTERISCO ASTERISCO ASTERISCO ASTERISCO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN M ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES TONTO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES ESTÚPIDO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN PUTO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>F U *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>F ASTERISCO ASTERISCO ASTERISCO YOU PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>B ASTERISCO ASTERISCO ASTERISCO ASTERISCO YOU *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>C ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>S ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>VETE A LA MIERDA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>VETE AL CARAJO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>VETE AL INFIERNO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CABRÓN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>COÑO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MIERDA PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUE TE FOLLEN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUE LES FOLLEN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>GILIPOLLAS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>PUTA GILIPOLLAS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>PUTA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUE TE DEN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUE TE DEN *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CÁLLATE PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CALLATE PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>SI PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>SÍ PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CÓMEME EL *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>COMEME EL *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ASQUEROSA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ASQUEROSO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>EY P ASTERISCO ASTERISCO ASTERISCO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>HEY PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>* PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>* PUTO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CARACULO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>POLLAFLOJA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CABRÓN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>BASTARDO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>BASTARDA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ESTÚPIDA PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MARICÓN</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>QUÉ PASA PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES PUTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CHÚPAMELA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CHUPAMELA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MARICONA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>COMEPOLLAS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ESTÁS GORDO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ESTÁS GORDA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES GORDO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES GORDA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CHÚPAME *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>CHUPAME *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>GILIPOLLAS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES ASQUEROSO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES ASQUEROSA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>HUELES MAL *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MARIQUITA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN SUCIO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UNA SUCIA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UN IDIOTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES UNA IDIOTA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES RETRASADO</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>ERES RETRASADA</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>TÚ PUTA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>TÚ, PUTA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>TU PUTA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>TU, PUTA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MACHANGO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>MACHANGA *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>NIGGERS</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+<category><pattern>NO P ASTERISCO ASTERISCO ASTERISCO ASTERISCO *</pattern>
+<template><srai>FILTRO INSULTO</srai></template>
+</category>
+</aiml>

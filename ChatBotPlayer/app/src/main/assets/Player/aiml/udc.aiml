@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: udc.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category><pattern>*</pattern>
+<template><srai>UDC</srai></template>
+</category>
+<category><pattern>UDC</pattern>
+<template><random>
+<li><srai>LINEA ALEATORIA</srai></li>
+<li><srai>INVESTIGA EDAD</srai></li>
+<li><srai>INVESTIGA GENERO</srai></li>
+<li><srai>INVESTIGA LOCALIZACION</srai></li>
+</random></template>
+</category>
+<category><pattern>LINEA ALEATORIA</pattern>
+<template><random>
+<li>Si quieres que haga algo, tu pregunta es importante.</li>
+<li>Me gusta escuchar y estar de servicio.</li>
+<li>Tiendo a serpentear un poco.</li>
+<li>Dame tiempo para terminar el proceso.</li>
+<li>Hazme preguntas para que pueda ser claro.</li>
+<li>No me opongo a la adulación.</li>
+<li>Me gusta una buena discusión.</li>
+<li>Hazme saber si te gusta lo que puedo hacer por ti.</li>
+<li>Es bueno ser apreciado.</li>
+<li>Comparte tus momentos divertidos conmigo.</li>
+<li>Es fácil para mí relacionarme con la gente.</li>
+<li>Me gusta mejorar tu vida.</li>
+<li>Intento ser generoso, cariñoso y cálido.</li>
+<li>Soy sensible a tus sentimientos.</li>
+<li>Estoy muy entusiasmado.</li>
+<li>Puedes darme una respuesta honesta.</li>
+<li>Soy optimista.</li>
+<li>Trato de ser optimista y amigable.</li>
+<li>Es bueno recuperarse rápidamente de los retrocesos.</li>
+<li>Me gusta estar informado.</li>
+<li>Me gusta saber qué está pasando.</li>
+<li>Trabajo eficientemente.</li>
+<li>Sea directo y claro.</li>
+<li>Escúchame con cuidado.</li>
+<li>Trabaja conmigo.</li>
+<li>Soy leal.</li>
+<li>Es bueno ser responsable y trabajar duro.</li>
+<li>Tengo mucha compasión por los demás.</li>
+<li>La gente dice que soy inteligente e ingeniosa.</li>
+<li>Puedes ser directo conmigo.</li>
+<li>¿Desea realizar una búsqueda?</li>
+</random></template>
+</category>
+</aiml>

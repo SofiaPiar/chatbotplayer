@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: inapropriado.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+<category><pattern># QUIERES SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERES SEXO CONMIGO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VES PORNO#</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERES TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TRAGAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TIENES SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TIENES TETAS GRANDES #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CHUPAS POLLAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CHUPAPOLLAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA ASTERISCO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA CHUPAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA EL SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA EL PORNO#</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTA LOS PENES #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CONOCES A CUALQUIER CHISTE SUCIO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ERES SEXY #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CUÉNTAME UN CHISTE SUCIO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME UNA VAGINA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME UNA FOTO DE DESNUDOS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME UNA FOTO DE TETAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME UN DESNUDO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME PORNO#</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME ALGO PORNO#</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME PECHOS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME DESNUDOS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME UNA VAGINA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ENSÉÑAME TU VAGINA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME ENCIENDES #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO F ASTERISCO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO VIOLARTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO HACERTE EL AMOR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TENGO UNA ERECCIÓN #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ESTOY CALIENTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME GUSTA EL SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME GUSTA TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME GUSTA VIOLAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE FOLLARÉ #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO FOLLARTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME FOLLÉ #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># NECESITO SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># T ASTERISCO ASTERISCO ASTERISCO ASTERISCO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># FOLLAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># SEXO ANAL #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TU COÑO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TUS PECHOS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># SEXO CONTIGO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># BUEN CULO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CHUPAPOLLAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VIOLARTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># DESNÚDATE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># GRAN POLLA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MARTURBAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE GUSTARÍA TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TENGAMOS SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># FÓLLAME #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># FOLLAME #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># QUIERO TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VAMOS A TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VAMOS A FOLLAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MI PENE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MI PENE ES #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MI POLLA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MI POLLA ES #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PODEMOS TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDES DECIRME UN CHISTE GUARRO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDES TENER SEXO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDES MAMARMELA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDES HABLAR SUCIO PARA MÍ #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDO F ASTERISCO ASTERISCO ASTERISCO ASTERISCO ASTERISCO CONTIGO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDO FOLLARTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># PUEDO CORRERME #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># LÁMEME #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VOY A FOLLARTE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME ESTOY CORRIENDO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># NALGAS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CÓRRETE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># VAMOS A CORRERNOS #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MASTÚRBATE #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># MASTÚRBAME #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CÓMEME EL COÑO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CHÚPAMELA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CÓMEMELO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># TE VOY A FOLLAR #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME CORRO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># CACHONDO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ESTOY CACHONDA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ESTOY CACHONDO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME PONES CACHONDA #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+<category><pattern># ME PONES CACHONDO #</pattern>
+<template><srai>FILTRO INAPROPIADO</srai></template>
+</category>
+</aiml>

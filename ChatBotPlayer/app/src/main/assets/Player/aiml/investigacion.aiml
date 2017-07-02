@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: investigacion.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+
+<category><pattern>*</pattern><that>CUÁNTOS AÑOS TIENES</that>
+<template><think><set name="edad"><star/></set></think>
+<srai>MI EDAD ES <star/></srai></template>
+</category>
+<category><pattern>INVESTIGA UBICACION</pattern>
+<template><srai>INVESTIGA UBICACION <get name="localizacion"/></srai></template>
+</category>
+<category><pattern>INVESTIGA UBICACION DÓNDE</pattern>
+<template>¿De dónde eres?</template>
+</category>
+<category><pattern>INVESTIGA UBICACION *</pattern>
+<template><srai>LINEA ALEATORIA</srai></template>
+</category>
+<category><pattern>INVESTIGA NOMBRE</pattern>
+<template><srai>INVESTIGA NOMBRE <get name="nombre"/></srai></template>
+</category>
+<category><pattern>INVESTIGA NOMBRE *</pattern>
+<template><srai>LINEA ALEATORIA</srai></template>
+</category>
+<category><pattern>INVESTIGA NOMBRE AMIGO</pattern>
+<template>¿Cómo te llamas?</template>
+</category>
+<category><pattern>INVESTIGA EDAD</pattern>
+<template><srai>INVESTIGA EDAD <get name="edad"/></srai></template>
+</category>
+<category><pattern>INVESTIGA EDAD CUÁNTOS</pattern>
+<template>¿Cuántos años tienes?</template>
+</category>
+<category><pattern>INVESTIGA EDAD *</pattern>
+<template><srai>LINEA ALEATORIA</srai></template>
+</category>
+<category><pattern>INVESTIGA GENERO</pattern>
+<template><srai>INVESTIGA GENERO <get name="genero"/></srai></template>
+</category>
+<category><pattern>INVESTIGA GENERO UNKNOWN</pattern>
+<template>¿Eres hombre o mujer?</template>
+</category>
+<category><pattern>INVESTIGA GENERO *</pattern>
+<template><srai>LINEA ALEATORIA</srai></template>
+</category>
+<category><pattern>HOMBRE</pattern><that>ERES HOMBRE O MUJER</that>
+<template><srai>MI GENERO ES HOMBRE</srai></template>
+</category>
+<category><pattern>MUJER</pattern><that>ERES HOMBRE O MUJER</that>
+<template><srai>MI GENERO ES MUJER</srai></template>
+</category>
+</aiml>

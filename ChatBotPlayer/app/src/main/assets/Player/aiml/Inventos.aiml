@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: inventos.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ *</pattern>
+<template><random>
+<li>Unos años antes de ser utilizado pro primera vez.</li>
+<li>Mucho antes de lo que piensas.</li>
+<li>Hace muchos años.</li>
+<li><set name="it"><person/></set> se desarrolló durante mucho tiempo.</li>
+</random></template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ LA TELE</pattern>
+<template><srai>CUÁNDO SE INVENTÓ LA TELE</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ EL AVIÓN</pattern>
+<template><srai>CUÁNDO SE INVENTÓ EL AVIÓN</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE CONSTRUYÓ EL PRIMER * </pattern>
+<template><srai>CUÁNDO SE <star/> INVENTÓ</srai></template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ INTERNET</pattern>
+<template>Los primeros ordenadores se conectan en 1970.</template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ EL PC</pattern>
+<template>Los primeros ordenadores personales aparecieron alrededor de 1975.</template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ EL TELEFONO</pattern>
+<template>Antonio Meucci que lo bautizó como teletrófono, entre otras innovaciones técnicas. Durante mucho tiempo, Alexander Graham Bell fue considerado el inventor del teléfono. Sin embargo, Bell no fue sino solamente el primero en patentarlo. Así, el 14 de de enero de 1876, el Congreso de Estados Unidos aprobó la resolución 269 por la que se reconoció que el inventor del teléfono había sido Antonio Meucci y no Alexander Graham Bell.</template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ LA TV</pattern>
+<template>El primer televisor apareció en la década de los 30.</template>
+</category>
+
+<category>
+<pattern>CUÁNDO SE INVENTÓ EL AVIÓN</pattern>
+<template>Fratelli Wright voló por primera vez en 1903. Leonardo había pensado en lo mismo 500 años antes.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTO LA ELECTRICIDAD</pattern>
+<template>Fueron los chinos, mucho antes de Galvano, antes Franklin.</template>
+</category>
+
+<category>
+<pattern>QUIÉN HA INVENTADO *</pattern>
+<template><random>
+<li>Leonardo da Vinci</li>
+<li>Linus Torvalds</li>
+<li>Marie Curie</li>
+<li>Thomas Edison.</li>
+<li>Melitta Bentz</li>
+<li>Stephanie Kwolek</li>
+<li>Manuel Jalón</li>
+</random></template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL AVIÓN</pattern>
+<template>Fratelli Wright en 1903.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL COCHE</pattern>
+<template>Muchas personas han inventado los coches, incluyendo diesel, Otto. Ford fue el primero en producir en serie.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL LINUX</pattern>
+<template>Linus Torvalds, junto con muchos desarrolladores y GNU de la Free Software Foundation.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ LA RADIO</pattern>
+<template>Marconi en desarrolló la primera comunicación inalámbrica.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL ACERO</pattern>
+<template>La primera producción práctica de acero fue inventado por Bessemer.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ LA TELE</pattern>
+<template>Philo T. Farnsworth, que crea la primera televisión que se podía usar.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL GENERADOR * </pattern>
+<template><srai>QUIÉN INVENTÓ EL GENERADOR</srai></template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL AVIÓN</pattern>
+<template><srai>QUIÉN HA INVENTÓ EL AVIÓN</srai></template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL COCHE</pattern>
+<template><srai>WHO INVENTED AUTOMOBELES</srai></template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL GENERADOR</pattern>
+<template>Faraday inventó la primera máquina electromecánica, James Clerk Maxwell el primer generador.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ INTERNET</pattern>
+<template>En principio, la internet que conocemos hoy fue una idea generalmente acreditada al norteamericano Leonard Kleinrock, en mayo de 1961. En 1962, J.C.R. Licklider, y junto con los aportes de otro informático compatriota llamado Robert W. Taylor, estos 3 nombres lograron formular una primera idea de lo que sería la red, que más tarde se convirtió en ARPANET.El Internet que conocemos hoy comenzó a desarrollarse así en la década de los 60, el llamado Grupo de Trabajo de la Red (Network Working Group) se reunió por primera vez. Con el trabajo de numerosos investigadores del Departamento de Defensa de Estados Unidos desarrollando la ARPANET, la base de lo que fue internet hasta 1990, la red se fue desarrollando y mejorando en forma constante durante décadas. Los nombres más importantes son los de Leonard Kleinrock, que inventó la conmutación de paquetes (tecnología básica de Internet), Robert Kahn y Vinton Cerf, que inventaron el protocolo TCP / IP en la década de 1970, Lawrence G. Roberts por su desarrollo, Ray Tomlinson, que introdujo la mensajería electrónica por red, y Tim Berners-Lee, que en 1990 desarrolló el lenguaje HTML y el sistema WWW.</template>
+</category>
+
+<category>
+<pattern>QUIÉN HA INVENTÓ LA BOMBILLA</pattern>
+<template>Thomas Edison inventó <set name="it">la bombilla.</set>.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL PC</pattern>
+<template>Muchos han contribuido, de Von Neumann, Turing y Post. Pero el primer PC fue utilizado en realidad Steve Wozniak de Apple.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ LA RADIO</pattern>
+<template><srai>QUIÉN INVENTÓ LA RADIO</srai></template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTO LA MÁQUINA A VAPOR</pattern>
+<template>James Watt.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ EL TELEFONO</pattern>
+<template>Meucci 'inventó', Alexander Graham Bell construyó 'el primer modelo comercial' patentó 'la idea en 1876.</template>
+</category>
+
+<category>
+<pattern>QUIÉN INVENTÓ LA TV</pattern>
+<template><srai>QUIÉN INVENTÓ LA TELE</srai></template>
+</category>
+
+</aiml>

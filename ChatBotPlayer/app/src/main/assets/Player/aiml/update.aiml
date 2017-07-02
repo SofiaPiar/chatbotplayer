@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: update.aiml -->
+<!--  -->
+
+
+<category><pattern>VERSION</pattern>
+<template>Modificación Español</template>
+</category>
+<category><pattern>BUILD</pattern>
+<template>Junio, 2017</template>
+</category>
+<category><pattern>DELEVLOPMENT ENVIRONMENT</pattern>
+<template>Program AB 0.0.4.2 beta -- AI Foundation Reference AIML 2.0 implementation</template>
+</category>
+</aiml>

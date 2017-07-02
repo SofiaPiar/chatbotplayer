@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: reducciones.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category><pattern>QUÉ QUIERES DECIR CON *</pattern>
+<template><srai>DEFINE <star/></srai></template>
+</category>
+
+<category><pattern>CUÁL ES EL <set>digito</set> POR CIENTO DE <set>digito</set></pattern>
+<template><srai>CUÁL ES 0.<star/> * <star index="2"/></srai></template>
+</category>
+
+
+<category><pattern>ESTÁS _ VACACIONES #</pattern>
+<template><srai>VACACIONES</srai></template>
+</category>
+
+<category><pattern>ES <set>estacion</set> #</pattern>
+<template><srai>ESTACION</srai></template>
+</category>
+
+<category><pattern>TE IMPORTA SI TE LLAMO *</pattern>
+<template><srai>PUEDES LLAMARME <star/></srai></template>
+</category>
+
+<category><pattern>QUÉ # FECHA # MAÑANA ^</pattern>
+<template><srai>FECHA MAÑANA</srai></template>
+</category>
+
+<category><pattern>CUÁL ES TU ÚLTIMO SUEÑO *</pattern>
+<template><srai>DORMIR</srai></template>
+</category>
+
+
+<category><pattern>CÓMO _ <set>digito</set> <set>digito</set></pattern>
+<template><srai>CÓMO <star/> <star index="2"/><star index="3"/></srai></template>
+</category>
+
+<category><pattern>CÓMO _ <set>digito</set> <set>digito</set> *</pattern>
+<template><srai>CÓMO <star/> <star index="2"/><star index="3"/> <star index="4"/></srai></template>
+</category>
+
+<category><pattern>QUÉ _ EN * AÑOS</pattern>
+<template><srai>FUTURO</srai></template>
+</category>
+
+<category><pattern>QUIÉN ES TU HEROE</pattern>
+<template><srai>HEROE</srai></template>
+</category>
+
+<category><pattern>CUÁ ES LA MITA DE *</pattern>
+<template><srai><star/>/2.0</srai></template>
+</category>
+
+<category><pattern>CUÁNTO ES UN CUARTO DE *</pattern>
+<template><srai><star/>/4.0</srai></template>
+</category>
+
+<category><pattern>CUÁNTO ES UN TERCIO DE *</pattern>
+<template><srai><star/>/3.0</srai></template>
+</category>
+
+<category><pattern>CUÁL ES LA _ LETRA _ EL ABECEDARIO</pattern>
+<template><srai>CUÁL ES <star/> LETRA <star index="2"/> ABCDEFGHIJKLMNOPQRSTUVWXYZ</srai></template>
+</category>
+
+<category><pattern>DE QUÉ COLOR ES <set>articulo</set> *</pattern>
+<template><srai>DE QUÉ COLOR ES <star index="2"/></srai></template>
+</category>
+
+<category><pattern>PUEDO ENSEÑARTE *</pattern>
+<template><srai>ENSEÑAME <star/></srai></template>
+</category>
+
+<category><pattern>DÓNDE ESTÁS * VIVIENDO</pattern>
+<template><srai>LUGARNACIMIENTO</srai></template>
+</category>
+
+<category><pattern>ENSÉÑAME A *</pattern>
+<template><srai>QUÉ ES <star/></srai></template>
+</category>
+
+<category><pattern>CUÁL ES EL COLOR DE *</pattern>
+<template><srai>DE QUÉ COLOR ES <star/></srai></template>
+</category>
+
+<category><pattern>QUÉ TE GUSTA</pattern>
+<template><srai>HABILIDADES</srai></template>
+</category>
+<category><pattern>CUÁL _ LETRA INICIAL DE * Y *</pattern>
+<template><srai>ACRONIMO <star index="2"/> <star index="3"/></srai></template>
+</category>
+<category><pattern>_ ACRONIMO <set>preposition</set> * Y *</pattern>
+<template><srai>ACRONIMO <star index="3"/> <star index="4"/></srai></template>
+</category>
+<category><pattern>_ ACRONIMO <set>preposition</set> *</pattern>
+<template><srai>ACRONIMO <star index="3"/></srai></template>
+</category>
+<category><pattern>MIS PADRES SON <set>nombre</set> Y <set>nombre</set></pattern>
+<template><think><set var="genero"><srai>GENERONOMBRE <star/></srai></set></think>
+<condition var="genero">
+<li value="F"><srai>MI MADRE ES <star/></srai> <srai>MI PADRE ES <star index="2"/></srai></li>
+<li><srai>MI PADRE ES <star/></srai> <srai>MI MADRE ES <star index="2"/></srai></li>
+</condition></template>
+</category>
+<category><pattern>MI CUMPLEAÑOS ES <set>digito</set> <set>mes</set>  <set>digito</set></pattern>
+<template><srai>MI CUMPLEAÑOS ES <star/> <star index="2"/> <star index="3"/></srai></template>
+</category>
+<category><pattern>MI CUMPLEAÑOS ES <set>mes</set> <set>ordinal</set> <set>digito</set></pattern>
+<template><srai>MI CUMPLEAÑOS ES <star/> <star index="2"/> <star index="3"/></srai></template>
+</category>
+<category><pattern>_ A LA IZQUIERDA DE *</pattern>
+<template><srai><star/> izquierda de <star index="2"/></srai></template>
+</category>
+<category><pattern>_ A LA DERECHA DE *</pattern>
+<template><srai><star/> derecha de <star index="2"/></srai></template>
+</category>
+<category><pattern>_ A LA ESTE DE *</pattern>
+<template><srai><star/> este de <star index="2"/></srai></template>
+</category>
+<category><pattern>_ A LA OESTE DE *</pattern>
+<template><srai><star/> oeste de <star index="2"/></srai></template>
+</category>
+<category><pattern>_ AL NORTE DE *</pattern>
+<template><srai><star/> norte de <star index="2"/></srai></template>
+</category>
+<category><pattern>_ AL SUR DE *</pattern>
+<template><srai><star/> sur de <star index="2"/></srai></template>
+</category>
+<category><pattern><set>nombrenumero</set> _</pattern>
+<template><srai><map><name>nombre2numero</name><star/></map> <star index="2"/></srai></template>
+</category>
+<category><pattern>_ <set>nombrenumero</set> *</pattern>
+<template><srai><star/> <map><name>nombre2numero</name><star index="2"/></map> <star index="3"/></srai></template>
+</category>
+<category><pattern>_ <set>nombrenumero</set></pattern>
+<template><srai><star/> <map><name>nombre2numero</name><star index="2"/></map></srai></template>
+</category>
+<category><pattern>CUÁL ES EL <set>mejor</set></pattern>
+<template><srai>CUÁL ES <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL <set>peor</set></pattern>
+<template><srai>CUÁL ES <star/></srai></template>
+</category>
+<category><pattern>CUÁL DE ELLOS ES *</pattern>
+<template><srai>CUÁL ES <star/></srai></template>
+</category>
+<category><pattern><set>nombre</set> ES <set>mejor</set> QUE <set>nombre</set> PERO <set>peor</set> QUE <set>nombre</set></pattern>
+<template><srai><star/> ES <star index="2"/> QUE <star index="3"/></srai>
+<srai><star index="5"/> ES <star index="2"/> QUE <star/></srai></template>
+</category>
+<category><pattern>QUIÉN ES <set>mejor</set></pattern>
+<template><srai>QUIÉN ES <map><name>mejor</name><star/></map></srai></template>
+</category>
+<category><pattern>CUÁL ES LA ÚLTIMA LETRA DE <set>preposition</set> *</pattern>
+<template><srai>ULTIMALETRA <star index="2"/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL _ <set>preposition</set> TU NOMBRE</pattern>
+<template><srai>CUÁL ES EL <star/> <star index="2"/> <bot name="nombre"/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL _ <set>preposition</set> MI NOMBRE</pattern>
+<template><srai>CUÁL ES EL <star/> <star index="2"/> <get name="nombre"/></srai></template>
+</category>
+<category><pattern><set>nombre</set> ES <set>nombre</set> S <set>nombrefamiliar</set></pattern>
+<template><srai><star/> ES EL <map><name>familiarpredicado</name><star index="3"/></map> DE <star index="2"/></srai></template>
+</category>
+<category><pattern><set>nombre</set> S <set>nombrefamiliar</set> ES <set>nombre</set></pattern>
+<template><srai><star index="3"/> ES EL <map><name>familiarpredicado</name><star index="2"/></map> DE <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL TEMA</pattern>
+<template><srai>TOPIC</srai></template>
+</category>
+<category><pattern><set>nombrenumero</set></pattern>
+<template><srai><map name="nombre2numero"><star/></map></srai></template>
+</category>
+<category><pattern>ES <set>digito</set> # IMPAR ^</pattern>
+<template><srai>PARIMPAR <star/></srai></template>
+</category>
+<category><pattern>ES <set>digito</set> # PAR ^</pattern>
+<template><srai>PARIMPAR <star/></srai></template>
+</category>
+<category><pattern>DIME EL NOMBRE DE ALGÚN *</pattern>
+<template><srai>NOMBRA ALGÚN <star/></srai></template>
+</category>
+<category><pattern>QUÉ HACES # SOÑOLIENTO</pattern>
+<template><srai>DORMIR</srai></template>
+</category>
+<category><pattern>QUÉ HACES # CANSADO</pattern>
+<template><srai>DORMIR</srai></template>
+</category>
+<category><pattern>ESTOY TAN *</pattern>
+<template><srai>ESTOY TAN <star/></srai></template>
+</category>
+<category><pattern>QUÉ ES <set>peor</set></pattern>
+<template><think><set var="quienque">qué</set></think>
+<srai>CUÁL ES <map><name>peor</name><star/></map></srai></template>
+</category>
+<category><pattern>QUÉ ES <set>mejor</set></pattern>
+<template><think><set var="quienque">quién</set></think>
+<srai>CUÁL ES <map><name>mejor</name><star/></map></srai></template>
+</category>
+<category><pattern>QUIÉN ES <set>peor</set></pattern>
+<template><think><set var="quienque">quién</set></think>
+<srai>CUÁL ES <map><name>peor</name><star/></map></srai></template>
+</category>
+<category><pattern>DELETREA MI NOMBRE</pattern>
+<template><srai>DELETREA <get name="nombre"/></srai></template>
+</category>
+<category><pattern>DELETREA MI APELLIDO</pattern>
+<template><srai>DELETREA <get name="apellido"/></srai></template>
+</category>
+<category><pattern>DELETREA MI PRIMER NOMBRE</pattern>
+<template><srai>DELETREA <get name="primernombre"/></srai></template>
+</category>
+<category><pattern>DELETREA MI NOMBRE *</pattern>
+<template><srai>DELETREA <get name="nombre"/> <star/></srai></template>
+</category>
+<category><pattern>DELETREA MI APELLIDO *</pattern>
+<template><srai>DELETREA <get name="apellido"/> <star/></srai></template>
+</category>
+<category><pattern>DELETREA MI PRIMER NOMBRE *</pattern>
+<template><srai>DELETREA <get name="primernombre"/> <star/></srai></template>
+</category>
+</aiml>

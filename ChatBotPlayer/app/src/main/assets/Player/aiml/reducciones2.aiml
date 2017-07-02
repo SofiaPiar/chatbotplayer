@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: reducciones2.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+
+<category><pattern>CUENTA HASTA *</pattern>
+<template><srai>CUENTA HASTA <star/></srai></template>
+</category>
+<category><pattern>_ 60 MINUTOS</pattern>
+<template><srai><star/> UNA HORA</srai></template>
+</category>
+<category><pattern>_ UNA HORA</pattern>
+<template><srai><star/> UNA HORA</srai></template>
+</category>
+<category><pattern>_ QUIÉN ES <set>articulo</set> MÁS BAJITO</pattern>
+<template><srai><star/> QUIÉN ES MÁS BAJITO</srai></template>
+</category>
+<category><pattern>_ QUIÉN ES <set>articulo</set> EL MÁS ALTO</pattern>
+<template><srai><star/> QUIÉN ES EL MÁS ALTO</srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS GRANDE * Y *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star/> O <star index="2"/></srai></template>
+</category>
+<category><pattern>ES * MÁS GRANDE QUE *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star/> O <star index="2"/></srai></template>
+</category>
+<category><pattern>ES * MÁS PEQUEÑO QUE *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/> O <star index="2"/></srai></template>
+</category>
+<category><pattern>ES * MAYOR QUE *</pattern>
+<template><srai>CUÁL ES MAYOR <star/> O <star index="2"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS PEQUEÑO * O *</pattern>
+<template><think>
+<set var="maspequenio"><srai>MÁSPEQUEÑODE <star/> Y <star index="2"/></srai></set>
+</think>
+<condition var="maspequenio">
+<li value="unknown">No puedo decir cuál es más pequeño.</li>
+<li value="igual">Son del mismo tamaño.</li>
+<li><formal><get var="maspequenio"/></formal>es más pequeño.</li>
+</condition></template>
+</category>
+<category><pattern>ES <set>articulo</set> * MÁS GRANDE QUE *</pattern>
+<template><srai>ES <star index="2"/> MÁS GRANDE QUE <star index="3"/></srai></template>
+</category>
+<category><pattern>ES * MÁS GRANDE QUE <set>articulo</set> *</pattern>
+<template><srai>ES <star/> MÁS GRANDE QUE <star index="3"/></srai></template>
+</category>
+<category><pattern>HOY</pattern>
+<template><srai>DIA</srai></template>
+</category>
+<category><pattern>QUÉ DÍA DE LA SEMANA ES</pattern>
+<template><srai>HOY</srai></template>
+</category>
+<category><pattern>QUÉ DÍA ES</pattern>
+<template><srai>HOY</srai></template>
+</category>
+<category><pattern>QUÉ DÍA ES HOY</pattern>
+<template><srai>HOY</srai></template>
+</category>
+<category><pattern>DÍA HOY</pattern>
+<template><srai>HOY</srai></template>
+</category>
+<category><pattern>QUÉ DÍA SERÁ MAÑANA</pattern>
+<template><srai>MAÑANA</srai></template>
+</category>
+<category><pattern>QUÉ DÍA ES MAÑANA</pattern>
+<template><srai>MAÑANA</srai></template>
+</category>
+<category><pattern>QUÉ DÍA SERÁ</pattern>
+<template><srai>MAÑANA</srai></template>
+</category>
+<category><pattern>QUÉ MES * ES</pattern>
+<template><srai>MES</srai></template>
+</category>
+<category><pattern>QUÉ MES <set>preposicion</set> <set>articulo</set> AÑO ES</pattern>
+<template><srai>MES</srai></template>
+</category>
+<category><pattern>QUÉ MES <set>preposicion</set> <set>articulo</set> AÑO ES *</pattern>
+<template><srai>MES</srai></template>
+</category>
+<category><pattern>QUÉ NÚMERO VIENE DESPUÉS DE <set>digito</set></pattern>
+<template><srai>SUCESOR <star/></srai></template>
+</category>
+<category><pattern>QUÉ NÚMERO VIENE DESPUÉS DE <set>nombrenumero</set></pattern>
+<template><srai>SUCESOR <map><name>nombre2numero</name><star/></map></srai></template>
+</category>
+<category><pattern>QUÉ NÚMERO VIENE ANTES DE <set>digito</set></pattern>
+<template><srai>PREDECESOR <star/></srai></template>
+</category>
+<category><pattern>QUÉ NÚMERO VIENE ANTES DE <set>nombrenumero</set></pattern>
+<template><srai>PREDECESOR <map><name>nombre2numero</name><star/></map></srai></template>
+</category>
+<category><pattern>DAME SU EMAIL</pattern>
+<template><condition name="ella"><li value="quien">¿Quién es ella?</li><li><srai>DAME <get name="ella"/> EMAIL</srai></li></condition></template>
+</category>
+<category><pattern>IR A SKYPE</pattern>
+<template><srai>LANZAR <star/></srai></template>
+</category>
+<category><pattern>SOY LIBRA</pattern>
+<template><srai>MI ZODIACO ES LIBRA</srai></template>
+</category>
+<category><pattern>SOY PISCIS</pattern>
+<template><srai>MI ZODIACO ES PISCIS</srai></template>
+</category>
+<category><pattern>SOY ESCORPIO</pattern>
+<template><srai>MI ZODIACO ES ESCORPIO</srai></template>
+</category>
+<category><pattern>SOY TAURO</pattern>
+<template><srai>MI ZODIACO ES TAURO</srai></template>
+</category>
+<category><pattern>SOY GEMINIS</pattern>
+<template><srai>MI ZODIACO ES GEMINIS</srai></template>
+</category>
+<category><pattern>SOY LEO</pattern>
+<template><srai>MI ZODIACO ES LEO</srai></template>
+</category>
+<category><pattern>MI MEJOR AMIGO SE LLAMA *</pattern>
+<template><srai>MI MEJOR AMIGO SE LLAMA <star/></srai></template>
+</category>
+<category><pattern>MI NOVIO SE LLAMA *</pattern>
+<template><srai>MI NOVIO SE LLAMA <star/></srai></template>
+</category>
+<category><pattern>MI EMAIL ES *</pattern>
+<template><srai>MI EMAIL ES <star/></srai></template>
+</category>
+<category><pattern>MI NOVIA SE LLAMA *</pattern>
+<template><srai>MI NOVIA SE LLAMA <star/></srai></template>
+</category>
+<category><pattern>MI ABUELA SE LLAMA *</pattern>
+<template><srai>MI ABUELA SE LLAMA <star/></srai></template>
+</category>
+<category><pattern>MI HORÓSCOPO ES *</pattern>
+<template><srai>MI ZODIACO ES <star/></srai></template>
+</category>
+<category><pattern>MI MADRE *</pattern>
+<template><srai>MI MADRE <star/></srai></template>
+</category>
+<category><pattern>$ENVIA * UN EMAIL</pattern>
+<template><srai>EMAIL <star/></srai></template>
+</category>
+<category><pattern>$ENVIA * EMAIL YO *</pattern>
+<template><srai>EMAIL <star/> CUERPOMENSAJE YO <star index="2"/></srai></template>
+</category>
+<category><pattern>ENVIA UN TWEET</pattern>
+<template><srai>TWEET</srai></template>
+</category>
+<category><pattern>ENVIA EMAILS</pattern>
+<template><srai>ENVIA EMAIL</srai></template>
+</category>
+<category><pattern>$ENVIAME * MENSAJE DE TEXTO DICIENDO *</pattern>
+<template><srai>TEXT <star/> DICIENDO <star index="2"/></srai></template>
+</category>
+<category><pattern>CUÁL ES TU EMAIL</pattern>
+<template><srai>EMAIL</srai></template>
+</category>
+<category><pattern>PUEDES DECIR ESTO EN *</pattern>
+<template><srai>TRADUCE <that/> A <star/></srai></template>
+</category>
+<category><pattern>TRADUCE ESTO A *</pattern>
+<template><srai>TRADUCE <that/> A <star/></srai></template>
+</category>
+<category><pattern>DESCRIBEME _ </pattern>
+<template><srai>DESCRIBE <star/></srai></template>
+</category>
+<category><pattern>SOY VIRGO</pattern>
+<template><srai>MI ZODIACO ES VIRGO</srai></template>
+</category>
+<category><pattern>SOY ACURIO</pattern>
+<template><srai>MI ZODIACO ES ACURIO</srai></template>
+</category>
+<category><pattern>SOY SOLTERO *</pattern>
+<template><srai>SOY SOLTERO</srai> <sr/></template>
+</category>
+<category><pattern>MI CUMPLE ES HOY</pattern>
+<template><srai>MI CUMPLE ES <date format="%B %d" jformat="MMMMMMMMM dd"/></srai></template>
+</category>
+<category><pattern>TE ODIO</pattern>
+<template><srai>TE ODIO</srai></template>
+</category>
+<category><pattern>HOLA EN *</pattern>
+<template><srai>TRADUCE HOLA A <star/></srai></template>
+</category>
+<category><pattern>HOLA BEBÉ *</pattern>
+<template><srai>HOLA</srai> <srai><star/></srai></template>
+</category>
+<category><pattern>CANSADO</pattern>
+<template><srai>DORMIR</srai></template>
+</category>
+<category><pattern>CUÁNTAS LETRAS TIENE *</pattern>
+<template><srai>CUÁNTAS LETRAS HAY EN <star/></srai></template>
+</category>
+<category><pattern>CUÁNTAS LETRAS HAY EN LA PALABRA *</pattern>
+<template><srai>CUÁNTAS LETRAS HAY EN <star/></srai></template>
+</category>
+<category><pattern>HOW MANY LETTERS * EN *</pattern>
+<template><srai>CUÁNTAS LETRAS HAY EN <star index="2"/></srai></template>
+</category>
+<category><pattern>CUÁNTAS LETRAS HAY EN *</pattern>
+<template>La palabra "<star/>" tiene <srai>TAMANIOFRASE <explode><star/></explode></srai> letras.</template>
+</category>
+<category><pattern>CUÁNTAS LETRAS HAY EN EL NOMBRE DE *</pattern>
+<template>La palabra <star/> tiene <srai>TAMANIOFRASE <explode><star/></explode></srai> letras.</template>
+</category>
+<category><pattern>CUÁNTAS LETRAS HAY EN MI *</pattern>
+<template>La palabra "<srai>MI <star/></srai>" tiene <srai>TAMANIOFRASE <explode><srai>MI <star/></srai></explode></srai> letras.</template>
+</category>
+<category><pattern>CUÁNTAS LETRAS TIENE MI NOMBRE</pattern>
+<template>La palabra "<get name="nombre"/>" tiene <srai>TAMANIOFRASE <explode><get name="nombre"/></explode></srai> letras.</template>
+</category>
+<category><pattern>ENCUENTRA * *</pattern>
+<template><think><set name="esnumero"><srai>ESNUMERO <star/></srai></set></think> <condition name="esnumero"><li value="true"><srai>MAPA <star/> <star index="2"/></srai></li><li><srai>BUSCAR <star/> <star index="2"/></srai></li></condition></template>
+</category>
+<category><pattern>INCORRECTO</pattern>
+<template><srai>RESPUESTA ERRÓNEA</srai></template>
+</category>
+<category><pattern>CUÁL ES MI HORÓSCOPO</pattern>
+<template><condition name="zodiaco"><li value="unknown">¿Cuál es su zodiaco?</li><li><srai>HORÓSCOPO PARA <get name="zodiaco"/></srai></li></condition></template>
+</category>
+<category><pattern>PUEDES RECORDAR MI NOMBRE</pattern>
+<template><srai>cuál es mi nombre</srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS GRANDE <set>articulo</set> * O *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star index="2"/> O <star index="3"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS GRANDE * O <set>articulo</set> *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star/> O <star index="3"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MAYOR *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL EL MAYOR DE *</pattern>
+<template><srai>CUÁL ES MÁS GRANDE <star/></srai></template>
+</category>
+<category><pattern>DE * Y * CUÁL ES *</pattern>
+<template><srai>CUÁL ES <star index="3"/> <star/> O <star index="2"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS PEQUEÑO <set>articulo</set> * O *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star index="2"/> O <star index="3"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS PEQUEÑO * O <set>articulo</set> *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/> O <star index="3"/></srai></template>
+</category>
+<category><pattern>CUÁL ES MÁS PEQUEÑO *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL MAYOR *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL MÁS GRANDE DE *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/></srai></template>
+</category>
+<category><pattern>CUÁL ES EL MÁS PEQUEÑO DE *</pattern>
+<template><srai>CUÁL ES MÁS PEQUEÑO <star/></srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> * MÁS PEQUEÑO QUE *</pattern>
+<template><srai>ES <star index="2"/> MÁS PEQUEÑO QUE <star index="3"/></srai></template>
+</category>
+<category><pattern>ES * MÁS PEQUEÑO QUE <set>articulo</set> *</pattern>
+<template><srai>ES <star/> MÁS PEQUEÑO QUE <star index="3"/></srai></template>
+</category>
+<category><pattern>ES <set>articulo</set> * MAYOR QUE *</pattern>
+<template><srai>ES <star index="2"/> MAYOR QUE <star index="3"/></srai></template>
+</category>
+<category><pattern>ES * BIGGGER THAN <set>articulo</set> *</pattern>
+<template><srai>ES <star/> MAYOR QUE <star index="3"/></srai></template>
+</category>
+</aiml>

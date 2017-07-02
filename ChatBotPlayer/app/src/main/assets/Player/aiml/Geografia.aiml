@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!-- File: geografia.aiml -->
+<!-- Last modified: Julio 2017 -->
+<!--  -->
+<!-- This AIML file is part of the Rosie knowledge base. -->
+<!--  -->
+<!-- Rosie is a fork of the ALICE2 brain, and is optimized for use on the Pandorabots platform -->
+<!--  -->
+<!-- Rosie is Copyright &copy; 2014 by Pandorabots, Inc. -->
+<!--  -->
+<!-- The Rosie brain is released under the terms of the GNU Lesser General -->
+<!-- Public License, as publiellad by the Free Software Foundation. -->
+<!--  -->
+<!-- This file is distributed WITHOUT ANY WARRANTY; without even the  -->
+<!-- implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.   -->
+<!--  -->
+<!-- For more information: -->
+<!-- http://www.pandorabots.com -->
+<!--  http://www.alicebot.org -->
+<!-- Modificado por Sofía Julio 2017 -->
+<!--  -->
+
+<category>
+<pattern>ADRIÁTICO</pattern>
+<template>es un cuerpo de agua localizado al sur de Europa que separa a la península Itálica (al oeste) de la península de los Balcanes (al este), y al sistema de los montes Apeninos del de los Alpes Dináricos y sus sierras colindantes. Forma parte del mar Mediterráneo.</template>
+</category>
+
+<category>
+<pattern>* MAR ADRIÁTICO</pattern>
+<template>Forma parte del mar Mediterráneo. Es un golfo estrecho y alargado que mide como máximo 200 km de ancho de este a oeste, y 800 km de norte a sur. En su extremo meridional limita con el mar Jónico, del que lo separa el canal de Otranto. Su superficie total es de aproximadamente 160.000 km².</template>
+</category>
+
+<category>
+<pattern>AFGANISTÁN</pattern>
+<template>es un país sin salida al mar ubicado en el corazón de Asia. El país se encuentra geográficamente en Asia Central, agrupado dentro de un bloque regional entre el subcontinente indio y el Medio Oriente, como una entidad religiosa, etnolingüística y geográfica relacionada con la mayoría de sus vecinos. Limita con Pakistán al sur y al este, con Irán al oeste, con Turkmenistán, Uzbekistán y Tayikistán al norte, y con la República Popular China al noreste a través del corredor de Wakhan.</template>
+</category>
+
+<category>
+<pattern>ÁFRICA</pattern>
+<template> Es el tercer continente por su extensión, tras Asia y América. Está situado entre los océanos Atlántico, al oeste, e Índico, al este. El mar Mediterráneo lo separa al norte del continente europeo; el punto en el que los dos continentes se hallan más cercanos es el estrecho de Gibraltar de 14,4 km de anchura. El mar Rojo lo separa al este de la península arábiga y queda unido a Asia a través del istmo de Suez, en territorio egipcio.</template>
+</category>
+
+<category>
+<pattern>ESPAÑA</pattern>
+<template> también denominado Reino de España, es un país soberano, miembro de la Unión Europea, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la monarquía parlamentaria. Su territorio, con capital en Madrid, está organizado en diecisiete comunidades autónomas y dos ciudades autónomas, formadas estas, a su vez, por cincuenta provincias.</template>
+</category>
+
+<category>
+<pattern>ITALIA</pattern>
+<template>Es un país soberano miembro de la Unión Europea.</template>
+</category>
+
+<category>
+<pattern>FRANCIA</pattern>
+<template>Oficialmente República Francesa (République française), es un país soberano, miembro de la Unión Europea, constituido en Estado social y democrático de derecho y cuya forma de gobierno es la república semipresidencialista.</template>
+</category>
+
+<category>
+<pattern>ALEMANIA</pattern>
+<template>oficialmente República Federal de Alemania (en alemán: Bundesrepublik Deutschland, es un país soberano centroeuropeo y miembro de la Unión Europea; se organiza como una república parlamentaria federal y su capital es Berlín.</template>
+</category>
+
+<category>
+<pattern>QUÉ * CALIFORNIA</pattern>
+<template>Un estado de U.S.A.</template>
+</category>
+
+<category>
+<pattern>CUÁL * CAPITAL _ ITALIA</pattern>
+<template>Roma.</template>
+</category>
+
+<category>
+<pattern>CUÁL * CAPITAL DE _</pattern>
+<template>la capital de
+<random>
+<li>Canada - Toronto.  </li>
+<li>California - Sacramento.  </li>
+<li>Georgia - Atlanta.  </li>
+<li>Francia - Parigi.  </li>
+</random></template>
+</category>
+
+<category>
+<pattern>* LA MONTAÑA MÁS ALTA</pattern>
+<template>Monte Everest.</template>
+</category>
+
+<category>
+<pattern>* LA POBLACIÓN  _ CHINA</pattern>
+<template>Más de mil millones de personas.</template>
+</category>
+
+<category>
+<pattern>* LA POBLACIÓN _ USA</pattern>
+<template>Los Estados Unidos tiene aproximadamente 300 millones de habitantes.</template>
+</category>
+
+<category>
+<pattern>* LA POBLACIÓN MUNDIAL</pattern>
+<template>La población mundial ha pasado de los casi 1000 millones de habitantes que había en 1800 a los más de 6000 millones en el año 2000. El 30 de octubre de 2011 se alcanzaron los 7000 millones (7 millardos). En diciembre de 2016 se superaron los 7400 millones de habitantes</template>
+</category>
+
+<category>
+<pattern>QUÉ SON LOS EE.UU.</pattern>
+<template>Estados Unidos de América</template>
+</category>
+
+<category>
+<pattern>DÓNDE * ESPAÑA</pattern>
+<template>Se encuentra situado tanto al sur de Europa Occidental como al norte de África. En Europa ocupa la mayor parte de la península ibérica, conocida como España peninsular, y el archipiélago de las islas Baleares y archipiélago Canario.</template>
+</category>
+
+<category>
+<pattern>* SANTIAGO DE COMPOSTELA</pattern>
+<template>Galicia</template>
+</category>
+
+<category>
+<pattern>* OVIEDO</pattern>
+<template>Asturias</template>
+</category>
+
+<category>
+<pattern>* SANTANDER</pattern>
+<template>Cantabria</template>
+</category>
+
+<category>
+<pattern>* VITORIA</pattern>
+<template>País Vasco</template>
+</category>
+
+<category>
+<pattern>* LOGROÑO</pattern>
+<template>La Rioja</template>
+</category>
+
+<category>
+<pattern>* PAMPLONA</pattern>
+<template>Navarra</template>
+</category>
+
+<category>
+<pattern>* ZARAGOZA</pattern>
+<template>Aragón</template>
+</category>
+<category>
+<pattern>* BARCELONA</pattern>
+<template>Cataluña</template>
+</category>
+<category>
+<pattern>* VALLADOLID</pattern>
+<template>Castilla y León</template>
+</category>
+
+<category>
+<pattern>* MADRID</pattern>
+<template>Madrid</template>
+</category>
+<category>
+<pattern>* VALENCIA</pattern>
+<template>Valencia</template>
+</category>
+<category>
+<pattern>* MALLORCA</pattern>
+<template>Baleares</template>
+</category>
+<category>
+<pattern>* TOLEDO</pattern>
+<template>Castilla la Mancha</template>
+</category>
+<category>
+<pattern>* MÉRIDA</pattern>
+<template>Extremadura</template>
+</category>
+<category>
+<pattern>* GRANADA</pattern>
+<template>Andalucía</template>
+</category>
+<category>
+<pattern>* SEVLLA</pattern>
+<template>Andalucía</template>
+</category>
+<category>
+<pattern>* MURCIA</pattern>
+<template>Murcia</template>
+</category>
+<category>
+<pattern>* TENERIFE</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* GRAN CANARIA</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* LA PALMA</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* EL HIERRO</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* LA GOMERA</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* FUERTEVENTURA</pattern>
+<template>Canarias</template>
+</category>
+<category>
+<pattern>* LANZAROTE</pattern>
+<template>Canarias</template>
+</category>
+
+
+</aiml>

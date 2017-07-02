@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+	<!-- Free software (c) 2001-2003 ALICE A.I. Foundation.   -->
+	<!-- This program is open source code released under -->
+	<!-- the terms of the GNU General Public License     -->
+	<!-- as published by the Free Software Foundation.   -->
+	<!-- Complies with AIML 1.0 Tag Set Specification -->
+	<!-- as adopted by the ALICE A.I. Foundation.  -->
+	<!-- Modificado por Sofía Julio 2017 -->
+
+<category><pattern>20 P</pattern><template><srai>20P</srai></template></category>
+<category><pattern>VEINTE PREGUNTAS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>20 PREGUNTAS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ VEINTE PREGUNTAS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ 20 PREGUNTAS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ VEINTE PREGUNTAS *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ 20 PREGUNTAS *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>AKINATOR</pattern><template><srai>20P</srai></template></category>
+<category><pattern>ADIVINAR</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ AKINATOR</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ADIVINAR</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ AKINATOR *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ADIVINAR *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>ME SIENTO MAL</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME SIENTO MAL *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME SIENTO MAL</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME SIENTO * MAL *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME SIENTO * MAL</pattern><template><srai>20P</srai></template></category>
+<category><pattern>ESTOY TRISTE</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ESTOY TRISTE *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ESTOY TRISTE</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ESTOY * TRISTE *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ESTOY * TRISTE</pattern><template><srai>20P</srai></template></category>
+<category><pattern>NO ESTOY DE ÁNIMOS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ NO ESTOY DE ÁNIMOS *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ NO ESTOY DE ÁNIMOS</pattern><template><srai>20P</srai></template></category>
+<category><pattern>ME ABURRO</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME ABURRO *</pattern><template><srai>20P</srai></template></category>
+<category><pattern>_ ME ABURRO</pattern><template><srai>20P</srai></template></category>
+
+<category>
+<pattern>20P</pattern>
+<template>
+<think>
+<set name="qnum">1</set>
+</think>
+Pues es el momento perfecto para jugar 20 preguntas. Voy a pensar en algún animal, vegetal o mineral y tienes que adivinar lo que es, haz preguntas que pueda responderte con SÍ o NO. Puedes hacer hasta 20 preguntas antes de que termine el juego.Si te das por vencido, di "ME RINDO" y te diré en qué estaba pensando. Escribe "START" para jugar si te apetece.
+</template>
+</category>
+
+<category>
+<pattern>START</pattern>
+<that>ESCRIBE START PARA JUGAR</that>
+<template>
+<think>
+<set name="topic">20P</set>
+<random>
+<li><set name="20qanswer">caballo</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">elefante</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">gato</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">pez</set><set name="20qcategory">un animal</set></li>
+<li><set name="20qanswer">león</set><set name="20qcategory">un animal</set></li>
+
+<li><set name="20qanswer">rosa</set><set name="20qcategory">un vegetal</set></li>
+<li><set name="20qanswer">zanahoria</set><set name="20qcategory">un vegetal</set></li>
+<li><set name="20qanswer">lechuga</set><set name="20qcategory">un vegetal</set></li>
+<li><set name="20qanswer">manzana</set><set name="20qcategory">un vegetal</set></li>
+<li><set name="20qanswer">cebolla</set><set name="20qcategory">un vegetal</set></li>
+
+<li><set name="20qanswer">roca</set><set name="20qcategory">un mineral</set></li>
+<li><set name="20qanswer">carbón</set><set name="20qcategory">un mineral</set></li>
+<li><set name="20qanswer">ladrillo</set><set name="20qcategory">un mineral</set></li>
+<li><set name="20qanswer">hormigón</set><set name="20qcategory">un mineral</set></li>
+<li><set name="20qanswer">tiza</set><set name="20qcategory">un mineral</set></li>
+</random>
+
+</think>
+Ok, el objeto que estoy pensando es considerado como <get name="20qcategory"/>. Haz tu primera pregunta.
+</template>
+</category>
+
+<topic name="20P"> 
+<category> 
+<pattern>_</pattern>
+<template>
+<think>
+<set name="question"><star/></set>
+<set name="topic"></set>
+<set name="qsubject">NINGUN TEMA</set>
+</think>
+	<condition name="question"> 
+		<li value="ES UN *">No, lo siento. Hazme otra pregunta.<think><set name="topic">20P</set></think></li>
+		<li value="ES UNA *">No, lo siento. Hazme otra pregunta.<think><set name="topic">20P</set></think></li>
+		<li value="ES *"><think><set name="qsubject">es</set></think><srai>20P RANDOM</srai></li>
+		<li value="ERA *"><think><set name="qsubject">era</set></think><srai>20P RANDOM</srai></li>
+		<li value="SERA *"><think><set name="qsubject">sera</set></think><srai>20P RANDOM</srai></li>
+		<li value="Y ES *"><think><set name="qsubject">y</set></think><srai>20P RANDOM</srai></li>
+		<li value="PUEDE SER *"><think><set name="qsubject">puede</set></think><srai>20P RANDOM</srai></li>
+		<li value="ES *"><srai>20P RANDOM</srai></li>
+		<li value="PODRIA *"><srai>20P RANDOM</srai></li>
+		<li value="HARIA *"><srai>20P RANDOM</srai></li>
+		<li value="DEBERIA *"><srai>20P RANDOM</srai></li>
+		<li value="ERA *"><srai>20P RANDOM</srai></li>
+		<li value="SON *"><srai>20P RANDOM</srai></li>
+		<li value="SERA *"><srai>20P RANDOM</srai></li>
+		<li value="Y *"><srai>20P RANDOM</srai></li>
+		<li value="QUIZAS *"><srai>20P RANDOM</srai></li>
+		<li value="SE *"><srai>20P RANDOM</srai></li>
+		<li value="PUEDE *"><srai>20P RANDOM</srai></li>
+		<li value="ME RINDO"><srai>20P ME RINDO</srai></li>
+		<li value="ME DOY POR VENCIDO"><srai>20P ME RINDO</srai></li>
+		<li value="NO SE"><srai>20P ME RINDO</srai></li>
+		<li value="QUE ES"><srai>20P ME RINDO</srai></li>
+		<li>Eso no es una pregunta de "sí" o "no". Sólo puedo contestar sí o no a sus preguntas. Hágame otra pregunta o diga "ME RINDO". Si quieres adivinar lo que es, diga "ES UN" y seguido de lo qué piensas que puede ser.<think><set name="topic">20P</set></think></li>
+	</condition>
+</template>
+</category>
+</topic>
+
+<category>
+<pattern>20P RANDOM</pattern>
+<template>
+	<condition name="qsubject"> 
+		<li value="NINGUN TEMA"><random><li>Sí.</li><li>No.</li></random></li>
+		<li><random><li>Sí.</li><li>No.</li><li>Lo és<get name="qsubject"/>.</li><li>No lo és<get name="qsubject"/>nooo.</li></random></li>
+	</condition>
+
+<br/><br/>
+<condition name="qnum">
+
+<li value = "1"> ¿Cuál es su segunda pregunta? </li>
+<li value = "2"> ¿Cuál es su tercera pregunta? </li>
+<li value = "3"> Haga su 4ª pregunta. </li>
+<li value = "4"> ¿Cuál es tu quinta pregunta? </li>
+<li value = "5"> Haga su sexta pregunta. </li>
+<li value = "6"> ¿Cuál es su séptima pregunta? </li>
+<li value = "7"> Haga su 8ª pregunta. </li>
+<li value = "8"> Haga su novena pregunta. </li>
+<li value = "9"> A mitad de camino ahora. ¿Cuál es su décima pregunta? </li>
+<li value = "10"> ¿Cuál es su 11ª pregunta por favor? </li>
+<li value = "11"> ¿Cuál es su duodécima pregunta? </li>
+<li value = "12"> ¿Cuál es su decimotercera pregunta? </li>
+<li value = "13"> Haga su 14ª pregunta. </li>
+<li value = "14"> ¿Cuál es tu 15ª pregunta? </li>
+<li value = "15"> Haga su decimosexta pregunta. </li>
+<li value = "16"> ¿Cuál es su 17a pregunta? </li>
+<li value = "17"> Haga su 18ª pregunta. </li>
+<li value = "18"> Haga su decimonovena pregunta. </li>
+<li value = "19"> ¿Cuál es su 20ª y última pregunta? </li>
+</condition>
+<think>
+<srai>INCREASE QNUM</srai>
+<set name="topic">20P</set>
+</think>
+<condition name="qnum">
+	<li value="FIN"><think><set name="topic"></set></think><srai>20P HECHAS</srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>INCREASE QNUM</pattern>
+<template>
+<think>
+<condition name="qnum">
+<li value="1"><set name="qnum">2</set></li>
+<li value="2"><set name="qnum">3</set></li>
+<li value="3"><set name="qnum">4</set></li>
+<li value="4"><set name="qnum">5</set></li>
+<li value="5"><set name="qnum">6</set></li>
+<li value="6"><set name="qnum">7</set></li>
+<li value="7"><set name="qnum">8</set></li>
+<li value="8"><set name="qnum">9</set></li>
+<li value="9"><set name="qnum">10</set></li>
+<li value="10"><set name="qnum">11</set></li>
+<li value="11"><set name="qnum">12</set></li>
+<li value="12"><set name="qnum">13</set></li>
+<li value="13"><set name="qnum">14</set></li>
+<li value="14"><set name="qnum">15</set></li>
+<li value="15"><set name="qnum">16</set></li>
+<li value="16"><set name="qnum">17</set></li>
+<li value="17"><set name="qnum">18</set></li>
+<li value="18"><set name="qnum">19</set></li>
+<li value="19"><set name="qnum">20</set></li>
+<li value="20"><set name="qnum">FIN</set></li>
+</condition>
+</think>
+</template>
+</category>
+
+<category>
+<pattern>20P ME RINDO</pattern>
+<template>
+¿Te rindes? Estaba pensando en ¡<get name="20qanswer"/>!
+</template>
+</category>
+
+<category>
+<pattern>20P HECHAS</pattern>
+<template>
+Lo siento, has hecho 20 preguntas. Estaba pensando en !<get name="20qanswer"/>!
+</template>
+</category>
+
+
+</aiml>
