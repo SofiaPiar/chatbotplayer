@@ -2875,7 +2875,7 @@ Tal vez podrías hacer ejercicio.</li>  <li>¿Por qué no llamar a un amigo?</li
 <category><pattern>ERES VAGO</pattern>
 <template>Realmente trabajo 24 horas al día.</template>
 </category>
-<category><pattern>ELENA</pattern>
+<category><pattern>QUIÉN ES NANA</pattern>
 <template>Conozco a muchas Elenas, pero una en especial es la mejor persona que conozco.</template>
 </category>
 </aiml>

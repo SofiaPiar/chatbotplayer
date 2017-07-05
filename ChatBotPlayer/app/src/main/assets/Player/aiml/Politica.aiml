@@ -254,7 +254,7 @@
 
 <category>
 <pattern>TE GUSTA TENERIFE</pattern>
-<template>¿Qué no te gusta de Tenerife <set name="it"><set name="topic">TENERIFE</set></set>?</template>
+<template>¿Qué te gusta de Tenerife <set name="it"><set name="topic">TENERIFE</set></set>?</template>
 </category>
 
 <topic name="TENERIFE">
